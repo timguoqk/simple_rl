@@ -6,6 +6,7 @@ from simple_rl.abstraction.action_abs.InListPredicateClass import InListPredicat
 from simple_rl.abstraction.action_abs.OptionClass import Option
 from simple_rl.abstraction.action_abs.PolicyFromDictClass import PolicyFromDict
 
+
 # ------------------------
 # -- Goal Based Options --
 # ------------------------
@@ -28,16 +29,16 @@ def make_goal_based_options(mdp_distr):
 
     options = set([])
     for mdp in mdp_distr.get_all_mdps():
-
         init_predicate = Predicate(func=lambda x: True)
         term_predicate = InListPredicate(ls=goal_list)
         o = Option(init_predicate=init_predicate,
-                    term_predicate=term_predicate,
-                    policy=_make_mini_mdp_option_policy(mdp),
-                    term_prob=0.0)
+                   term_predicate=term_predicate,
+                   policy=_make_mini_mdp_option_policy(mdp),
+                   term_prob=0.0)
         options.add(o)
 
     return options
+
 
 def _make_mini_mdp_option_policy(mini_mdp):
     '''
@@ -55,6 +56,7 @@ def _make_mini_mdp_option_policy(mini_mdp):
     o_policy = PolicyFromDict(o_policy_dict)
 
     return o_policy.get_action
+
 
 def make_dict_from_lambda(policy_func, state_list):
     policy_dict = {}

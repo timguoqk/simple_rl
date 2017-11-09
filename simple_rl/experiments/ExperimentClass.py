@@ -15,6 +15,7 @@ from collections import defaultdict
 from simple_rl.utils import chart_utils
 from simple_rl.experiments.ExperimentParametersClass import ExperimentParameters
 
+
 class Experiment(object):
     ''' Experiment Class for RL Experiments '''
 
@@ -22,17 +23,17 @@ class Experiment(object):
     RESULTS_DIR = os.path.join(os.getcwdu(), "results", "")
 
     def __init__(self,
-                    agents,
-                    mdp,
-                    agent_colors=[],
-                    params=None,
-                    is_episodic=False,
-                    is_markov_game=False,
-                    is_multi_task=False,
-                    is_rec_disc_reward=False,
-                    clear_old_results=True,
-                    count_r_per_n_timestep=1,
-                    cumulative_plot=True):
+                 agents,
+                 mdp,
+                 agent_colors=[],
+                 params=None,
+                 is_episodic=False,
+                 is_markov_game=False,
+                 is_multi_task=False,
+                 is_rec_disc_reward=False,
+                 clear_old_results=True,
+                 count_r_per_n_timestep=1,
+                 cumulative_plot=True):
         '''
         Args:
             agents (list)
@@ -89,13 +90,13 @@ class Experiment(object):
             agent_name_ls = [agent_name for agent_name in self.agents.keys()]
         else:
             agent_name_ls = [a.get_name() for a in self.agents]
-            
+
         chart_utils.make_plots(self.exp_directory,
-                                agent_name_ls,
-                                episodic=self.is_episodic,
-                                cumulative=self.cumulative_plot,
-                                is_rec_disc_reward=self.is_rec_disc_reward,
-                                open_plot=open_plot)
+                               agent_name_ls,
+                               episodic=self.is_episodic,
+                               cumulative=self.cumulative_plot,
+                               is_rec_disc_reward=self.is_rec_disc_reward,
+                               open_plot=open_plot)
 
     def _write_extra_datum_to_file(self, mdp_name, agent, datum, datum_name):
         out_file = open(os.path.join(self.exp_directory, str(agent)) + "-" + datum_name + ".csv", "a+")
@@ -104,7 +105,7 @@ class Experiment(object):
 
     def get_agent_avg_cumulative_rew(self, agent):
         result_file = open(os.path.join(self.exp_directory, str(agent)) + ".csv", "r")
-        
+
         total = 0
         num_lines = 0
         for line in result_file.readlines():
@@ -210,7 +211,7 @@ class Experiment(object):
             agent_string += "\t" + str(agent) + "," + str(self.agent_colors[i]) + "\n"
         param_string = "(Params)" + str(self.parameters) + "\n"
 
-        return  mdp_string + agent_string + param_string
+        return mdp_string + agent_string + param_string
 
     def __str__(self):
         return self._get_exp_file_string()

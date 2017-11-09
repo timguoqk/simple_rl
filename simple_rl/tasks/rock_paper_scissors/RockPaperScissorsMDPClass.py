@@ -7,6 +7,7 @@ import random
 from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP
 from simple_rl.mdp.StateClass import State
 
+
 class RockPaperScissorsMDP(MarkovGameMDP):
     ''' Class for a Rock Paper Scissors Game '''
 
@@ -14,7 +15,8 @@ class RockPaperScissorsMDP(MarkovGameMDP):
     ACTIONS = ["rock", "paper", "scissors"]
 
     def __init__(self):
-        MarkovGameMDP.__init__(self, RockPaperScissorsMDP.ACTIONS, self._transition_func, self._reward_func, init_state=State())
+        MarkovGameMDP.__init__(self, RockPaperScissorsMDP.ACTIONS, self._transition_func, self._reward_func,
+                               init_state=State())
 
     def _reward_func(self, state, action_dict):
         '''
@@ -54,13 +56,14 @@ class RockPaperScissorsMDP(MarkovGameMDP):
             (State)
         '''
         return state
-      
+
     def __str__(self):
         return "rock_paper_scissors"
 
 
 def main():
     grid_world = RockPaperScissorsMDP()
+
 
 if __name__ == "__main__":
     main()

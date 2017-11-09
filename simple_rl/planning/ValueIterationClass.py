@@ -6,8 +6,8 @@ import random
 # Other imports.
 from PlannerClass import Planner
 
-class ValueIteration(Planner):
 
+class ValueIteration(Planner):
     def __init__(self, mdp, name="value_iter", delta=0.0001, max_iterations=200, sample_rate=3):
         '''
         Args:
@@ -33,11 +33,11 @@ class ValueIteration(Planner):
             # We've already run this, just return.
             return
 
-        self.trans_dict = defaultdict(lambda:defaultdict(lambda:defaultdict(float)))
-            # K: state
-                # K: a
-                    # K: s_prime
-                    # V: prob
+        self.trans_dict = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
+        # K: state
+        # K: a
+        # K: s_prime
+        # V: prob
 
         for s in self.get_states():
             for a in self.actions:
@@ -50,7 +50,7 @@ class ValueIteration(Planner):
     def get_num_states(self):
         if not self.reachability_done:
             self._compute_reachable_state_space()
-        return len(self.states)      
+        return len(self.states)
 
     def get_states(self):
         if self.reachability_done:
@@ -83,7 +83,7 @@ class ValueIteration(Planner):
         for s_prime in self.trans_dict[s][a].keys():
             expected_future_val += self.trans_dict[s][a][s_prime] * self.value_func[s_prime]
 
-        return self.reward_func(s,a) + self.gamma*expected_future_val
+        return self.reward_func(s, a) + self.gamma * expected_future_val
 
     def _compute_reachable_state_space(self):
         '''
@@ -102,8 +102,8 @@ class ValueIteration(Planner):
         while not state_queue.empty():
             s = state_queue.get()
             for a in self.actions:
-                for samples in xrange(self.sample_rate): # Take @sample_rate samples to estimate E[V]
-                    next_state = self.transition_func(s,a)
+                for samples in xrange(self.sample_rate):  # Take @sample_rate samples to estimate E[V]
+                    next_state = self.transition_func(s, a)
 
                     if next_state not in self.states:
                         self.states.add(next_state)
@@ -144,7 +144,7 @@ class ValueIteration(Planner):
             # print "iters, val:", iterations, max_diff
 
         value_of_init_state = self._compute_max_qval_action_pair(self.init_state)[0]
-        
+
         self.has_planned = True
 
         return iterations, value_of_init_state
@@ -187,7 +187,7 @@ class ValueIteration(Planner):
             steps += 1
 
         return action_seq, state_seq
-    
+
     def _get_max_q_action(self, state):
         '''
         Args:

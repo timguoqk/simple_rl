@@ -5,15 +5,15 @@ from collections import defaultdict
 from simple_rl.mdp.StateClass import State
 from simple_rl.mdp.MDPClass import MDP
 
-class StateAbstraction(object):
 
+class StateAbstraction(object):
     def __init__(self, phi=None):
         '''
         Args:
             phi (dict)
         '''
         self.identity = phi is None
-        self._phi = phi if not self.identity else {} # key:state, val:int. (int represents an abstract state).
+        self._phi = phi if not self.identity else {}  # key:state, val:int. (int represents an abstract state).
 
     def set_phi(self, new_phi):
         self._phi = new_phi
@@ -62,7 +62,7 @@ class StateAbstraction(object):
             (list): Contains all ground states in the cluster.
         '''
         return [s_g for s_g in self.get_ground_states() if self.phi(s_g) == abs_state]
-    
+
     def get_lower_states_in_abs_state(self, abs_state):
         '''
         Args:
@@ -136,4 +136,3 @@ class StateAbstraction(object):
         new_sa = StateAbstraction(phi=merged_state_abs)
 
         return new_sa
-

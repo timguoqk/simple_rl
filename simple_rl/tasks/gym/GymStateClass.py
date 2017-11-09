@@ -6,6 +6,7 @@ from simple_rl.mdp.StateClass import State
 
 ''' GymStateClass.py: Contains a State class for Gym. '''
 
+
 class GymState(State):
     ''' Gym State class '''
 

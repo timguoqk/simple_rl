@@ -3,6 +3,7 @@
 # Other imports.
 from simple_rl.mdp.StateClass import State
 
+
 class GridWorldState(State):
     ''' Class for Grid World States '''
 

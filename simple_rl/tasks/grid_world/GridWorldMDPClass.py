@@ -10,6 +10,7 @@ import numpy as np
 from simple_rl.mdp.MDPClass import MDP
 from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState
 
+
 class GridWorldMDP(MDP):
     ''' Class for a Grid World MDP '''
 
@@ -17,17 +18,17 @@ class GridWorldMDP(MDP):
     ACTIONS = ["up", "down", "left", "right"]
 
     def __init__(self,
-                width=5,
-                height=3,
-                init_loc=(1,1),
-                rand_init=False,
-                goal_locs=[(5,3)],
-                walls=[],
-                is_goal_terminal=False,
-                gamma=0.99,
-                init_state=None,
-                slip_prob=0.0,
-                name="gridworld"):
+                 width=5,
+                 height=3,
+                 init_loc=(1, 1),
+                 rand_init=False,
+                 goal_locs=[(5, 3)],
+                 walls=[],
+                 is_goal_terminal=False,
+                 gamma=0.99,
+                 init_state=None,
+                 slip_prob=0.0,
+                 name="gridworld"):
         '''
         Args:
             height (int)
@@ -45,7 +46,8 @@ class GridWorldMDP(MDP):
         self.init_loc = init_loc
         init_state = GridWorldState(init_loc[0], init_loc[1]) if init_state is None or rand_init else init_state
 
-        MDP.__init__(self, GridWorldMDP.ACTIONS, self._transition_func, self._reward_func, init_state=init_state, gamma=gamma)
+        MDP.__init__(self, GridWorldMDP.ACTIONS, self._transition_func, self._reward_func, init_state=init_state,
+                     gamma=gamma)
 
         if type(goal_locs) is not list:
             print "(simple_rl) GridWorld Error: argument @goal_locs needs to be a list of locations. For example: [(3,3), (4,3)]."
@@ -176,16 +178,15 @@ class GridWorldMDP(MDP):
         ["up", "down", "left", "right"]
 
         action_char_dict = {
-            "up":u"\u2191",
-            "down":u"\u2193",
-            "left":u"\u2190",
-            "right":u"\u2192"
+            "up": u"\u2191",
+            "down": u"\u2193",
+            "left": u"\u2190",
+            "right": u"\u2192"
         }
 
         mdpv.visualize_policy(self, policy, _draw_state, action_char_dict)
         raw_input("Press anything to quit ")
         quit()
-
 
     def visualize_agent(self, agent):
         from simple_rl.utils import mdp_visualizer as mdpv
@@ -211,7 +212,8 @@ def _error_check(state, action):
     '''
 
     if action not in GridWorldMDP.ACTIONS:
-        print "(simple_rl) GridWorldError: the action provided (" + str(action) + ") was invalid in state: " + str(state) + "."
+        print "(simple_rl) GridWorldError: the action provided (" + str(action) + ") was invalid in state: " + str(
+            state) + "."
         quit()
 
     if not isinstance(state, GridWorldState):
@@ -278,7 +280,8 @@ def make_grid_world_from_file(file_name, randomize=False, num_goals=1, name=None
     if len(goal_locs) == 0:
         goal_locs = [(num_cols, num_rows)]
 
-    return GridWorldMDP(width=num_cols, height=num_rows, init_loc=(agent_x, agent_y), goal_locs=goal_locs, walls=walls, name=name, slip_prob=slip_prob)
+    return GridWorldMDP(width=num_cols, height=num_rows, init_loc=(agent_x, agent_y), goal_locs=goal_locs, walls=walls,
+                        name=name, slip_prob=slip_prob)
 
     def reset(self):
         if self.rand_init:
@@ -292,6 +295,7 @@ def main():
     grid_world = GridWorldMDP(5, 10, (1, 1), (6, 7))
 
     grid_world.visualize()
+
 
 if __name__ == "__main__":
     main()

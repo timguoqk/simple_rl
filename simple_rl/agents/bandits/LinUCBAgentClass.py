@@ -8,6 +8,7 @@ import numpy as np
 # Other imports.
 from ..AgentClass import Agent
 
+
 class LinUCBAgent(Agent):
     '''
     From:
@@ -45,7 +46,7 @@ class LinUCBAgent(Agent):
                 self.model['theta'][action_id] = np.random.random((self.context_size, 1))
             else:
                 self.model['theta'][action_id] = np.zeros((self.context_size, 1))
-            self.model['b'][action_id] = np.zeros((self.context_size,1))
+            self.model['b'][action_id] = np.zeros((self.context_size, 1))
 
     def _compute_score(self, context):
         '''
@@ -68,7 +69,8 @@ class LinUCBAgent(Agent):
         for action_id in xrange(len(self.actions)):
             action_context = np.reshape(context[action_id], (-1, 1))
             estimated_reward[action_id] = float(theta[action_id].T.dot(action_context))
-            uncertainty[action_id] = float(self.alpha * np.sqrt(action_context.T.dot(a_inv[action_id]).dot(action_context)))
+            uncertainty[action_id] = float(
+                self.alpha * np.sqrt(action_context.T.dot(a_inv[action_id]).dot(action_context)))
             # print "u", uncertainty[action_id],
             score_dict[action_id] = estimated_reward[action_id] + uncertainty[action_id]
 
@@ -117,12 +119,11 @@ class LinUCBAgent(Agent):
                 max_score = score[action_id]
                 best_action = self.actions[action_id]
 
-
         # Update prev pointers.
         self.prev_action = best_action
         self.prev_context = context
         self.step_number += 1
-        
+
         return best_action
 
     def _pre_process_context(self, context):
@@ -138,5 +139,3 @@ class LinUCBAgent(Agent):
             self._init_action_model()
 
         return context
-
-

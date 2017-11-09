@@ -7,6 +7,7 @@ import random
 from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP
 from GridGameStateClass import GridGameState
 
+
 class GridGameMDP(MarkovGameMDP):
     ''' Class for a Two Player Grid Game '''
 
@@ -21,7 +22,8 @@ class GridGameMDP(MarkovGameMDP):
         init_state = GridGameState(init_a_x, init_a_y, init_b_x, init_b_y)
         self.height = height
         self.width = width
-        MarkovGameMDP.__init__(self, GridGameMDP.ACTIONS, self._transition_func, self._reward_func, init_state=init_state)
+        MarkovGameMDP.__init__(self, GridGameMDP.ACTIONS, self._transition_func, self._reward_func,
+                               init_state=init_state)
 
     def _reward_func(self, state, action_dict):
         '''
@@ -41,7 +43,7 @@ class GridGameMDP(MarkovGameMDP):
 
         a_at_goal = (next_state.a_x == self.goal_a_x and next_state.a_y == self.goal_a_y)
         b_at_goal = (next_state.b_x == self.goal_b_x and next_state.b_y == self.goal_b_y)
-        
+
         if a_at_goal and b_at_goal:
             reward_dict[agent_a] = 2.0
             reward_dict[agent_b] = 2.0
@@ -66,14 +68,14 @@ class GridGameMDP(MarkovGameMDP):
         Returns
             (State)
         '''
-        
+
         agent_a, agent_b = action_dict.keys()[0], action_dict.keys()[1]
         action_a, action_b = action_dict[agent_a], action_dict[agent_b]
 
         next_state = self._move_agents(action_a, state.a_x, state.a_y, action_b, state.b_x, state.b_y)
 
         return next_state
-      
+
     def _move_agents(self, action_a, a_x, a_y, action_b, b_x, b_y):
         '''
         Args:
@@ -113,9 +115,9 @@ class GridGameMDP(MarkovGameMDP):
             new_b_x += 1
         elif action_b == "left" and b_x > 1:
             new_b_x -= 1
-        
+
         if new_a_x == new_b_x and new_a_y == new_b_y or \
-            (new_a_x == b_x and new_a_y == b_y and new_b_x == a_x and new_b_y == a_y):
+                (new_a_x == b_x and new_a_y == b_y and new_b_x == a_x and new_b_y == a_y):
             # If the agent's collided or traded places, reset them.
             new_a_x, new_a_y = a_x, a_y
             new_b_x, new_b_y = b_x, b_y
@@ -130,16 +132,19 @@ class GridGameMDP(MarkovGameMDP):
 
     def _is_terminal_state(self, next_state):
         return (next_state.a_x == self.goal_a_x and next_state.a_y == self.goal_a_y) or \
-            (next_state.b_x == self.goal_b_x and next_state.b_y == self.goal_b_y)
+               (next_state.b_x == self.goal_b_x and next_state.b_y == self.goal_b_y)
 
     def __str__(self):
         return "grid_game-" + str(self.height) + "-" + str(self.width)
 
+
 def _manhattan_distance(a_x, a_y, b_x, b_y):
     return abs(a_x - b_x) + abs(a_y - b_y)
 
+
 def main():
     grid_game = GridGameMDP()
+
 
 if __name__ == "__main__":
     main()

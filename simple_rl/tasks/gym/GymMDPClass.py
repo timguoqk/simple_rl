@@ -14,6 +14,7 @@ import gym
 from simple_rl.mdp.MDPClass import MDP
 from simple_rl.tasks.gym.GymStateClass import GymState
 
+
 class GymMDP(MDP):
     ''' Class for Gym MDPs '''
 
@@ -25,8 +26,9 @@ class GymMDP(MDP):
         self.env_name = env_name
         self.env = gym.make(env_name)
         self.render = render
-        MDP.__init__(self, xrange(self.env.action_space.n), self._transition_func, self._reward_func, init_state=GymState(self.env.reset()))
-    
+        MDP.__init__(self, xrange(self.env.action_space.n), self._transition_func, self._reward_func,
+                     init_state=GymState(self.env.reset()))
+
     def _reward_func(self, state, action):
         '''
         Args:
@@ -61,4 +63,3 @@ class GymMDP(MDP):
 
     def __str__(self):
         return "gym-" + str(self.env_name)
-

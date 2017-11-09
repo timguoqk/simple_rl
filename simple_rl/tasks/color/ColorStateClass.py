@@ -4,6 +4,7 @@
 from simple_rl.mdp.StateClass import State
 from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState
 
+
 class ColorState(GridWorldState):
     ''' Class for Color Grid World States '''
 

@@ -9,6 +9,7 @@ from collections import defaultdict
 # Other imports.
 from simple_rl.agents.AgentClass import Agent
 
+
 class QLearnerAgent(Agent):
     ''' Implementation for a Q Learning Agent '''
 
@@ -31,13 +32,13 @@ class QLearnerAgent(Agent):
         self.step_number = 0
         self.anneal = anneal
         self.default_q = 0.0
-        
+
         # Q Function:
         # Key: state
         # Val: dict
         #   Key: action
         #   Val: q-value
-        self.q_func = defaultdict(lambda : defaultdict(lambda: self.default_q))
+        self.q_func = defaultdict(lambda: defaultdict(lambda: self.default_q))
 
         # Choose explore type.
         self.explore = explore
@@ -60,7 +61,7 @@ class QLearnerAgent(Agent):
         '''
         if learning:
             self.update(self.prev_state, self.prev_action, reward, state)
-        
+
         if self.explore == "softmax":
             # Softmax exploration
             action = self.soft_max_policy(state)
@@ -129,12 +130,13 @@ class QLearnerAgent(Agent):
         # Update the Q Function.
         max_q_curr_state = self.get_max_q_value(next_state)
         prev_q_val = self.get_q_value(state, action)
-        self.q_func[state][action] = (1 - self.alpha) * prev_q_val + self.alpha * (reward + self.gamma*max_q_curr_state)
+        self.q_func[state][action] = (1 - self.alpha) * prev_q_val + self.alpha * (
+        reward + self.gamma * max_q_curr_state)
 
     def _anneal(self):
         # Taken from "Note on learning rate schedules for stochastic optimization, by Darken and Moody (Yale)":
-        self.alpha = self.alpha_init / (1.0 +  (self.step_number / 200.0)*(self.episode_number + 1) / 2000.0 )
-        self.epsilon = self.epsilon_init / (1.0 + (self.step_number / 200.0)*(self.episode_number + 1) / 2000.0 )
+        self.alpha = self.alpha_init / (1.0 + (self.step_number / 200.0) * (self.episode_number + 1) / 2000.0)
+        self.epsilon = self.epsilon_init / (1.0 + (self.step_number / 200.0) * (self.episode_number + 1) / 2000.0)
 
     def _compute_max_qval_action_pair(self, state):
         '''
@@ -213,7 +215,7 @@ class QLearnerAgent(Agent):
     def reset(self):
         self.step_number = 0
         self.episode_number = 0
-        self.q_func = defaultdict(lambda : defaultdict(lambda: self.default_q))
+        self.q_func = defaultdict(lambda: defaultdict(lambda: self.default_q))
         Agent.reset(self)
 
     def end_of_episode(self):
@@ -224,4 +226,3 @@ class QLearnerAgent(Agent):
         if self.anneal:
             self._anneal()
         Agent.end_of_episode(self)
-

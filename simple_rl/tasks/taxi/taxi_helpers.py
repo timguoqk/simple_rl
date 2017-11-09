@@ -3,6 +3,7 @@
 # Other imports.
 from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject
 
+
 def _is_wall_in_the_way(state, dx=0, dy=0):
     '''
     Args:
@@ -15,9 +16,10 @@ def _is_wall_in_the_way(state, dx=0, dy=0):
     '''
     for wall in state.objects["wall"]:
         if wall["x"] == state.objects["agent"][0]["x"] + dx and \
-            wall["y"] == state.objects["agent"][0]["y"] + dy:
+                        wall["y"] == state.objects["agent"][0]["y"] + dy:
             return True
     return False
+
 
 def _move_pass_in_taxi(state, dx=0, dy=0):
     '''
@@ -36,6 +38,7 @@ def _move_pass_in_taxi(state, dx=0, dy=0):
             passenger_attr_dict_ls[i]["x"] += dx
             passenger_attr_dict_ls[i]["y"] += dy
 
+
 def is_taxi_terminal_state(state):
     '''
     Args:
@@ -46,6 +49,6 @@ def is_taxi_terminal_state(state):
     '''
     for p in state.get_objects_of_class("passenger"):
         if p.get_attribute("in_taxi") == 1 or p.get_attribute("x") != p.get_attribute("dest_x") or \
-            p.get_attribute("y") != p.get_attribute("dest_y"):
+                        p.get_attribute("y") != p.get_attribute("dest_y"):
             return False
     return True

@@ -14,6 +14,7 @@ import random
 import math
 import numpy as np
 import time
+
 try:
     from sklearn.ensemble import GradientBoostingRegressor
 except ImportError:
@@ -22,6 +23,7 @@ except ImportError:
 
 # simple_rl classes.
 from ..QLearnerAgentClass import QLearnerAgent
+
 
 class GradientBoostingAgent(QLearnerAgent):
     '''
@@ -35,7 +37,7 @@ class GradientBoostingAgent(QLearnerAgent):
         self.model = []
         self.most_recent_episode = []
         self.max_state_features = 0
-        self.max_depth = len(actions)*2
+        self.max_depth = len(actions) * 2
         self.markov_window = markov_window
         self.update_window = 500
 
@@ -86,8 +88,8 @@ class GradientBoostingAgent(QLearnerAgent):
 
         # Compute Q(s,a)
         predictions = [h.predict(features)[0] for h in self.model]
-        result = float(sum(predictions)) # Cast since we'll normally get a numpy float.
-        
+        result = float(sum(predictions))  # Cast since we'll normally get a numpy float.
+
         return result
 
     def _pad_features_with_zeros(self, state, action):
@@ -131,7 +133,7 @@ class GradientBoostingAgent(QLearnerAgent):
             # Pad in case the state features are too short (as in Atari sometimes).
             features = self._pad_features_with_zeros(s, a)
             loss = (r + self.gamma * self.get_max_q_value(s_prime) - self.get_q_value(s, a))
-            
+
             # Add to relevant lists.
             data[i] = features
             total_loss[i] = loss

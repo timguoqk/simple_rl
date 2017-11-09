@@ -3,6 +3,7 @@
 # Other imports.
 from simple_rl.mdp.StateClass import State
 
+
 class OOMDPState(State):
     ''' OOMDP State class '''
 

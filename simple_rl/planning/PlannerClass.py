@@ -2,7 +2,6 @@ class Planner(object):
     ''' Abstract class for a Planner. '''
 
     def __init__(self, mdp, name="planner"):
-
         self.name = name
 
         # MDP components.

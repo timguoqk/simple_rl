@@ -48,8 +48,9 @@ def play_markov_game(agent_ls, markov_game_mdp, instances=10, episodes=100, step
         agent_dict[a.name] = a
 
     # Experiment (for reproducibility, plotting).
-    exp_params = {"instances":instances} #, "episodes":episodes, "steps":steps}
-    experiment = Experiment(agents=agent_dict, mdp=markov_game_mdp, params=exp_params, is_episodic=episodes > 1, is_markov_game=True)
+    exp_params = {"instances": instances}  # , "episodes":episodes, "steps":steps}
+    experiment = Experiment(agents=agent_dict, mdp=markov_game_mdp, params=exp_params, is_episodic=episodes > 1,
+                            is_markov_game=True)
 
     # Record how long each agent spends learning.
     print "Running experiment: \n" + str(experiment)
@@ -116,17 +117,18 @@ def play_markov_game(agent_ls, markov_game_mdp, instances=10, episodes=100, step
 
     experiment.make_plots(open_plot=open_plot)
 
+
 def run_agents_multi_task(agents,
-                            mdp_distr,
-                            task_samples=5,
-                            episodes=1,
-                            steps=100,
-                            clear_old_results=True,
-                            open_plot=True,
-                            verbose=False,
-                            is_rec_disc_reward=False,
-                            reset_at_terminal=False,
-                            resample_at_terminal=False):
+                          mdp_distr,
+                          task_samples=5,
+                          episodes=1,
+                          steps=100,
+                          clear_old_results=True,
+                          open_plot=True,
+                          verbose=False,
+                          is_rec_disc_reward=False,
+                          reset_at_terminal=False,
+                          resample_at_terminal=False):
     '''
     Args:
         agents (list)
@@ -151,14 +153,14 @@ def run_agents_multi_task(agents,
         steps = mdp_distr.get_horizon()
 
     # Experiment (for reproducibility, plotting).
-    exp_params = {"task_samples":task_samples, "episodes":episodes, "steps":steps, "gamma":mdp_distr.get_gamma()}
+    exp_params = {"task_samples": task_samples, "episodes": episodes, "steps": steps, "gamma": mdp_distr.get_gamma()}
     experiment = Experiment(agents=agents,
-                mdp=mdp_distr,
-                params=exp_params,
-                is_episodic=episodes > 1,
-                is_multi_task=True,
-                clear_old_results=clear_old_results,
-                is_rec_disc_reward=is_rec_disc_reward)
+                            mdp=mdp_distr,
+                            params=exp_params,
+                            is_episodic=episodes > 1,
+                            is_multi_task=True,
+                            clear_old_results=clear_old_results,
+                            is_rec_disc_reward=is_rec_disc_reward)
 
     # Record how long each agent spends learning.
     print "Running experiment: \n" + str(experiment)
@@ -179,15 +181,17 @@ def run_agents_multi_task(agents,
             mdp = mdp_distr.sample()
 
             # Run the agent.
-            hit_terminal, total_steps_taken = run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment, verbose, is_rec_disc_reward, reset_at_terminal, resample_at_terminal)
+            hit_terminal, total_steps_taken = run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment, verbose,
+                                                                      is_rec_disc_reward, reset_at_terminal,
+                                                                      resample_at_terminal)
 
             # If we resample at terminal, keep grabbing MDPs until we're done.
             while resample_at_terminal and hit_terminal and total_steps_taken < steps:
                 mdp = mdp_distr.sample()
-                hit_terminal, steps_taken = run_single_agent_on_mdp(agent, mdp, episodes, steps - total_steps_taken, experiment, verbose, is_rec_disc_reward, reset_at_terminal, resample_at_terminal)
+                hit_terminal, steps_taken = run_single_agent_on_mdp(agent, mdp, episodes, steps - total_steps_taken,
+                                                                    experiment, verbose, is_rec_disc_reward,
+                                                                    reset_at_terminal, resample_at_terminal)
                 total_steps_taken += steps_taken
-
-
 
             # Reset the agent.
             agent.reset()
@@ -207,17 +211,18 @@ def run_agents_multi_task(agents,
 
     experiment.make_plots(open_plot=open_plot)
 
+
 def run_agents_on_mdp(agents,
-                        mdp,
-                        instances=5,
-                        episodes=100,
-                        steps=200,
-                        clear_old_results=True,
-                        rew_step_count=1,
-                        is_rec_disc_reward=False,
-                        open_plot=True,
-                        verbose=False,
-                        reset_at_terminal=False):
+                      mdp,
+                      instances=5,
+                      episodes=100,
+                      steps=200,
+                      clear_old_results=True,
+                      rew_step_count=1,
+                      is_rec_disc_reward=False,
+                      open_plot=True,
+                      verbose=False,
+                      reset_at_terminal=False):
     '''
     Args:
         agents (list of Agents): See agents/AgentClass.py (and friends).
@@ -239,11 +244,11 @@ def run_agents_on_mdp(agents,
     '''
 
     # Experiment (for reproducibility, plotting).
-    exp_params = {"instances":instances, "episodes":episodes, "steps":steps, "gamma":mdp.get_gamma()}
+    exp_params = {"instances": instances, "episodes": episodes, "steps": steps, "gamma": mdp.get_gamma()}
     experiment = Experiment(agents=agents,
                             mdp=mdp,
                             params=exp_params,
-                            is_episodic= episodes > 1,
+                            is_episodic=episodes > 1,
                             clear_old_results=clear_old_results,
                             is_rec_disc_reward=is_rec_disc_reward,
                             count_r_per_n_timestep=rew_step_count)
@@ -262,8 +267,9 @@ def run_agents_on_mdp(agents,
         for instance in xrange(1, instances + 1):
             print "  Instance " + str(instance) + " of " + str(instances) + "."
             sys.stdout.flush()
-            run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment, verbose, is_rec_disc_reward, reset_at_terminal=reset_at_terminal)
-            
+            run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment, verbose, is_rec_disc_reward,
+                                    reset_at_terminal=reset_at_terminal)
+
             # Reset the agent.
             agent.reset()
 
@@ -271,7 +277,6 @@ def run_agents_on_mdp(agents,
         end = time.clock()
         time_dict[agent] = round(end - start, 3)
         print
-
     # Time stuff.
     print "\n--- TIMES ---"
     for agent in time_dict.keys():
@@ -280,7 +285,9 @@ def run_agents_on_mdp(agents,
 
     experiment.make_plots(open_plot=open_plot)
 
-def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbose=False, is_rec_disc_reward=False, reset_at_terminal=False, resample_at_terminal=False):
+
+def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbose=False, is_rec_disc_reward=False,
+                            reset_at_terminal=False, resample_at_terminal=False):
     '''
     Summary:
         Main loop of a single MDP experiment.
@@ -308,13 +315,12 @@ def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbos
 
         # Extra printing if verbose.
         if verbose:
-            print
-            sys.stdout.flush()
+            print sys.stdout.flush()
             prog_bar_len = _make_step_progress_bar()
             _increment_bar()
 
         for step in xrange(1, steps + 1):
-            if verbose and int(prog_bar_len*float(step) / steps) > int(prog_bar_len*float(step-1) / steps):
+            if verbose and int(prog_bar_len * float(step) / steps) > int(prog_bar_len * float(step - 1) / steps):
                 _increment_bar()
 
             # step time
@@ -327,7 +333,7 @@ def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbos
             if state.is_terminal():
                 if episodes == 1 and not reset_at_terminal and experiment is not None and action != "terminate":
                     # Self loop if we're not episodic or resetting and in a terminal state.
-                    experiment.add_experience(agent, state, action, 0, state, time_taken=time.clock()-step_start)
+                    experiment.add_experience(agent, state, action, 0, state, time_taken=time.clock() - step_start)
                     continue
                 break
 
@@ -336,8 +342,9 @@ def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbos
 
             # Record the experience.
             if experiment is not None:
-                reward_to_track = mdp.get_gamma()**(step + 1) * reward if is_rec_disc_reward else reward
-                experiment.add_experience(agent, state, action, reward_to_track, next_state, time_taken=time.clock() - step_start)
+                reward_to_track = mdp.get_gamma() ** (step + 1) * reward if is_rec_disc_reward else reward
+                experiment.add_experience(agent, state, action, reward_to_track, next_state,
+                                          time_taken=time.clock() - step_start)
 
             if next_state.is_terminal():
                 if reset_at_terminal:
@@ -371,6 +378,7 @@ def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbos
 
     return False, steps
 
+
 def _make_step_progress_bar():
     '''
     Summary:
@@ -382,12 +390,14 @@ def _make_step_progress_bar():
     progress_bar_width = 20
     sys.stdout.write("\t\t[%s]" % (" " * progress_bar_width))
     sys.stdout.flush()
-    sys.stdout.write("\b" * (progress_bar_width+1)) # return to start of line, after '['
+    sys.stdout.write("\b" * (progress_bar_width + 1))  # return to start of line, after '['
     return progress_bar_width
+
 
 def _increment_bar():
     sys.stdout.write("-")
     sys.stdout.flush()
+
 
 def choose_mdp(mdp_name, env_name="Asteroids-v0"):
     '''
@@ -400,11 +410,12 @@ def choose_mdp(mdp_name, env_name="Asteroids-v0"):
     '''
 
     # Other imports
-    from simple_rl.tasks import ChainMDP, GridWorldMDP, FourRoomMDP, TaxiOOMDP, RandomMDP, PrisonersDilemmaMDP, RockPaperScissorsMDP, GridGameMDP
+    from simple_rl.tasks import ChainMDP, GridWorldMDP, FourRoomMDP, TaxiOOMDP, RandomMDP, PrisonersDilemmaMDP, \
+        RockPaperScissorsMDP, GridGameMDP
 
     # Taxi MDP.
-    agent = {"x":1, "y":1, "has_passenger":0}
-    passengers = [{"x":4, "y":3, "dest_x":2, "dest_y":2, "in_taxi":0}]
+    agent = {"x": 1, "y": 1, "has_passenger": 0}
+    passengers = [{"x": 4, "y": 3, "dest_x": 2, "dest_y": 2, "in_taxi": 0}]
     walls = []
     if mdp_name == "gym":
         # OpenAI Gym MDP.
@@ -415,21 +426,23 @@ def choose_mdp(mdp_name, env_name="Asteroids-v0"):
             quit()
         return GymMDP(env_name, render=True)
     else:
-        return {"grid":GridWorldMDP(5, 5, (1, 1), goal_locs=[(5, 3), (4,1)]),
-                "four_room":FourRoomMDP(),
-                "chain":ChainMDP(5),
-                "taxi":TaxiOOMDP(10, 10, slip_prob=0.0, agent=agent, walls=walls, passengers=passengers),
-                "random":RandomMDP(num_states=40, num_rand_trans=20),
-                "prison":PrisonersDilemmaMDP(),
-                "rps":RockPaperScissorsMDP(),
-                "grid_game":GridGameMDP(),
-                "multi":{0.5:RandomMDP(num_states=40, num_rand_trans=20), 0.5:RandomMDP(num_states=40, num_rand_trans=5)}}[mdp_name]
+        return {"grid": GridWorldMDP(5, 5, (1, 1), goal_locs=[(5, 3), (4, 1)]),
+                "four_room": FourRoomMDP(),
+                "chain": ChainMDP(5),
+                "taxi": TaxiOOMDP(10, 10, slip_prob=0.0, agent=agent, walls=walls, passengers=passengers),
+                "random": RandomMDP(num_states=40, num_rand_trans=20),
+                "prison": PrisonersDilemmaMDP(),
+                "rps": RockPaperScissorsMDP(),
+                "grid_game": GridGameMDP(),
+                "multi": {0.5: RandomMDP(num_states=40, num_rand_trans=20),
+                          0.5: RandomMDP(num_states=40, num_rand_trans=5)}}[mdp_name]
+
 
 def parse_args():
     # Add all arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-mdp", type = str, nargs = '?', help = "Select the mdp. Options: {atari, grid, chain, taxi}")
-    parser.add_argument("-env", type = str, nargs = '?', help = "Select the Gym environment.")
+    parser.add_argument("-mdp", type=str, nargs='?', help="Select the mdp. Options: {atari, grid, chain, taxi}")
+    parser.add_argument("-env", type=str, nargs='?', help="Select the Gym environment.")
     args = parser.parse_args()
 
     # Fix variables based on options.
@@ -450,7 +463,7 @@ def main():
 
     # Setup agents.
     from simple_rl.agents import RandomAgent, RMaxAgent, QLearnerAgent, LinearQLearnerAgent
-    
+
     random_agent = RandomAgent(actions)
     rmax_agent = RMaxAgent(actions, gamma=gamma, horizon=4, s_a_threshold=2)
     qlearner_agent = QLearnerAgent(actions, gamma=gamma, explore="uniform")
@@ -460,11 +473,12 @@ def main():
     # Run Agents.
     if isinstance(mdp, MarkovGameMDP):
         # Markov Game.
-        agents = {qlearner_agent.name: qlearner_agent, random_agent.name:random_agent}
+        agents = {qlearner_agent.name: qlearner_agent, random_agent.name: random_agent}
         play_markov_game(agents, mdp, instances=100, episodes=1, steps=500)
     else:
         # Regular experiment.
         run_agents_on_mdp(agents, mdp, instances=50, episodes=1, steps=2000)
+
 
 if __name__ == "__main__":
     main()

@@ -8,16 +8,16 @@ from collections import defaultdict
 # Other imports.
 from PlannerClass import Planner
 
-class MCTS(Planner):
 
+class MCTS(Planner):
     def __init__(self, mdp, name="mcts", explore_param=m.sqrt(2), rollout_depth=20, num_rollouts_per_step=10):
         Planner.__init__(self, mdp, name=name)
 
         self.rollout_depth = rollout_depth
         self.num_rollouts_per_step = num_rollouts_per_step
-        self.value_total = defaultdict(lambda : defaultdict(float))
+        self.value_total = defaultdict(lambda: defaultdict(float))
         self.explore_param = explore_param
-        self.visitation_counts = defaultdict(lambda : defaultdict(lambda : 0))
+        self.visitation_counts = defaultdict(lambda: defaultdict(lambda: 0))
 
     def plan(self, cur_state, horizon=20):
         '''
@@ -75,7 +75,7 @@ class MCTS(Planner):
 
         if 0 in total_visits:
             # Insufficient stats, return random.
-                # Should choose randomly AMONG UNSAMPLED.
+            # Should choose randomly AMONG UNSAMPLED.
             unsampled_actions = [self.actions[i] for i, x in enumerate(total_visits) if x == 0]
             next_action = random.choice(unsampled_actions)
             self.visitation_counts[state][next_action] += 1
@@ -114,7 +114,7 @@ class MCTS(Planner):
             next_reward = self.reward_func(cur_state, next_action)
 
             # Track rewards and states.
-            total_discounted_reward.append(self.gamma**i * next_reward)
+            total_discounted_reward.append(self.gamma ** i * next_reward)
             trajectory.append((cur_state, next_action))
 
             if cur_state.is_terminal():
@@ -128,4 +128,3 @@ class MCTS(Planner):
             self.value_total[s][a] += sum(total_discounted_reward[i:])
 
         return total_discounted_reward
-

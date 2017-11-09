@@ -19,6 +19,7 @@ from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject
 from simple_rl.tasks.taxi.TaxiStateClass import TaxiState
 import taxi_helpers
 
+
 class TaxiOOMDP(OOMDP):
     ''' Class for a Taxi OO-MDP '''
 
@@ -36,7 +37,8 @@ class TaxiOOMDP(OOMDP):
         pass_objs = self._make_oomdp_objs_from_list_of_dict(passengers, "passenger")
 
         init_state = self._create_state(agent_obj, wall_objs, pass_objs)
-        OOMDP.__init__(self, TaxiOOMDP.ACTIONS, self._taxi_transition_func, self._taxi_reward_func, init_state=init_state, gamma=gamma)
+        OOMDP.__init__(self, TaxiOOMDP.ACTIONS, self._taxi_transition_func, self._taxi_reward_func,
+                       init_state=init_state, gamma=gamma)
         self.slip_prob = slip_prob
 
     def _create_state(self, agent_oo_obj, walls, passengers):
@@ -52,7 +54,7 @@ class TaxiOOMDP(OOMDP):
         TODO: Make this more egneral and put it in OOMDPClass.
         '''
 
-        objects = {c : [] for c in TaxiOOMDP.CLASSES}
+        objects = {c: [] for c in TaxiOOMDP.CLASSES}
 
         objects["agent"].append(agent_oo_obj)
 
@@ -85,7 +87,8 @@ class TaxiOOMDP(OOMDP):
             # Check to see if all passengers at destination.
             if agent.get_attribute("has_passenger"):
                 for p in state.get_objects_of_class("passenger"):
-                    if p.get_attribute("x") != p.get_attribute("dest_x") or p.get_attribute("y") != p.get_attribute("dest_y"):
+                    if p.get_attribute("x") != p.get_attribute("dest_x") or p.get_attribute("y") != p.get_attribute(
+                            "dest_y"):
                         return 0 - self.step_cost
                 return 1 - self.step_cost
         return 0 - self.step_cost
@@ -130,7 +133,7 @@ class TaxiOOMDP(OOMDP):
         # Make terminal.
         if taxi_helpers.is_taxi_terminal_state(next_state):
             next_state.set_terminal(True)
-        
+
         # All OOMDP states must be updated.
         next_state.update()
 
@@ -189,16 +192,17 @@ class TaxiOOMDP(OOMDP):
 
         # update = False
         if agent.get_attribute("has_passenger") == 0:
-            
+
             # If the agent does not have a passenger.
             for i, passenger in enumerate(next_state.get_objects_of_class("passenger")):
-                if agent.get_attribute("x") == passenger.get_attribute("x") and agent.get_attribute("y") == passenger.get_attribute("y"):
+                if agent.get_attribute("x") == passenger.get_attribute("x") and agent.get_attribute(
+                        "y") == passenger.get_attribute("y"):
                     # Pick up passenger at agent location.
                     agent.set_attribute("has_passenger", 1)
                     passenger.set_attribute("in_taxi", 1)
 
         return next_state
-                    
+
     def agent_dropoff(self, state):
         '''
         Args:
@@ -225,6 +229,7 @@ class TaxiOOMDP(OOMDP):
 
         return next_state
 
+
 def _error_check(state, action):
     '''
     Args:
@@ -245,9 +250,10 @@ def _error_check(state, action):
 
 
 def main():
-    agent = {"x":1, "y":1, "has_passenger":0}
-    passengers = [{"x":8, "y":4, "dest_x":2, "dest_y":2, "in_taxi":0}]
+    agent = {"x": 1, "y": 1, "has_passenger": 0}
+    passengers = [{"x": 8, "y": 4, "dest_x": 2, "dest_y": 2, "in_taxi": 0}]
     taxi_world = TaxiOOMDP(10, 10, agent=agent, walls=[], passengers=passengers)
+
 
 if __name__ == "__main__":
     main()

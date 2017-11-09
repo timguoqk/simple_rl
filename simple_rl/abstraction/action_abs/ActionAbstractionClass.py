@@ -6,12 +6,12 @@ import random
 from OptionClass import Option
 from PredicateClass import Predicate
 
-class ActionAbstraction(object):
 
+class ActionAbstraction(object):
     def __init__(self, options, prim_actions=[], term_prob=0.0, prims_on_failure=False):
         self.options = self._convert_to_options(options)
         self.is_cur_executing = False
-        self.cur_option = None # The option we're executing currently.
+        self.cur_option = None  # The option we're executing currently.
         self.term_prob = term_prob
         self.prims_on_failure = prims_on_failure
         if self.prims_on_failure:
@@ -47,7 +47,7 @@ class ActionAbstraction(object):
             else:
                 # Give agent available options.
                 agent.actions = active_options
-            
+
             abstr_action = agent.act(abstr_state, reward)
             self.set_option_executing(abstr_action)
 
@@ -76,9 +76,9 @@ class ActionAbstraction(object):
             o = ground_action
             if type(ground_action) is str:
                 o = Option(init_predicate=Predicate(make_lambda(True)),
-                            term_predicate=Predicate(make_lambda(True)),
-                            policy=make_lambda(ground_action),
-                            name="prim." + ground_action)
+                           term_predicate=Predicate(make_lambda(True)),
+                           policy=make_lambda(ground_action),
+                           name="prim." + ground_action)
             options.append(o)
         return options
 
@@ -111,11 +111,11 @@ class ActionAbstraction(object):
 
     def reset(self):
         self.is_cur_executing = False
-        self.cur_option = None # The option we're executing currently.
+        self.cur_option = None  # The option we're executing currently.
 
     def end_of_episode(self):
         self.reset()
 
 
 def make_lambda(result):
-    return lambda x : result
+    return lambda x: result

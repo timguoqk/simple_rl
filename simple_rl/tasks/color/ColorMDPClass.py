@@ -10,10 +10,12 @@ from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP
 from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState
 from simple_rl.tasks.color.ColorStateClass import ColorState
 
+
 class ColorMDP(GridWorldMDP):
     ''' Class for a Color '''
 
-    def __init__(self, width=9, height=9, rand_init=False, is_four_room=False, num_colors=5, init_loc=(1,1), goal_locs=[(9,9)], gamma=0.99, slip_prob=0.00, name="color"):
+    def __init__(self, width=9, height=9, rand_init=False, is_four_room=False, num_colors=5, init_loc=(1, 1),
+                 goal_locs=[(9, 9)], gamma=0.99, slip_prob=0.00, name="color"):
         '''
         Args:
             height (int)
@@ -27,7 +29,9 @@ class ColorMDP(GridWorldMDP):
         else:
             walls = []
         init_state = ColorState(init_loc[0], init_loc[1], color=random.randint(1, self.num_colors))
-        GridWorldMDP.__init__(self, width, height, init_loc, rand_init=rand_init, init_state=init_state, goal_locs=goal_locs, walls=walls, gamma=gamma, slip_prob=slip_prob, name=str(self.num_colors) + name)
+        GridWorldMDP.__init__(self, width, height, init_loc, rand_init=rand_init, init_state=init_state,
+                              goal_locs=goal_locs, walls=walls, gamma=gamma, slip_prob=slip_prob,
+                              name=str(self.num_colors) + name)
 
     def _compute_walls(self, width, height):
         '''

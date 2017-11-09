@@ -4,6 +4,7 @@
 from simple_rl.mdp.MDPClass import MDP
 from ChainStateClass import ChainState
 
+
 class ChainMDP(MDP):
     ''' Imeplementation for a standard Chain MDP '''
 
@@ -14,7 +15,8 @@ class ChainMDP(MDP):
         Args:
             num_states (int) [optional]: Number of states in the chain.
         '''
-        MDP.__init__(self, ChainMDP.ACTIONS, self._transition_func, self._reward_func, init_state=ChainState(1), gamma=gamma)
+        MDP.__init__(self, ChainMDP.ACTIONS, self._transition_func, self._reward_func, init_state=ChainState(1),
+                     gamma=gamma)
         self.num_states = num_states
         self.reset_val = reset_val
 
@@ -52,7 +54,7 @@ class ChainMDP(MDP):
         elif action == "reset":
             return ChainState(1)
         else:
-            #print "Error: Unrecognized action! (" + action + ")"
+            # print "Error: Unrecognized action! (" + action + ")"
             quit()
 
     def __str__(self):

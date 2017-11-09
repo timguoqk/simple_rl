@@ -27,18 +27,19 @@ import numpy as np
 import subprocess
 import argparse
 
-color_ls = [[240, 163, 255], [113, 113, 198],[113, 198, 113],\
-                [197, 193, 170],[85, 85, 85], [198, 113, 113],\
-                [142, 56, 142], [125, 158, 192],[184, 221, 255],\
-                [153, 63, 0], [142, 142, 56], [56, 142, 142]]
+color_ls = [[240, 163, 255], [113, 113, 198], [113, 198, 113], \
+            [197, 193, 170], [85, 85, 85], [198, 113, 113], \
+            [142, 56, 142], [125, 158, 192], [184, 221, 255], \
+            [153, 63, 0], [142, 142, 56], [56, 142, 142]]
 
 # Set font.
-font = {'family':'sans serif', 'size':14}
+font = {'family': 'sans serif', 'size': 14}
 matplotlib.rc('font', **font)
 
 CUSTOM_TITLE = None
 X_AXIS_LABEL = None
 Y_AXIS_LABEL = None
+
 
 def load_data(experiment_dir, experiment_agents):
     '''
@@ -80,7 +81,8 @@ def average_data(data, cumulative=False):
 
     num_algorithms = len(data)
 
-    result = [None for i in xrange(num_algorithms)] # [Alg][avgRewardEpisode], where avg is summed up to episode i if @cumulative=True
+    result = [None for i in xrange(
+        num_algorithms)]  # [Alg][avgRewardEpisode], where avg is summed up to episode i if @cumulative=True
 
     for i, all_instances in enumerate(data):
 
@@ -89,12 +91,11 @@ def average_data(data, cumulative=False):
         all_instances = np.array(all_instances)
         avged = None
         try:
-            avged = all_instances.sum(axis=0)/float(num_instances)
+            avged = all_instances.sum(axis=0) / float(num_instances)
         except TypeError:
-            print 
             print "(simple_rl) Plotting Error: an algorithm was run with inconsistent parameters."
             quit()
-        
+
         if cumulative:
             # If we're summing over episodes.
             temp = []
@@ -110,6 +111,7 @@ def average_data(data, cumulative=False):
 
     return result
 
+
 def compute_conf_intervals(data, cumulative=False):
     '''
     Args:
@@ -117,7 +119,7 @@ def compute_conf_intervals(data, cumulative=False):
         cumulative (bool) *opt
     '''
 
-    confidence_intervals_each_alg = [] # [alg][conf_inv_for_episode]
+    confidence_intervals_each_alg = []  # [alg][conf_inv_for_episode]
 
     for i, all_instances in enumerate(data):
 
@@ -155,12 +157,13 @@ def compute_single_conf_interval(datum):
         (float): Margin of error.
     '''
     std_deviation = np.std(datum)
-    std_error = 1.96*(std_deviation / math.sqrt(len(datum)))
+    std_error = 1.96 * (std_deviation / math.sqrt(len(datum)))
 
     return std_error
 
 
-def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cumulative=False, episodic=True, open_plot=True, is_rec_disc_reward=False):
+def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cumulative=False, episodic=True,
+         open_plot=True, is_rec_disc_reward=False):
     '''
     Args:
         results (list of lists): each element is itself the reward from an episode for an algorithm.
@@ -178,7 +181,7 @@ def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cum
     '''
 
     # Some nice markers and colors for plotting.
-    markers = ['o', 's', 'D', '^', '*', '+', 'p', 'x', 'v','|']
+    markers = ['o', 's', 'D', '^', '*', '+', 'p', 'x', 'v', '|']
 
     x_axis_unit = "episode" if episodic else "step"
 
@@ -212,13 +215,12 @@ def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cum
             top = np.add(y_axis, alg_conf_interv)
             bot = np.subtract(y_axis, alg_conf_interv)
             pyplot.fill_between(x_axis, top, bot, facecolor=series_color, edgecolor=series_color, alpha=0.25)
-        print "\t" + str(agents[i]) + ":", round(y_axis[-1], 5) , "(conf_interv:", round(alg_conf_interv[-1], 2), ")"
+        print "\t" + str(agents[i]) + ":", round(y_axis[-1], 5), "(conf_interv:", round(alg_conf_interv[-1], 2), ")"
 
-        marker_every = max(len(y_axis) / 30,1)
+        marker_every = max(len(y_axis) / 30, 1)
         pyplot.plot(x_axis, y_axis, color=series_color, marker=series_marker, markevery=marker_every, label=agent_name)
         pyplot.legend()
     print
-
     # Configure plot naming information.
     unit = "Cost" if use_cost else "Reward"
     plot_label = "Cumulative" if cumulative else "Average"
@@ -244,7 +246,7 @@ def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cum
 
     # Save the plot.
     pyplot.savefig(plot_name, format="pdf")
-    
+
     if open_plot:
         # Open it.
         open_prefix = "gnome-" if sys.platform == "linux" or sys.platform == "linux2" else ""
@@ -254,7 +256,9 @@ def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cum
     pyplot.cla()
     pyplot.close()
 
-def make_plots(experiment_dir, experiment_agents, cumulative=True, use_cost=False, episodic=True, open_plot=True, is_rec_disc_reward=False):
+
+def make_plots(experiment_dir, experiment_agents, cumulative=True, use_cost=False, episodic=True, open_plot=True,
+               is_rec_disc_reward=False):
     '''
     Args:
         experiment_dir (str): path to results.
@@ -272,7 +276,7 @@ def make_plots(experiment_dir, experiment_agents, cumulative=True, use_cost=Fals
     # experiment_agents.sort()
 
     # Load the data.
-    data = load_data(experiment_dir, experiment_agents) # [alg][instance][episode]
+    data = load_data(experiment_dir, experiment_agents)  # [alg][instance][episode]
 
     # Average the data.
     avg_data = average_data(data, cumulative=cumulative)
@@ -282,13 +286,14 @@ def make_plots(experiment_dir, experiment_agents, cumulative=True, use_cost=Fals
 
     # Create plot.
     plot(avg_data, experiment_dir,
-                experiment_agents,
-                conf_intervals=conf_intervals,
-                use_cost=use_cost,
-                cumulative=cumulative,
-                episodic=episodic,
-                open_plot=open_plot,
-                is_rec_disc_reward=is_rec_disc_reward)
+         experiment_agents,
+         conf_intervals=conf_intervals,
+         use_cost=use_cost,
+         cumulative=cumulative,
+         episodic=episodic,
+         open_plot=open_plot,
+         is_rec_disc_reward=is_rec_disc_reward)
+
 
 def _get_agent_names(data_dir):
     '''
@@ -302,7 +307,8 @@ def _get_agent_names(data_dir):
         params_file = open(os.path.join(data_dir, "parameters.txt"), "r")
     except IOError:
         # No param file.
-        return [agent_file.replace(".csv", "") for agent_file in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, agent_file)) and ".csv" in agent_file]
+        return [agent_file.replace(".csv", "") for agent_file in os.listdir(data_dir) if
+                os.path.isfile(os.path.join(data_dir, agent_file)) and ".csv" in agent_file]
 
     agent_names = []
     agent_flag = False
@@ -318,6 +324,7 @@ def _get_agent_names(data_dir):
 
     return agent_names
 
+
 def _get_agent_colors(data_dir, agents):
     '''
     Args:
@@ -331,7 +338,7 @@ def _get_agent_colors(data_dir, agents):
         params_file = open(os.path.join(data_dir, "parameters.txt"), "r")
     except IOError:
         # No param file.
-        d = {agent : i for i, agent in enumerate(agents)}
+        d = {agent: i for i, agent in enumerate(agents)}
         print d
         return d
 
@@ -344,6 +351,7 @@ def _get_agent_colors(data_dir, agents):
                 colors[agent_name] = int(line[-2])
 
     return colors
+
 
 def _is_episodic(data_dir):
     '''
@@ -364,14 +372,15 @@ def _is_episodic(data_dir):
             vals = line.strip().split(":")
             return int(vals[1]) > 1
 
+
 def parse_args():
     '''
     Summary:
         Parses two arguments, 'dir' (directory pointer) and 'a' (bool to indicate avg. plot).
     '''
     parser = argparse.ArgumentParser()
-    parser.add_argument("-dir", type = str, help = "Path to relevant csv files of data.")
-    parser.add_argument("-a", type = bool, default=False, help = "If true, plots average reward (default is cumulative).")
+    parser.add_argument("-dir", type=str, help="Path to relevant csv files of data.")
+    parser.add_argument("-a", type=bool, default=False, help="If true, plots average reward (default is cumulative).")
     return parser.parse_args()
 
 
@@ -380,7 +389,7 @@ def main():
     Summary:
         For manual plotting.
     '''
-    
+
     # Parse args.
     args = parse_args()
 
@@ -392,11 +401,12 @@ def main():
         print "Error: no csv files found."
         quit()
 
-    cumulative = not(args.a)
+    cumulative = not (args.a)
     episodic = _is_episodic(data_dir)
 
     # Plot.
     make_plots(data_dir, agent_names, cumulative=cumulative, episodic=episodic)
+
 
 if __name__ == "__main__":
     main()

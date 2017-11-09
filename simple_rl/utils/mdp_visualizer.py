@@ -1,8 +1,10 @@
 # Python imports.
 import sys
+
 try:
     import pygame
     from pygame.locals import *
+
     pygame.init()
     title_font = pygame.font.SysFont("CMU Serif", 32)
 except ImportError:
@@ -11,6 +13,7 @@ except ImportError:
 
 # Other imports.
 from simple_rl.utils.chart_utils import color_ls
+
 
 def val_to_color(val, good_col=(169, 193, 249), bad_col=(255, 255, 255)):
     '''
@@ -28,8 +31,9 @@ def val_to_color(val, good_col=(169, 193, 249), bad_col=(255, 255, 255)):
         halfway between the two, and so on.
     '''
     diff_list = [bad_col[i] - good_col[i] for i in range(3)]
-    result = tuple([max(min(int(bad_col[i] - (val**4)*diff_list[i]), 255), 0) for i in range(3)])
+    result = tuple([max(min(int(bad_col[i] - (val ** 4) * diff_list[i]), 255), 0) for i in range(3)])
     return result
+
 
 def _draw_title_text(mdp, screen):
     '''
@@ -49,7 +53,8 @@ def _draw_title_text(mdp, screen):
     param_text += title_split[-1] + ")"
     formatted_title_text = title[0].upper() + title[1:] + param_text
     title_text = title_font.render(formatted_title_text, True, (46, 49, 49))
-    screen.blit(title_text, (scr_width / 2.0 - len(formatted_title_text)*6, scr_width / 20.0))
+    screen.blit(title_text, (scr_width / 2.0 - len(formatted_title_text) * 6, scr_width / 20.0))
+
 
 def _draw_agent_text(agent, screen):
     '''
@@ -62,9 +67,10 @@ def _draw_agent_text(agent, screen):
     '''
     scr_width, scr_height = screen.get_width(), screen.get_height()
     formatted_agent_text = "agent: " + str(agent)
-    agent_text_point = (3*scr_width / 4.0 - len(formatted_agent_text)*6, 18*scr_height / 20.0)
+    agent_text_point = (3 * scr_width / 4.0 - len(formatted_agent_text) * 6, 18 * scr_height / 20.0)
     agent_text = title_font.render(formatted_agent_text, True, (46, 49, 49))
     screen.blit(agent_text, agent_text_point)
+
 
 def _draw_state_text(state, screen):
     '''
@@ -81,10 +87,11 @@ def _draw_state_text(state, screen):
     if len(formatted_state_text) > 20:
         # State text is too long, ignore.
         return
-    state_text_point = (scr_width / 4.0 - len(formatted_state_text)*6, 18*scr_height / 20.0)
-    pygame.draw.rect(screen, (255,255,255), (state_text_point[0] - 20, state_text_point[1]) + (200,40))
+    state_text_point = (scr_width / 4.0 - len(formatted_state_text) * 6, 18 * scr_height / 20.0)
+    pygame.draw.rect(screen, (255, 255, 255), (state_text_point[0] - 20, state_text_point[1]) + (200, 40))
     state_text = title_font.render(formatted_state_text, True, (46, 49, 49))
     screen.blit(state_text, state_text_point)
+
 
 def visualize_policy(mdp, policy, draw_state, action_char_dict, cur_state=None, scr_width=720, scr_height=720):
     '''
@@ -106,7 +113,9 @@ def visualize_policy(mdp, policy, draw_state, action_char_dict, cur_state=None, 
     cur_state = mdp.get_init_state() if cur_state is None else cur_state
 
     agent_shape = _vis_init(screen, mdp, draw_state, cur_state, value=True)
-    draw_state(screen, mdp, cur_state, policy=policy, action_char_dict=action_char_dict, show_value=False, draw_statics=True)
+    draw_state(screen, mdp, cur_state, policy=policy, action_char_dict=action_char_dict, show_value=False,
+               draw_statics=True)
+
 
 def visualize_value(mdp, draw_state, cur_state=None, scr_width=720, scr_height=720):
     '''
@@ -125,6 +134,7 @@ def visualize_value(mdp, draw_state, cur_state=None, scr_width=720, scr_height=7
 
     agent_shape = _vis_init(screen, mdp, draw_state, cur_state, value=True)
     draw_state(screen, mdp, cur_state, show_value=True, draw_statics=True)
+
 
 def visualize_agent(mdp, agent, draw_state, cur_state=None, scr_width=720, scr_height=720):
     '''
@@ -168,11 +178,12 @@ def visualize_agent(mdp, agent, draw_state, cur_state=None, scr_width=720, scr_h
             # Done! Agent found goal.
             goal_text = "Victory!"
             goal_text_rendered = title_font.render(goal_text, True, (246, 207, 106))
-            goal_text_point = scr_width / 2.0 - (len(goal_text)*7), 18*scr_height / 20.0
+            goal_text_point = scr_width / 2.0 - (len(goal_text) * 7), 18 * scr_height / 20.0
             screen.blit(goal_text_rendered, goal_text_point)
             done = True
 
         pygame.display.update()
+
 
 def _vis_init(screen, mdp, draw_state, cur_state, agent=None, value=False):
     # Pygame setup.

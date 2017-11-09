@@ -1,5 +1,6 @@
 ''' OOMDPObjectClass.py: Contains the OOMDP Object Class. '''
 
+
 class OOMDPObject(object):
     ''' Abstract OOMDP Object class '''
 

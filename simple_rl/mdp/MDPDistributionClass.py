@@ -5,6 +5,7 @@ import numpy as np
 import random as rnd
 from collections import defaultdict
 
+
 class MDPDistribution(object):
     ''' Class for distributions over MDPs. '''
 
@@ -41,7 +42,8 @@ class MDPDistribution(object):
             try:
                 self.mdp_prob_dict.pop(mdp)
             except KeyError:
-                print "simple-rl (Error): Trying to remove MDP (" + str(mdp) + ") from MDP Distribution that doesn't contain it."
+                print "simple-rl (Error): Trying to remove MDP (" + str(
+                    mdp) + ") from MDP Distribution that doesn't contain it."
                 quit()
 
         self._normalize()
@@ -102,6 +104,7 @@ class MDPDistribution(object):
             for m in self.mdp_prob_dict.keys():
                 r += m.reward_func(s, a) * self.mdp_prob_dict[m]
             return r
+
         return _avg_r_func
 
     def get_init_state(self):
@@ -149,7 +152,6 @@ class MDPDistribution(object):
                 mdps_to_return.append(self.mdp_prob_dict.keys()[i])
 
         return mdps_to_return
-        
 
     def __str__(self):
         '''
@@ -157,6 +159,7 @@ class MDPDistribution(object):
             Not all MDPs are guaranteed to share a name (for instance, might include dimensions).
         '''
         return "multitask-" + str(self.mdp_prob_dict.keys()[0])
+
 
 def main():
     # Simple test code.
@@ -167,13 +170,15 @@ def main():
     prob_list = [0.0, 0.1, 0.2, 0.3, 0.4]
 
     for i in range(len(prob_list)):
-        next_mdp = GridWorldMDP(width=width, height=width, init_loc=(1, 1), goal_locs=r.sample(zip(range(1, width + 1), [height] * width), 2), is_goal_terminal=True)
+        next_mdp = GridWorldMDP(width=width, height=width, init_loc=(1, 1),
+                                goal_locs=r.sample(zip(range(1, width + 1), [height] * width), 2),
+                                is_goal_terminal=True)
 
         mdp_distr[next_mdp] = prob_list[i]
 
-
     m = MDPDistribution(mdp_distr)
     m.sample()
+
 
 if __name__ == "__main__":
     main()

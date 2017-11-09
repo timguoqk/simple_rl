@@ -7,6 +7,7 @@ Purpose: Bundles all relevant parameters into an object that can be written to a
 # Python imports.
 from collections import defaultdict
 
+
 class ExperimentParameters(object):
     '''
     Parameters object given to @ExperimentClass instances.
@@ -23,6 +24,6 @@ class ExperimentParameters(object):
             appears on a line.
         '''
         result = ""
-        for item in ["\n\t"+ str(key) + " : " + str(value) for key, value in self.params.items()]:
+        for item in ["\n\t" + str(key) + " : " + str(value) for key, value in self.params.items()]:
             result += item
         return result

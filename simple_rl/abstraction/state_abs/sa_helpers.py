@@ -12,6 +12,7 @@ from simple_rl.mdp import MDPDistribution
 import indicator_funcs as ind_funcs
 from StateAbstractionClass import StateAbstraction
 
+
 def merge_state_abs(list_of_sa, track_act_opt_pr=False):
     '''
     Args:
@@ -27,7 +28,9 @@ def merge_state_abs(list_of_sa, track_act_opt_pr=False):
 
     return merged
 
-def make_sa(mdp, indic_func=ind_funcs._q_eps_approx_indicator, state_class=State, epsilon=0.0, save=False, track_act_opt_pr=False):
+
+def make_sa(mdp, indic_func=ind_funcs._q_eps_approx_indicator, state_class=State, epsilon=0.0, save=False,
+            track_act_opt_pr=False):
     '''
     Args:
         mdp (MDP)
@@ -40,16 +43,20 @@ def make_sa(mdp, indic_func=ind_funcs._q_eps_approx_indicator, state_class=State
     print "  Making state abstraction... "
     q_equiv_sa = StateAbstraction(phi={}, track_act_opt_pr=track_act_opt_pr)
     if isinstance(mdp, MDPDistribution):
-        q_equiv_sa = make_multitask_sa(mdp, state_class=state_class, indic_func=indic_func, epsilon=epsilon, track_act_opt_pr=track_act_opt_pr)
+        q_equiv_sa = make_multitask_sa(mdp, state_class=state_class, indic_func=indic_func, epsilon=epsilon,
+                                       track_act_opt_pr=track_act_opt_pr)
     else:
-        q_equiv_sa = make_singletask_sa(mdp, state_class=state_class, indic_func=indic_func, epsilon=epsilon, track_act_opt_pr=track_act_opt_pr)
+        q_equiv_sa = make_singletask_sa(mdp, state_class=state_class, indic_func=indic_func, epsilon=epsilon,
+                                        track_act_opt_pr=track_act_opt_pr)
 
     if save:
         save_sa(q_equiv_sa, str(mdp) + ".p")
 
     return q_equiv_sa
 
-def make_multitask_sa(mdp_distr, state_class=State, indic_func=ind_funcs._q_eps_approx_indicator, epsilon=0.0, aa_single_act=True, track_act_opt_pr=False):
+
+def make_multitask_sa(mdp_distr, state_class=State, indic_func=ind_funcs._q_eps_approx_indicator, epsilon=0.0,
+                      aa_single_act=True, track_act_opt_pr=False):
     '''
     Args:
         mdp_distr (MDPDistribution)
@@ -63,14 +70,17 @@ def make_multitask_sa(mdp_distr, state_class=State, indic_func=ind_funcs._q_eps_
     '''
     sa_list = []
     for mdp in mdp_distr.get_mdps():
-        sa = make_singletask_sa(mdp, indic_func, state_class, epsilon, aa_single_act=aa_single_act, prob_of_mdp=mdp_distr.get_prob_of_mdp(mdp), track_act_opt_pr=track_act_opt_pr)
+        sa = make_singletask_sa(mdp, indic_func, state_class, epsilon, aa_single_act=aa_single_act,
+                                prob_of_mdp=mdp_distr.get_prob_of_mdp(mdp), track_act_opt_pr=track_act_opt_pr)
         sa_list += [sa]
 
     multitask_sa = merge_state_abs(sa_list, track_act_opt_pr=track_act_opt_pr)
 
     return multitask_sa
 
-def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=False, prob_of_mdp=1.0, track_act_opt_pr=False):
+
+def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=False, prob_of_mdp=1.0,
+                       track_act_opt_pr=False):
     '''
     Args:
         mdp (MDP)
@@ -111,7 +121,7 @@ def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=
 
     print "making clusters...",
     sys.stdout.flush()
-    
+
     # Build SA.
     for i, state in enumerate(clusters.keys()):
         new_cluster = clusters[state]
@@ -121,7 +131,7 @@ def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=
         for s in clusters[state]:
             if s in clusters.keys():
                 clusters.pop(s)
-    
+
     if aa_single_act:
         # Put all optimal actions in a set associated with the ground state.
         for ground_s in sa.get_ground_states():
@@ -132,5 +142,4 @@ def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=
     print "\tGround States:", num_states
     print "\tAbstract:", sa.get_num_abstr_states()
     print
-
     return sa

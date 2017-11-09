@@ -3,6 +3,7 @@
 # Other imports.
 from simple_rl.mdp.StateClass import State
 
+
 class GridGameState(State):
     ''' Class for two player Grid Game States '''
 
@@ -46,4 +47,4 @@ class GridGameState(State):
 
     def __eq__(self, other):
         return isinstance(other, GridGameState) and self.a_x == other.a_x and self.a_y == other.a_y and \
-            self.b_x == other.b_x and self.b_y == other.b_y
+               self.b_x == other.b_x and self.b_y == other.b_y

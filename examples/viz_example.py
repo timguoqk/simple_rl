@@ -7,17 +7,20 @@ import sys
 # Other imports.
 import srl_example_setup
 from simple_rl.agents import QLearnerAgent
-from simple_rl.run_experiments import run_single_agent_on_mdp 
+from simple_rl.run_experiments import run_single_agent_on_mdp
 from simple_rl.tasks import FourRoomMDP, GridWorldMDP
 from simple_rl.planning import ValueIteration
 from simple_rl.utils.make_mdp import make_mdp_distr
 
+
 def parse_args():
     # Add all arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", type = str, default="value", nargs = '?', help = "Choose the visualization type (one of {value, policy, agent}).")
+    parser.add_argument("-v", type=str, default="value", nargs='?',
+                        help="Choose the visualization type (one of {value, policy, agent}).")
     args = parser.parse_args()
     return args.v
+
 
 def main():
     # Setup MDP, Agents.
@@ -40,6 +43,6 @@ def main():
         run_single_agent_on_mdp(ql_agent, mdp, episodes=500, steps=200, open_plot=False)
         mdp.visualize_agent(ql_agent)
 
+
 if __name__ == "__main__":
     main()
-        

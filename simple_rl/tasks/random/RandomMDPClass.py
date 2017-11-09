@@ -9,6 +9,7 @@ from collections import defaultdict
 from simple_rl.mdp.MDPClass import MDP
 from simple_rl.tasks.random.RandomStateClass import RandomState
 
+
 class RandomMDP(MDP):
     ''' Imeplementation for a standard Random MDP '''
 
@@ -24,7 +25,8 @@ class RandomMDP(MDP):
             Each state-action pair picks @num_rand_trans possible states and has a uniform distribution
             over them for transitions. Rewards are also chosen randomly.
         '''
-        MDP.__init__(self, RandomMDP.ACTIONS, self._transition_func, self._reward_func, init_state=RandomState(1), gamma=gamma)
+        MDP.__init__(self, RandomMDP.ACTIONS, self._transition_func, self._reward_func, init_state=RandomState(1),
+                     gamma=gamma)
         # assert(num_rand_trans <= num_states)
         self.num_rand_trans = num_rand_trans
         self.num_states = num_states
@@ -69,9 +71,9 @@ class RandomMDP(MDP):
         return "RandomMDP-" + str(self.num_states)
 
 
-
 def main():
     _gen_random_distr()
+
 
 if __name__ == "__main__":
     main()

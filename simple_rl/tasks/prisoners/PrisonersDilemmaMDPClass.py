@@ -7,6 +7,7 @@ import random
 from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP
 from simple_rl.mdp.StateClass import State
 
+
 class PrisonersDilemmaMDP(MarkovGameMDP):
     ''' Class for a Grid World MDP '''
 
@@ -14,7 +15,8 @@ class PrisonersDilemmaMDP(MarkovGameMDP):
     ACTIONS = ["defect", "cooperate"]
 
     def __init__(self):
-        MarkovGameMDP.__init__(self, PrisonersDilemmaMDP.ACTIONS, self._transition_func, self._reward_func, init_state=State())
+        MarkovGameMDP.__init__(self, PrisonersDilemmaMDP.ACTIONS, self._transition_func, self._reward_func,
+                               init_state=State())
 
     def _reward_func(self, state, action_dict):
         '''
@@ -43,8 +45,6 @@ class PrisonersDilemmaMDP(MarkovGameMDP):
 
         return reward_dict
 
-
-
     def _transition_func(self, state, action):
         '''
         Args:
@@ -55,13 +55,14 @@ class PrisonersDilemmaMDP(MarkovGameMDP):
             (State)
         '''
         return state
-      
+
     def __str__(self):
         return "prisoners_dilemma"
 
 
 def main():
     grid_world = GridWorldMDP(5, 10, (1, 1), (6, 7))
+
 
 if __name__ == "__main__":
     main()

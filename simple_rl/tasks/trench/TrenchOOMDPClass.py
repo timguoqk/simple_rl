@@ -28,7 +28,8 @@ class TrenchOOMDP(OOMDP):
         lava_objs = self._make_oomdp_objs_from_list_of_dict(lavas, "lava")
 
         init_state = self._create_state(agent_obj, block_objs, lava_objs)
-        OOMDP.__init__(self, TrenchOOMDP.ACTIONS, self._trench_transition_func, self._trench_reward_func, init_state=init_state, gamma=gamma)
+        OOMDP.__init__(self, TrenchOOMDP.ACTIONS, self._trench_transition_func, self._trench_reward_func,
+                       init_state=init_state, gamma=gamma)
         self.slip_prob = slip_prob
 
     def _create_state(self, agent_oo_obj, blocks, lavas):
@@ -42,7 +43,7 @@ class TrenchOOMDP(OOMDP):
             (OOMDP State)
         '''
 
-        objects = {c : [] for c in TrenchOOMDP.CLASSES}
+        objects = {c: [] for c in TrenchOOMDP.CLASSES}
 
         objects["agent"].append(agent_oo_obj)
 
@@ -284,6 +285,7 @@ def main():
     states = vi.get_states()
     num_states = len(states)
     print num_states, states
+
 
 if __name__ == "__main__":
     main()

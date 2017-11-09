@@ -14,8 +14,8 @@ class TrenchOOMDPState(OOMDPState):
         return self.objects["agent"][0]["y"]
 
     def __hash__(self):
-        state_hash = str(self.get_agent_x()) + str(self.get_agent_y()) + str(self.objects["agent"][0]["dx"] + 1)\
-                     + str(self.objects["agent"][0]["dy"] + 1) + str(self.objects["agent"][0]["dest_x"])\
+        state_hash = str(self.get_agent_x()) + str(self.get_agent_y()) + str(self.objects["agent"][0]["dx"] + 1) \
+                     + str(self.objects["agent"][0]["dy"] + 1) + str(self.objects["agent"][0]["dest_x"]) \
                      + str(self.objects["agent"][0]["dest_x"]) + str(self.objects["agent"][0]["dest_y"]) + \
                      str(self.objects["agent"][0]["has_block"]) + "00"
 

@@ -3,6 +3,7 @@ import numpy as np
 
 ''' StateClass.py: Contains the State Class. '''
 
+
 class State(object):
     ''' Abstract State class '''
 
@@ -11,22 +12,22 @@ class State(object):
         self._is_terminal = is_terminal
 
     def features(self):
-    	'''
-    	Summary
-    		Used by function approximators to represent the state.
-    		Override this method in State subclasses to have functiona
-    		approximators use a different set of features.
+        '''
+        Summary
+            Used by function approximators to represent the state.
+            Override this method in State subclasses to have functiona
+            approximators use a different set of features.
 
         Returns:
             (iterable)
-    	'''
+        '''
         return np.array(self.data).flatten()
 
     def get_num_feats(self):
         return len(self.features())
 
     def is_terminal(self):
-    	return self._is_terminal
+        return self._is_terminal
 
     def set_terminal(self, is_term=True):
         self._is_terminal = is_term

@@ -8,11 +8,11 @@ import sys
 import srl_example_setup
 from simple_rl.agents import QLearnerAgent, RandomAgent
 from simple_rl.tasks import GridWorldMDP, GridWorldState
-from simple_rl.run_experiments import run_agents_on_mdp 
+from simple_rl.run_experiments import run_agents_on_mdp
+
 
 class ColoredGridWorldMDP(GridWorldMDP):
-
-    def __init__(self, col_sq_locs_dict, width=5, height=3, init_loc=(1,1), goal_locs=[(5,3)]):
+    def __init__(self, col_sq_locs_dict, width=5, height=3, init_loc=(1, 1), goal_locs=[(5, 3)]):
         '''
         Args:
             col_sq_locs_dict (dict):
@@ -26,11 +26,12 @@ class ColoredGridWorldMDP(GridWorldMDP):
             goal_locs (list of tuples)
         '''
         GridWorldMDP.__init__(self,
-                            width,
-                            height,
-                            init_loc=init_loc,
-                            goal_locs=goal_locs,
-                            init_state=ColoredGridWorldState(init_loc[0], init_loc[1], col_sq_locs_dict[init_loc[0]][init_loc[1]]))
+                              width,
+                              height,
+                              init_loc=init_loc,
+                              goal_locs=goal_locs,
+                              init_state=ColoredGridWorldState(init_loc[0], init_loc[1],
+                                                               col_sq_locs_dict[init_loc[0]][init_loc[1]]))
         self.col_sq_locs_dict = col_sq_locs_dict
 
     def _transition_func(self, state, action):
@@ -75,17 +76,19 @@ class ColoredGridWorldState(GridWorldState):
     def __str__(self):
         return "s: (" + str(self.x) + "," + str(self.y) + "," + str(self.color) + ")"
 
+
 def main(open_plot=True):
-    state_colors = defaultdict(lambda:defaultdict(lambda:"white"))
+    state_colors = defaultdict(lambda: defaultdict(lambda: "white"))
     state_colors[3][2] = "red"
 
     # Setup MDP, Agents.
     mdp = ColoredGridWorldMDP(state_colors)
-    ql_agent = QLearnerAgent(actions=mdp.get_actions()) 
+    ql_agent = QLearnerAgent(actions=mdp.get_actions())
     rand_agent = RandomAgent(actions=mdp.get_actions())
 
     # Run experiment and make plot.
-    run_agents_on_mdp([ql_agent, rand_agent], mdp, instances=15, episodes=500, steps=40, open_plot=open_plot) 
+    run_agents_on_mdp([ql_agent, rand_agent], mdp, instances=15, episodes=500, steps=40, open_plot=open_plot)
+
 
 if __name__ == "__main__":
-    main(open_plot=not(sys.argv[-1] == "no_plot"))
+    main(open_plot=not (sys.argv[-1] == "no_plot"))

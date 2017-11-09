@@ -12,6 +12,7 @@ from collections import defaultdict
 # Local classes.
 from simple_rl.agents.AgentClass import Agent
 
+
 class RMaxAgent(Agent):
     '''
     Implementation for an R-Max Agent [Brafman and Tennenholtz 2003]
@@ -29,15 +30,15 @@ class RMaxAgent(Agent):
         Summary:
             Resets the agent back to its tabula rasa config.
         '''
-        self.rewards = defaultdict(lambda : defaultdict(list)) # S --> A --> [r_1, ...]
-        self.transitions = defaultdict(lambda : defaultdict(lambda : defaultdict(int))) # S --> A --> S' --> counts
-        self.r_s_a_counts = defaultdict(lambda : defaultdict(int)) # S --> A --> #rs
-        self.t_s_a_counts = defaultdict(lambda : defaultdict(int)) # S --> A --> #ts
+        self.rewards = defaultdict(lambda: defaultdict(list))  # S --> A --> [r_1, ...]
+        self.transitions = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))  # S --> A --> S' --> counts
+        self.r_s_a_counts = defaultdict(lambda: defaultdict(int))  # S --> A --> #rs
+        self.t_s_a_counts = defaultdict(lambda: defaultdict(int))  # S --> A --> #ts
         self.prev_state = None
         self.prev_action = None
 
     def get_num_known_sa(self):
-        return sum([self.is_known(s,a) for s,a in self.r_s_a_counts.keys()])
+        return sum([self.is_known(s, a) for s, a in self.r_s_a_counts.keys()])
 
     def is_known(self, s, a):
         return self.r_s_a_counts[s][a] >= self.s_a_threshold and self.t_s_a_counts[s][a] >= self.s_a_threshold
@@ -114,7 +115,7 @@ class RMaxAgent(Agent):
 
         # If this is the first call, use the default horizon.
         if horizon is None:
-            horizon = self.horizon 
+            horizon = self.horizon
         return self._compute_max_qval_action_pair(state, horizon)[1]
 
     def get_max_q_value(self, state, horizon=None):
@@ -129,7 +130,7 @@ class RMaxAgent(Agent):
 
         # If this is the first call, use the default horizon.
         if horizon is None:
-            horizon = self.horizon 
+            horizon = self.horizon
         return self._compute_max_qval_action_pair(state, horizon)[0]
 
     def get_q_value(self, state, action, horizon=None):
@@ -152,8 +153,9 @@ class RMaxAgent(Agent):
             return self._get_reward(state, action)
 
         # Compute future return.
-        expected_future_return = self.gamma*self._compute_exp_future_return(state, action, horizon)
-        q_val = self._get_reward(state, action) + expected_future_return# self.q_func[(state, action)] = self._get_reward(state, action) + expected_future_return
+        expected_future_return = self.gamma * self._compute_exp_future_return(state, action, horizon)
+        q_val = self._get_reward(state,
+                                 action) + expected_future_return  # self.q_func[(state, action)] = self._get_reward(state, action) + expected_future_return
 
         return q_val
 
@@ -180,7 +182,8 @@ class RMaxAgent(Agent):
             count = next_state_dict[next_state]
             state_weights[next_state] = (count / denominator)
 
-        weighted_future_returns = [self.get_max_q_value(next_state, horizon-1) * state_weights[next_state] for next_state in next_state_dict.keys()]
+        weighted_future_returns = [self.get_max_q_value(next_state, horizon - 1) * state_weights[next_state] for
+                                   next_state in next_state_dict.keys()]
 
         return sum(weighted_future_returns)
 
@@ -204,6 +207,5 @@ class RMaxAgent(Agent):
             return self.rmax
 
     def _reset_reward(self):
-        self.rewards = defaultdict(lambda : defaultdict(list)) # S --> A --> [r_1, ...]
-        self.r_s_a_counts = defaultdict(lambda : defaultdict(int)) # S --> A --> #rs
-
+        self.rewards = defaultdict(lambda: defaultdict(list))  # S --> A --> [r_1, ...]
+        self.r_s_a_counts = defaultdict(lambda: defaultdict(int))  # S --> A --> #rs

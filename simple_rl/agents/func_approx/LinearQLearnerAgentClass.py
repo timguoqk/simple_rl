@@ -11,20 +11,23 @@ import math
 # Other imports.
 from simple_rl.agents import Agent, QLearnerAgent
 
+
 class LinearQLearnerAgent(QLearnerAgent):
     '''
     QLearnerAgent with a linear function approximator for the Q Function.
     '''
 
-    def __init__(self, actions, num_features, rand_init=True, name="ql-linear", alpha=0.2, gamma=0.99, epsilon=0.2, explore="uniform", rbf=False, anneal=True):
+    def __init__(self, actions, num_features, rand_init=True, name="ql-linear", alpha=0.2, gamma=0.99, epsilon=0.2,
+                 explore="uniform", rbf=False, anneal=True):
         name = name + "-rbf" if rbf else name
-        QLearnerAgent.__init__(self, actions=list(actions), name=name, alpha=alpha, gamma=gamma, epsilon=epsilon, explore=explore, anneal=anneal)
+        QLearnerAgent.__init__(self, actions=list(actions), name=name, alpha=alpha, gamma=gamma, epsilon=epsilon,
+                               explore=explore, anneal=anneal)
         self.num_features = num_features
         # Add a basis feature.
         if rand_init:
-            self.weights = np.random.random(self.num_features*len(self.actions))
+            self.weights = np.random.random(self.num_features * len(self.actions))
         else:
-            self.weights = np.zeros(self.num_features*len(self.actions))
+            self.weights = np.zeros(self.num_features * len(self.actions))
 
         self.rbf = rbf
 
@@ -66,7 +69,7 @@ class LinearQLearnerAgent(QLearnerAgent):
         if self.rbf:
             basis_feats = [_rbf(f) for f in basis_feats]
 
-        result[act_index*self.num_features:(act_index + 1)*self.num_features] = basis_feats
+        result[act_index * self.num_features:(act_index + 1) * self.num_features] = basis_feats
 
         return np.array(self._normalize(result))
 
@@ -123,9 +126,9 @@ class LinearQLearnerAgent(QLearnerAgent):
         return np.dot(self.weights, sa_feats)
 
     def reset(self):
-        self.weights = np.zeros(self.num_features*len(self.actions))
+        self.weights = np.zeros(self.num_features * len(self.actions))
         QLearnerAgent.reset(self)
 
 
 def _rbf(x):
-    return math.exp(-(x)**2)
+    return math.exp(-(x) ** 2)

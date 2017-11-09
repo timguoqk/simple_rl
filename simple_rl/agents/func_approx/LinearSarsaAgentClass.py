@@ -11,14 +11,18 @@ import math
 # Other imports.
 from simple_rl.agents.func_approx.LinearQLearnerAgentClass import LinearQLearnerAgent
 
+
 class LinearSarsaAgent(LinearQLearnerAgent):
     '''
     Sarsa Agent with a linear function approximator for the Q Function.
     '''
 
-    def __init__(self, actions, num_features, rand_init=False, name="sarsa-linear", alpha=0.05, gamma=0.99, epsilon=0.01, explore="uniform", rbf=False, anneal=True):
+    def __init__(self, actions, num_features, rand_init=False, name="sarsa-linear", alpha=0.05, gamma=0.99,
+                 epsilon=0.01, explore="uniform", rbf=False, anneal=True):
         name = name + "-rbf" if (name == "sarsa-linear" and rbf) else name
-        LinearQLearnerAgent.__init__(self, actions=list(actions), rand_init=rand_init, num_features=num_features, name=name, alpha=alpha, gamma=gamma, epsilon=epsilon, explore=explore, anneal=anneal)
+        LinearQLearnerAgent.__init__(self, actions=list(actions), rand_init=rand_init, num_features=num_features,
+                                     name=name, alpha=alpha, gamma=gamma, epsilon=epsilon, explore=explore,
+                                     anneal=anneal)
 
     def act(self, state, reward):
         '''
@@ -29,7 +33,7 @@ class LinearSarsaAgent(LinearQLearnerAgent):
         Summary:
             The central update for SARSA.
         '''
-        
+
         if self.explore == "softmax":
             # Softmax exploration
             action = self.soft_max_policy(state)

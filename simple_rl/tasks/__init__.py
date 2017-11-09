@@ -11,8 +11,9 @@ from taxi.TaxiStateClass import TaxiState
 from prisoners.PrisonersDilemmaMDPClass import PrisonersDilemmaMDP
 from rock_paper_scissors.RockPaperScissorsMDPClass import RockPaperScissorsMDP
 from grid_game.GridGameMDPClass import GridGameMDP
+
 try:
-	from gym.GymMDPClass import GymMDP
+    from gym.GymMDPClass import GymMDP
 except ImportError:
-	print "Warning: OpenAI gym not installed."
-	pass
+    print "Warning: OpenAI gym not installed."
+    pass
