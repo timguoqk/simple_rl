@@ -13,7 +13,7 @@ setup(
     scripts=['simple_rl/run_experiments.py'],
     install_requires=[
         'numpy',
-        'matplotlib'
+        'matplotlib', 'scipy'
     ],
     version='0.76',
     description='A simple framework for experimenting with Reinforcement Learning in Python 2.7',
