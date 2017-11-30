@@ -57,7 +57,10 @@ class EigenOptions:
         eigens = sorted(zip(w, v))  # the smallest eigen values first
 
         # TODO: calculate eigen_options using eigen values and eigen vectors
-        self.eigen_options = []
+        self.eigen_purpose = lambda (s, s_, e) : np.dot(e, s_) - np.dot(e, s)
+        for e in w:
+            M_e = MDP(self, actions, )
+
 
     def visualize_mdp(self):
         for i in range(1, self.width + 1):

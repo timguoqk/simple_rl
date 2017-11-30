@@ -15,7 +15,7 @@ class GridWorldMDP(MDP):
     ''' Class for a Grid World MDP '''
 
     # Static constants.
-    ACTIONS = ["up", "down", "left", "right"]
+    ACTIONS = ["up", "down", "left", "right", "terminate"]
 
     def __init__(self,
                  width=5,

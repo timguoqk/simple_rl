@@ -1,0 +1,953 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIONS	../simple_rl/tasks/chain/ChainMDPClass.py	/^    ACTIONS = ["forward", "reset"]$/;"	kind:variable	line:11
+ACTIONS	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    ACTIONS = ["up", "left", "down", "right"]$/;"	kind:variable	line:15
+ACTIONS	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    ACTIONS = ["up", "down", "left", "right"]$/;"	kind:variable	line:18
+ACTIONS	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^    ACTIONS = ["defect", "cooperate"]$/;"	kind:variable	line:15
+ACTIONS	../simple_rl/tasks/random/RandomMDPClass.py	/^    ACTIONS = [str(i) for i in range(3)]$/;"	kind:variable	line:16
+ACTIONS	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^    ACTIONS = ["rock", "paper", "scissors"]$/;"	kind:variable	line:15
+ACTIONS	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    ACTIONS = ["up", "down", "left", "right", "pickup", "dropoff"]$/;"	kind:variable	line:27
+ACTIONS	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    ACTIONS = ["forward", "rotate_right", "rotate_left", "pickup", "place"]$/;"	kind:variable	line:17
+ATTRIBUTES	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    ATTRIBUTES = ["x", "y", "has_passenger", "in_taxi", "dest_x", "dest_y"]$/;"	kind:variable	line:28
+ATTRIBUTES	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    ATTRIBUTES = ["x", "y", "dx", "dy", "has_block", "dest_x", "dest_y"]$/;"	kind:variable	line:18
+AbstractionWrapper	../eigen_options/eigen_options.py	/^from simple_rl.abstraction import AbstractionWrapper, ActionAbstraction$/;"	kind:namespace	line:4
+AbstractionWrapper	../examples/abstraction_example.py	/^from simple_rl.abstraction import AbstractionWrapper$/;"	kind:namespace	line:11
+AbstractionWrapper	../examples/goal_based_options_example.py	/^from simple_rl.abstraction import AbstractionWrapper, aa_helpers, ActionAbstraction$/;"	kind:namespace	line:11
+AbstractionWrapper	../simple_rl/abstraction/AbstractionWrapperClass.py	/^class AbstractionWrapper(Agent):$/;"	kind:class	line:10
+AbstractionWrapper	../simple_rl/abstraction/__init__.py	/^from AbstractionWrapperClass import AbstractionWrapper$/;"	kind:namespace	line:1
+AbstractionWrapperClass.py	../simple_rl/abstraction/AbstractionWrapperClass.py	1;"	kind:file	line:1
+ActionAbstraction	../eigen_options/eigen_options.py	/^from simple_rl.abstraction import AbstractionWrapper, ActionAbstraction$/;"	kind:namespace	line:4
+ActionAbstraction	../examples/goal_based_options_example.py	/^from simple_rl.abstraction import AbstractionWrapper, aa_helpers, ActionAbstraction$/;"	kind:namespace	line:11
+ActionAbstraction	../simple_rl/abstraction/AbstractionWrapperClass.py	/^from action_abs.ActionAbstractionClass import ActionAbstraction$/;"	kind:namespace	line:7
+ActionAbstraction	../simple_rl/abstraction/__init__.py	/^from action_abs.ActionAbstractionClass import ActionAbstraction$/;"	kind:namespace	line:3
+ActionAbstraction	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^class ActionAbstraction(object):$/;"	kind:class	line:10
+ActionAbstraction	../simple_rl/abstraction/action_abs/__init__.py	/^from ActionAbstractionClass import ActionAbstraction$/;"	kind:namespace	line:2
+ActionAbstractionClass.py	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	1;"	kind:file	line:1
+Agent	../simple_rl/abstraction/AbstractionWrapperClass.py	/^from simple_rl.agents import Agent, RMaxAgent$/;"	kind:namespace	line:5
+Agent	../simple_rl/agents/AgentClass.py	/^class Agent(object):$/;"	kind:class	line:7
+Agent	../simple_rl/agents/FixedPolicyAgentClass.py	/^from simple_rl.agents.AgentClass import Agent$/;"	kind:namespace	line:4
+Agent	../simple_rl/agents/QLearnerAgentClass.py	/^from simple_rl.agents.AgentClass import Agent$/;"	kind:namespace	line:10
+Agent	../simple_rl/agents/RMaxAgentClass.py	/^from simple_rl.agents.AgentClass import Agent$/;"	kind:namespace	line:13
+Agent	../simple_rl/agents/RandomAgentClass.py	/^from simple_rl.agents.AgentClass import Agent$/;"	kind:namespace	line:7
+Agent	../simple_rl/agents/__init__.py	/^from AgentClass import Agent$/;"	kind:namespace	line:13
+Agent	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^from ..AgentClass import Agent$/;"	kind:namespace	line:9
+Agent	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^from simple_rl.agents import Agent, QLearnerAgent$/;"	kind:namespace	line:12
+AgentClass.py	../simple_rl/agents/AgentClass.py	1;"	kind:file	line:1
+CLASSES	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    CLASSES = ["agent", "wall", "passenger"]$/;"	kind:variable	line:29
+CLASSES	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    CLASSES = ["agent", "block", "lava"]$/;"	kind:variable	line:19
+CUSTOM_TITLE	../simple_rl/utils/chart_utils.py	/^CUSTOM_TITLE = None$/;"	kind:variable	line:39
+ChainMDP	../examples/multitask_example.py	/^from simple_rl.tasks import GridWorldMDP, RandomMDP, ChainMDP, TaxiOOMDP, FourRoomMDP$/;"	kind:namespace	line:9
+ChainMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+ChainMDP	../simple_rl/tasks/__init__.py	/^from chain.ChainMDPClass import ChainMDP$/;"	kind:namespace	line:2
+ChainMDP	../simple_rl/tasks/chain/ChainMDPClass.py	/^class ChainMDP(MDP):$/;"	kind:class	line:8
+ChainMDP	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks import ChainMDP, GridWorldMDP, TaxiOOMDP, RandomMDP, FourRoomMDP$/;"	kind:namespace	line:13
+ChainMDPClass.py	../simple_rl/tasks/chain/ChainMDPClass.py	1;"	kind:file	line:1
+ChainState	../simple_rl/tasks/__init__.py	/^from chain.ChainStateClass import ChainState$/;"	kind:namespace	line:3
+ChainState	../simple_rl/tasks/chain/ChainMDPClass.py	/^from ChainStateClass import ChainState$/;"	kind:namespace	line:5
+ChainState	../simple_rl/tasks/chain/ChainStateClass.py	/^class ChainState(State):$/;"	kind:class	line:7
+ChainStateClass.py	../simple_rl/tasks/chain/ChainStateClass.py	1;"	kind:file	line:1
+ColorMDP	../simple_rl/tasks/color/ColorMDPClass.py	/^class ColorMDP(GridWorldMDP):$/;"	kind:class	line:14
+ColorMDPClass.py	../simple_rl/tasks/color/ColorMDPClass.py	1;"	kind:file	line:1
+ColorState	../simple_rl/tasks/color/ColorMDPClass.py	/^from simple_rl.tasks.color.ColorStateClass import ColorState$/;"	kind:namespace	line:11
+ColorState	../simple_rl/tasks/color/ColorStateClass.py	/^class ColorState(GridWorldState):$/;"	kind:class	line:8
+ColorStateClass.py	../simple_rl/tasks/color/ColorStateClass.py	1;"	kind:file	line:1
+ColoredGridWorldMDP	../examples/new_mdp_example.py	/^class ColoredGridWorldMDP(GridWorldMDP):$/;"	kind:class	line:14
+ColoredGridWorldState	../examples/new_mdp_example.py	/^class ColoredGridWorldState(GridWorldState):$/;"	kind:class	line:69
+Decimal	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^from decimal import Decimal$/;"	kind:namespace	line:3
+EigenOptions	../eigen_options/eigen_options.py	/^class EigenOptions:$/;"	kind:class	line:9
+EigenOptions	../eigen_options/run.py	/^from eigen_options import EigenOptions$/;"	kind:namespace	line:6
+Experiment	../simple_rl/experiments/ExperimentClass.py	/^class Experiment(object):$/;"	kind:class	line:19
+Experiment	../simple_rl/experiments/__init__.py	/^from ExperimentClass import Experiment$/;"	kind:namespace	line:1
+Experiment	../simple_rl/run_experiments.py	/^from simple_rl.experiments import Experiment$/;"	kind:namespace	line:28
+ExperimentClass.py	../simple_rl/experiments/ExperimentClass.py	1;"	kind:file	line:1
+ExperimentParameters	../simple_rl/experiments/ExperimentClass.py	/^from simple_rl.experiments.ExperimentParametersClass import ExperimentParameters$/;"	kind:namespace	line:16
+ExperimentParameters	../simple_rl/experiments/ExperimentParametersClass.py	/^class ExperimentParameters(object):$/;"	kind:class	line:11
+ExperimentParametersClass.py	../simple_rl/experiments/ExperimentParametersClass.py	1;"	kind:file	line:1
+FixedPolicyAgent	../examples/markov_game_example.py	/^from simple_rl.agents import QLearnerAgent, FixedPolicyAgent$/;"	kind:namespace	line:9
+FixedPolicyAgent	../simple_rl/agents/FixedPolicyAgentClass.py	/^class FixedPolicyAgent(Agent):$/;"	kind:class	line:7
+FixedPolicyAgent	../simple_rl/agents/__init__.py	/^from FixedPolicyAgentClass import FixedPolicyAgent$/;"	kind:namespace	line:14
+FixedPolicyAgent	../simple_rl/run_experiments.py	/^from simple_rl.agents import QLearnerAgent, FixedPolicyAgent$/;"	kind:namespace	line:30
+FixedPolicyAgentClass.py	../simple_rl/agents/FixedPolicyAgentClass.py	1;"	kind:file	line:1
+FourRoomMDP	../eigen_options/run.py	/^from simple_rl.tasks import FourRoomMDP$/;"	kind:namespace	line:3
+FourRoomMDP	../examples/multitask_example.py	/^from simple_rl.tasks import GridWorldMDP, RandomMDP, ChainMDP, TaxiOOMDP, FourRoomMDP$/;"	kind:namespace	line:9
+FourRoomMDP	../examples/viz_example.py	/^from simple_rl.tasks import FourRoomMDP, GridWorldMDP$/;"	kind:namespace	line:11
+FourRoomMDP	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^from simple_rl.tasks import FourRoomMDP$/;"	kind:namespace	line:2
+FourRoomMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+FourRoomMDP	../simple_rl/tasks/__init__.py	/^from four_room.FourRoomMDPClass import FourRoomMDP$/;"	kind:namespace	line:6
+FourRoomMDP	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^class FourRoomMDP(GridWorldMDP):$/;"	kind:class	line:13
+FourRoomMDP	../simple_rl/tasks/grid_world/grid_visualizer.py	/^from simple_rl.tasks import FourRoomMDP$/;"	kind:namespace	line:13
+FourRoomMDP	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks import ChainMDP, GridWorldMDP, TaxiOOMDP, RandomMDP, FourRoomMDP$/;"	kind:namespace	line:13
+FourRoomMDPClass.py	../simple_rl/tasks/four_room/FourRoomMDPClass.py	1;"	kind:file	line:1
+GradientBoostingAgent	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^class GradientBoostingAgent(QLearnerAgent):$/;"	kind:class	line:28
+GradientBoostingAgentClass.py	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	1;"	kind:file	line:1
+GradientBoostingRegressor	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    from sklearn.ensemble import GradientBoostingRegressor$/;"	kind:namespace	line:19
+GridGameMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+GridGameMDP	../simple_rl/tasks/__init__.py	/^from grid_game.GridGameMDPClass import GridGameMDP$/;"	kind:namespace	line:13
+GridGameMDP	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^class GridGameMDP(MarkovGameMDP):$/;"	kind:class	line:11
+GridGameMDPClass.py	../simple_rl/tasks/grid_game/GridGameMDPClass.py	1;"	kind:file	line:1
+GridGameState	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^from GridGameStateClass import GridGameState$/;"	kind:namespace	line:8
+GridGameState	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^class GridGameState(State):$/;"	kind:class	line:7
+GridGameStateClass.py	../simple_rl/tasks/grid_game/GridGameStateClass.py	1;"	kind:file	line:1
+GridWorldMDP	../examples/abstraction_example.py	/^from simple_rl.tasks import GridWorldMDP$/;"	kind:namespace	line:9
+GridWorldMDP	../examples/multitask_example.py	/^from simple_rl.tasks import GridWorldMDP, RandomMDP, ChainMDP, TaxiOOMDP, FourRoomMDP$/;"	kind:namespace	line:9
+GridWorldMDP	../examples/new_mdp_example.py	/^from simple_rl.tasks import GridWorldMDP, GridWorldState$/;"	kind:namespace	line:10
+GridWorldMDP	../examples/planning_example.py	/^from simple_rl.tasks import GridWorldMDP$/;"	kind:namespace	line:8
+GridWorldMDP	../examples/simple_example.py	/^from simple_rl.tasks import GridWorldMDP$/;"	kind:namespace	line:9
+GridWorldMDP	../examples/viz_example.py	/^from simple_rl.tasks import FourRoomMDP, GridWorldMDP$/;"	kind:namespace	line:11
+GridWorldMDP	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.tasks import GridWorldMDP$/;"	kind:namespace	line:3
+GridWorldMDP	../simple_rl/mdp/MDPDistributionClass.py	/^    from simple_rl.tasks import GridWorldMDP$/;"	kind:namespace	line:166
+GridWorldMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+GridWorldMDP	../simple_rl/tasks/__init__.py	/^from grid_world.GridWorldMDPClass import GridWorldMDP$/;"	kind:namespace	line:4
+GridWorldMDP	../simple_rl/tasks/color/ColorMDPClass.py	/^from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP$/;"	kind:namespace	line:9
+GridWorldMDP	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP$/;"	kind:namespace	line:9
+GridWorldMDP	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^class GridWorldMDP(MDP):$/;"	kind:class	line:14
+GridWorldMDP	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks import ChainMDP, GridWorldMDP, TaxiOOMDP, RandomMDP, FourRoomMDP$/;"	kind:namespace	line:13
+GridWorldMDPClass.py	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	1;"	kind:file	line:1
+GridWorldState	../examples/new_mdp_example.py	/^from simple_rl.tasks import GridWorldMDP, GridWorldState$/;"	kind:namespace	line:10
+GridWorldState	../simple_rl/tasks/__init__.py	/^from grid_world.GridWorldStateClass import GridWorldState$/;"	kind:namespace	line:5
+GridWorldState	../simple_rl/tasks/color/ColorMDPClass.py	/^from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState$/;"	kind:namespace	line:10
+GridWorldState	../simple_rl/tasks/color/ColorStateClass.py	/^from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState$/;"	kind:namespace	line:5
+GridWorldState	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState$/;"	kind:namespace	line:10
+GridWorldState	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^from simple_rl.tasks.grid_world.GridWorldStateClass import GridWorldState$/;"	kind:namespace	line:11
+GridWorldState	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^class GridWorldState(State):$/;"	kind:class	line:7
+GridWorldStateClass.py	../simple_rl/tasks/grid_world/GridWorldStateClass.py	1;"	kind:file	line:1
+GymMDP	../examples/gym_example.py	/^from simple_rl.tasks import GymMDP$/;"	kind:namespace	line:10
+GymMDP	../simple_rl/run_experiments.py	/^            from simple_rl.tasks.gym.GymMDPClass import GymMDP$/;"	kind:namespace	line:423
+GymMDP	../simple_rl/tasks/__init__.py	/^    from gym.GymMDPClass import GymMDP$/;"	kind:namespace	line:16
+GymMDP	../simple_rl/tasks/gym/GymMDPClass.py	/^class GymMDP(MDP):$/;"	kind:class	line:18
+GymMDPClass.py	../simple_rl/tasks/gym/GymMDPClass.py	1;"	kind:file	line:1
+GymState	../simple_rl/tasks/gym/GymMDPClass.py	/^from simple_rl.tasks.gym.GymStateClass import GymState$/;"	kind:namespace	line:15
+GymState	../simple_rl/tasks/gym/GymStateClass.py	/^class GymState(State):$/;"	kind:class	line:10
+GymStateClass.py	../simple_rl/tasks/gym/GymStateClass.py	1;"	kind:file	line:1
+InListPredicate	../simple_rl/abstraction/action_abs/InListPredicateClass.py	/^class InListPredicate(object):$/;"	kind:class	line:1
+InListPredicate	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.abstraction.action_abs.InListPredicateClass import InListPredicate$/;"	kind:namespace	line:5
+InListPredicateClass.py	../simple_rl/abstraction/action_abs/InListPredicateClass.py	1;"	kind:file	line:1
+LinUCBAgent	../simple_rl/agents/__init__.py	/^from bandits.LinUCBAgentClass import LinUCBAgent$/;"	kind:namespace	line:22
+LinUCBAgent	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^class LinUCBAgent(Agent):$/;"	kind:class	line:12
+LinUCBAgentClass.py	../simple_rl/agents/bandits/LinUCBAgentClass.py	1;"	kind:file	line:1
+LinearQLearnerAgent	../examples/gym_example.py	/^from simple_rl.agents import LinearQLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+LinearQLearnerAgent	../simple_rl/agents/__init__.py	/^from func_approx.LinearQLearnerAgentClass import LinearQLearnerAgent$/;"	kind:namespace	line:19
+LinearQLearnerAgent	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^class LinearQLearnerAgent(QLearnerAgent):$/;"	kind:class	line:15
+LinearQLearnerAgent	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^from simple_rl.agents.func_approx.LinearQLearnerAgentClass import LinearQLearnerAgent$/;"	kind:namespace	line:12
+LinearQLearnerAgent	../simple_rl/run_experiments.py	/^    from simple_rl.agents import RandomAgent, RMaxAgent, QLearnerAgent, LinearQLearnerAgent$/;"	kind:namespace	line:465
+LinearQLearnerAgentClass.py	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	1;"	kind:file	line:1
+LinearSarsaAgent	../simple_rl/agents/__init__.py	/^from func_approx.LinearSarsaAgentClass import LinearSarsaAgent$/;"	kind:namespace	line:20
+LinearSarsaAgent	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^class LinearSarsaAgent(LinearQLearnerAgent):$/;"	kind:class	line:15
+LinearSarsaAgentClass.py	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	1;"	kind:file	line:1
+MCTS	../examples/planning_example.py	/^from simple_rl.planning import ValueIteration, MCTS$/;"	kind:namespace	line:9
+MCTS	../simple_rl/planning/MCTSClass.py	/^class MCTS(Planner):$/;"	kind:class	line:12
+MCTS	../simple_rl/planning/__init__.py	/^from MCTSClass import MCTS$/;"	kind:namespace	line:12
+MCTSClass.py	../simple_rl/planning/MCTSClass.py	1;"	kind:file	line:1
+MDP	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:6
+MDP	../simple_rl/mdp/MDPClass.py	/^class MDP(object):$/;"	kind:class	line:7
+MDP	../simple_rl/mdp/__init__.py	/^from MDPClass import MDP$/;"	kind:namespace	line:4
+MDP	../simple_rl/mdp/markov_game/MarkovGameMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:4
+MDP	../simple_rl/mdp/oomdp/OOMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:11
+MDP	../simple_rl/tasks/chain/ChainMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:4
+MDP	../simple_rl/tasks/color/ColorMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:8
+MDP	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:8
+MDP	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:10
+MDP	../simple_rl/tasks/gym/GymMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:14
+MDP	../simple_rl/tasks/random/RandomMDPClass.py	/^from simple_rl.mdp.MDPClass import MDP$/;"	kind:namespace	line:9
+MDPClass.py	../simple_rl/mdp/MDPClass.py	1;"	kind:file	line:1
+MDPDistribution	../examples/multitask_example.py	/^from simple_rl.mdp import MDPDistribution$/;"	kind:namespace	line:8
+MDPDistribution	../simple_rl/abstraction/state_abs/sa_helpers.py	/^from simple_rl.mdp import MDPDistribution$/;"	kind:namespace	line:11
+MDPDistribution	../simple_rl/mdp/MDPDistributionClass.py	/^class MDPDistribution(object):$/;"	kind:class	line:9
+MDPDistribution	../simple_rl/mdp/__init__.py	/^from MDPDistributionClass import MDPDistribution$/;"	kind:namespace	line:3
+MDPDistribution	../simple_rl/utils/make_mdp.py	/^from simple_rl.mdp import MDPDistribution$/;"	kind:namespace	line:15
+MDPDistributionClass.py	../simple_rl/mdp/MDPDistributionClass.py	1;"	kind:file	line:1
+MarkovGameMDP	../simple_rl/mdp/__init__.py	/^from markov_game.MarkovGameMDPClass import MarkovGameMDP$/;"	kind:namespace	line:1
+MarkovGameMDP	../simple_rl/mdp/markov_game/MarkovGameMDPClass.py	/^class MarkovGameMDP(MDP):$/;"	kind:class	line:7
+MarkovGameMDP	../simple_rl/run_experiments.py	/^from simple_rl.mdp import MarkovGameMDP$/;"	kind:namespace	line:29
+MarkovGameMDP	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP$/;"	kind:namespace	line:7
+MarkovGameMDP	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP$/;"	kind:namespace	line:7
+MarkovGameMDP	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^from simple_rl.mdp.markov_game.MarkovGameMDPClass import MarkovGameMDP$/;"	kind:namespace	line:7
+MarkovGameMDPClass.py	../simple_rl/mdp/markov_game/MarkovGameMDPClass.py	1;"	kind:file	line:1
+NAME	../simple_rl/agents/FixedPolicyAgentClass.py	/^    NAME = "fixed-policy"$/;"	kind:variable	line:10
+OOMDP	../simple_rl/mdp/__init__.py	/^from oomdp.OOMDPClass import OOMDP$/;"	kind:namespace	line:2
+OOMDP	../simple_rl/mdp/oomdp/OOMDPClass.py	/^class OOMDP(MDP):$/;"	kind:class	line:15
+OOMDP	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^from simple_rl.mdp.oomdp.OOMDPClass import OOMDP$/;"	kind:namespace	line:17
+OOMDP	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.mdp import OOMDP$/;"	kind:namespace	line:6
+OOMDPClass.py	../simple_rl/mdp/oomdp/OOMDPClass.py	1;"	kind:file	line:1
+OOMDPObject	../simple_rl/mdp/oomdp/OOMDPClass.py	/^from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject$/;"	kind:namespace	line:12
+OOMDPObject	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^class OOMDPObject(object):$/;"	kind:class	line:4
+OOMDPObject	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject$/;"	kind:namespace	line:18
+OOMDPObject	../simple_rl/tasks/taxi/taxi_helpers.py	/^from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject$/;"	kind:namespace	line:4
+OOMDPObject	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.mdp.oomdp.OOMDPObjectClass import OOMDPObject$/;"	kind:namespace	line:7
+OOMDPObjectClass.py	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	1;"	kind:file	line:1
+OOMDPState	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^class OOMDPState(State):$/;"	kind:class	line:7
+OOMDPState	../simple_rl/tasks/taxi/TaxiStateClass.py	/^from simple_rl.mdp.oomdp.OOMDPStateClass import OOMDPState$/;"	kind:namespace	line:4
+OOMDPState	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^from simple_rl.mdp.oomdp.OOMDPStateClass import OOMDPState$/;"	kind:namespace	line:1
+OOMDPStateClass.py	../simple_rl/mdp/oomdp/OOMDPStateClass.py	1;"	kind:file	line:1
+Option	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^from OptionClass import Option$/;"	kind:namespace	line:6
+Option	../simple_rl/abstraction/action_abs/OptionClass.py	/^class Option(object):$/;"	kind:class	line:6
+Option	../simple_rl/abstraction/action_abs/__init__.py	/^from OptionClass import Option$/;"	kind:namespace	line:3
+Option	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.abstraction.action_abs.OptionClass import Option$/;"	kind:namespace	line:6
+OptionClass.py	../simple_rl/abstraction/action_abs/OptionClass.py	1;"	kind:file	line:1
+Planner	../simple_rl/planning/MCTSClass.py	/^from PlannerClass import Planner$/;"	kind:namespace	line:9
+Planner	../simple_rl/planning/PlannerClass.py	/^class Planner(object):$/;"	kind:class	line:1
+Planner	../simple_rl/planning/ValueIterationClass.py	/^from PlannerClass import Planner$/;"	kind:namespace	line:7
+Planner	../simple_rl/planning/__init__.py	/^from PlannerClass import Planner$/;"	kind:namespace	line:10
+PlannerClass.py	../simple_rl/planning/PlannerClass.py	1;"	kind:file	line:1
+Policy	../simple_rl/abstraction/action_abs/PolicyClass.py	/^class Policy(object):$/;"	kind:class	line:1
+Policy	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^from PolicyClass import Policy$/;"	kind:namespace	line:5
+PolicyClass.py	../simple_rl/abstraction/action_abs/PolicyClass.py	1;"	kind:file	line:1
+PolicyFromDict	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^class PolicyFromDict(Policy):$/;"	kind:class	line:9
+PolicyFromDict	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.abstraction.action_abs.PolicyFromDictClass import PolicyFromDict$/;"	kind:namespace	line:7
+PolicyFromDictClass.py	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	1;"	kind:file	line:1
+Predicate	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^from PredicateClass import Predicate$/;"	kind:namespace	line:7
+Predicate	../simple_rl/abstraction/action_abs/PredicateClass.py	/^class Predicate(object):$/;"	kind:class	line:1
+Predicate	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.abstraction.action_abs.PredicateClass import Predicate$/;"	kind:namespace	line:4
+PredicateClass.py	../simple_rl/abstraction/action_abs/PredicateClass.py	1;"	kind:file	line:1
+PrisonersDilemmaMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+PrisonersDilemmaMDP	../simple_rl/tasks/__init__.py	/^from prisoners.PrisonersDilemmaMDPClass import PrisonersDilemmaMDP$/;"	kind:namespace	line:11
+PrisonersDilemmaMDP	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^class PrisonersDilemmaMDP(MarkovGameMDP):$/;"	kind:class	line:11
+PrisonersDilemmaMDPClass.py	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	1;"	kind:file	line:1
+QLearnerAgent	../eigen_options/eigen_options.py	/^from simple_rl.agents import QLearnerAgent$/;"	kind:namespace	line:3
+QLearnerAgent	../eigen_options/run.py	/^from simple_rl.agents import QLearnerAgent$/;"	kind:namespace	line:4
+QLearnerAgent	../examples/abstraction_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+QLearnerAgent	../examples/goal_based_options_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+QLearnerAgent	../examples/markov_game_example.py	/^from simple_rl.agents import QLearnerAgent, FixedPolicyAgent$/;"	kind:namespace	line:9
+QLearnerAgent	../examples/multitask_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent, RMaxAgent$/;"	kind:namespace	line:10
+QLearnerAgent	../examples/new_mdp_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+QLearnerAgent	../examples/oomdp_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+QLearnerAgent	../examples/simple_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+QLearnerAgent	../examples/viz_example.py	/^from simple_rl.agents import QLearnerAgent$/;"	kind:namespace	line:9
+QLearnerAgent	../simple_rl/agents/QLearnerAgentClass.py	/^class QLearnerAgent(Agent):$/;"	kind:class	line:13
+QLearnerAgent	../simple_rl/agents/__init__.py	/^from QLearnerAgentClass import QLearnerAgent$/;"	kind:namespace	line:15
+QLearnerAgent	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^from ..QLearnerAgentClass import QLearnerAgent$/;"	kind:namespace	line:25
+QLearnerAgent	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^from simple_rl.agents import Agent, QLearnerAgent$/;"	kind:namespace	line:12
+QLearnerAgent	../simple_rl/run_experiments.py	/^    from simple_rl.agents import RandomAgent, RMaxAgent, QLearnerAgent, LinearQLearnerAgent$/;"	kind:namespace	line:465
+QLearnerAgent	../simple_rl/run_experiments.py	/^from simple_rl.agents import QLearnerAgent, FixedPolicyAgent$/;"	kind:namespace	line:30
+QLearnerAgent	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.agents import QLearnerAgent$/;"	kind:namespace	line:4
+QLearnerAgentClass.py	../simple_rl/agents/QLearnerAgentClass.py	1;"	kind:file	line:1
+Queue	../simple_rl/planning/ValueIterationClass.py	/^import Queue$/;"	kind:namespace	line:3
+RESULTS_DIR	../simple_rl/experiments/ExperimentClass.py	/^    RESULTS_DIR = os.path.join(os.getcwdu(), "results", "")$/;"	kind:variable	line:23
+RMaxAgent	../examples/multitask_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent, RMaxAgent$/;"	kind:namespace	line:10
+RMaxAgent	../simple_rl/abstraction/AbstractionWrapperClass.py	/^from simple_rl.agents import Agent, RMaxAgent$/;"	kind:namespace	line:5
+RMaxAgent	../simple_rl/agents/RMaxAgentClass.py	/^class RMaxAgent(Agent):$/;"	kind:class	line:16
+RMaxAgent	../simple_rl/agents/__init__.py	/^from RMaxAgentClass import RMaxAgent$/;"	kind:namespace	line:17
+RMaxAgent	../simple_rl/run_experiments.py	/^    from simple_rl.agents import RandomAgent, RMaxAgent, QLearnerAgent, LinearQLearnerAgent$/;"	kind:namespace	line:465
+RMaxAgentClass.py	../simple_rl/agents/RMaxAgentClass.py	1;"	kind:file	line:1
+RandomAgent	../examples/abstraction_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+RandomAgent	../examples/goal_based_options_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+RandomAgent	../examples/gym_example.py	/^from simple_rl.agents import LinearQLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+RandomAgent	../examples/multitask_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent, RMaxAgent$/;"	kind:namespace	line:10
+RandomAgent	../examples/new_mdp_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:9
+RandomAgent	../examples/oomdp_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+RandomAgent	../examples/simple_example.py	/^from simple_rl.agents import QLearnerAgent, RandomAgent$/;"	kind:namespace	line:8
+RandomAgent	../simple_rl/agents/RandomAgentClass.py	/^class RandomAgent(Agent):$/;"	kind:class	line:10
+RandomAgent	../simple_rl/agents/__init__.py	/^from RandomAgentClass import RandomAgent$/;"	kind:namespace	line:16
+RandomAgent	../simple_rl/run_experiments.py	/^    from simple_rl.agents import RandomAgent, RMaxAgent, QLearnerAgent, LinearQLearnerAgent$/;"	kind:namespace	line:465
+RandomAgent	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.agents import RandomAgent$/;"	kind:namespace	line:5
+RandomAgentClass.py	../simple_rl/agents/RandomAgentClass.py	1;"	kind:file	line:1
+RandomMDP	../examples/multitask_example.py	/^from simple_rl.tasks import GridWorldMDP, RandomMDP, ChainMDP, TaxiOOMDP, FourRoomMDP$/;"	kind:namespace	line:9
+RandomMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+RandomMDP	../simple_rl/tasks/__init__.py	/^from random.RandomMDPClass import RandomMDP$/;"	kind:namespace	line:7
+RandomMDP	../simple_rl/tasks/random/RandomMDPClass.py	/^class RandomMDP(MDP):$/;"	kind:class	line:13
+RandomMDP	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks import ChainMDP, GridWorldMDP, TaxiOOMDP, RandomMDP, FourRoomMDP$/;"	kind:namespace	line:13
+RandomMDPClass.py	../simple_rl/tasks/random/RandomMDPClass.py	1;"	kind:file	line:1
+RandomState	../simple_rl/tasks/__init__.py	/^from random.RandomStateClass import RandomState$/;"	kind:namespace	line:8
+RandomState	../simple_rl/tasks/random/RandomMDPClass.py	/^from simple_rl.tasks.random.RandomStateClass import RandomState$/;"	kind:namespace	line:10
+RandomState	../simple_rl/tasks/random/RandomStateClass.py	/^class RandomState(State):$/;"	kind:class	line:7
+RandomStateClass.py	../simple_rl/tasks/random/RandomStateClass.py	1;"	kind:file	line:1
+RockPaperScissorsMDP	../examples/markov_game_example.py	/^from simple_rl.tasks import RockPaperScissorsMDP$/;"	kind:namespace	line:10
+RockPaperScissorsMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+RockPaperScissorsMDP	../simple_rl/tasks/__init__.py	/^from rock_paper_scissors.RockPaperScissorsMDPClass import RockPaperScissorsMDP$/;"	kind:namespace	line:12
+RockPaperScissorsMDP	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^class RockPaperScissorsMDP(MarkovGameMDP):$/;"	kind:class	line:11
+RockPaperScissorsMDPClass.py	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	1;"	kind:file	line:1
+State	../simple_rl/abstraction/action_abs/OptionClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:3
+State	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:5
+State	../simple_rl/abstraction/state_abs/sa_helpers.py	/^from simple_rl.mdp import State$/;"	kind:namespace	line:10
+State	../simple_rl/mdp/StateClass.py	/^class State(object):$/;"	kind:class	line:7
+State	../simple_rl/mdp/__init__.py	/^from StateClass import State$/;"	kind:namespace	line:5
+State	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/chain/ChainStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/color/ColorStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/gym/GymStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:5
+State	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:8
+State	../simple_rl/tasks/random/RandomStateClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:4
+State	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^from simple_rl.mdp.StateClass import State$/;"	kind:namespace	line:8
+StateAbstraction	../simple_rl/abstraction/AbstractionWrapperClass.py	/^from state_abs.StateAbstractionClass import StateAbstraction$/;"	kind:namespace	line:6
+StateAbstraction	../simple_rl/abstraction/__init__.py	/^from state_abs.StateAbstractionClass import StateAbstraction$/;"	kind:namespace	line:2
+StateAbstraction	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^class StateAbstraction(object):$/;"	kind:class	line:9
+StateAbstraction	../simple_rl/abstraction/state_abs/sa_helpers.py	/^from StateAbstractionClass import StateAbstraction$/;"	kind:namespace	line:13
+StateAbstractionClass.py	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	1;"	kind:file	line:1
+StateClass.py	../simple_rl/mdp/StateClass.py	1;"	kind:file	line:1
+TaxiOOMDP	../examples/multitask_example.py	/^from simple_rl.tasks import GridWorldMDP, RandomMDP, ChainMDP, TaxiOOMDP, FourRoomMDP$/;"	kind:namespace	line:9
+TaxiOOMDP	../examples/oomdp_example.py	/^from simple_rl.tasks import TaxiOOMDP$/;"	kind:namespace	line:9
+TaxiOOMDP	../simple_rl/run_experiments.py	/^        RockPaperScissorsMDP, GridGameMDP$/;"	kind:namespace	line:414
+TaxiOOMDP	../simple_rl/tasks/__init__.py	/^from taxi.TaxiOOMDPClass import TaxiOOMDP$/;"	kind:namespace	line:9
+TaxiOOMDP	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^class TaxiOOMDP(OOMDP):$/;"	kind:class	line:23
+TaxiOOMDP	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks import ChainMDP, GridWorldMDP, TaxiOOMDP, RandomMDP, FourRoomMDP$/;"	kind:namespace	line:13
+TaxiOOMDPClass.py	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	1;"	kind:file	line:1
+TaxiState	../simple_rl/tasks/__init__.py	/^from taxi.TaxiStateClass import TaxiState$/;"	kind:namespace	line:10
+TaxiState	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^from simple_rl.tasks.taxi.TaxiStateClass import TaxiState$/;"	kind:namespace	line:19
+TaxiState	../simple_rl/tasks/taxi/TaxiStateClass.py	/^class TaxiState(OOMDPState):$/;"	kind:class	line:7
+TaxiStateClass.py	../simple_rl/tasks/taxi/TaxiStateClass.py	1;"	kind:file	line:1
+TrenchOOMDP	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^class TrenchOOMDP(OOMDP):$/;"	kind:class	line:13
+TrenchOOMDPClass.py	../simple_rl/tasks/trench/TrenchOOMDPClass.py	1;"	kind:file	line:1
+TrenchOOMDPState	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.tasks.trench.TrenchOOMDPState import TrenchOOMDPState$/;"	kind:namespace	line:10
+TrenchOOMDPState	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^class TrenchOOMDPState(OOMDPState):$/;"	kind:class	line:4
+TrenchOOMDPState.py	../simple_rl/tasks/trench/TrenchOOMDPState.py	1;"	kind:file	line:1
+ValueIteration	../examples/planning_example.py	/^from simple_rl.planning import ValueIteration, MCTS$/;"	kind:namespace	line:9
+ValueIteration	../examples/viz_example.py	/^from simple_rl.planning import ValueIteration$/;"	kind:namespace	line:12
+ValueIteration	../simple_rl/abstraction/action_abs/aa_helpers.py	/^from simple_rl.planning.ValueIterationClass import ValueIteration$/;"	kind:namespace	line:2
+ValueIteration	../simple_rl/abstraction/state_abs/sa_helpers.py	/^from simple_rl.planning.ValueIterationClass import ValueIteration$/;"	kind:namespace	line:9
+ValueIteration	../simple_rl/planning/ValueIterationClass.py	/^class ValueIteration(Planner):$/;"	kind:class	line:10
+ValueIteration	../simple_rl/planning/__init__.py	/^from ValueIterationClass import ValueIteration$/;"	kind:namespace	line:11
+ValueIteration	../simple_rl/run_experiments.py	/^from simple_rl.planning import ValueIteration$/;"	kind:namespace	line:27
+ValueIteration	../simple_rl/tasks/grid_world/grid_visualizer.py	/^from simple_rl.planning import ValueIteration$/;"	kind:namespace	line:12
+ValueIteration	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.planning import ValueIteration$/;"	kind:namespace	line:8
+ValueIterationClass.py	../simple_rl/planning/ValueIterationClass.py	1;"	kind:file	line:1
+X_AXIS_LABEL	../simple_rl/utils/chart_utils.py	/^X_AXIS_LABEL = None$/;"	kind:variable	line:40
+Y_AXIS_LABEL	../simple_rl/utils/chart_utils.py	/^Y_AXIS_LABEL = None$/;"	kind:variable	line:41
+__add__	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def __add__(self, other_abs):$/;"	kind:member	line:104
+__add__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __add__(self, val):$/;"	kind:member	line:17
+__add__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __add__(self, val):$/;"	kind:member	line:17
+__eq__	../simple_rl/mdp/StateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:47
+__eq__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:26
+__eq__	../simple_rl/tasks/color/ColorStateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:29
+__eq__	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:48
+__eq__	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:21
+__eq__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __eq__(self, other):$/;"	kind:member	line:26
+__eq__	../simple_rl/tasks/taxi/TaxiStateClass.py	/^    def __eq__(self, other_taxi_state):$/;"	kind:member	line:27
+__eq__	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^    def __eq__(self, other_trench_state):$/;"	kind:member	line:32
+__getitem__	../simple_rl/mdp/StateClass.py	/^    def __getitem__(self, index):$/;"	kind:member	line:50
+__getitem__	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def __getitem__(self, key):$/;"	kind:member	line:27
+__hash__	../simple_rl/mdp/StateClass.py	/^    def __hash__(self):$/;"	kind:member	line:35
+__hash__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:14
+__hash__	../simple_rl/tasks/color/ColorStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:23
+__hash__	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:17
+__hash__	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:15
+__hash__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:14
+__hash__	../simple_rl/tasks/taxi/TaxiStateClass.py	/^    def __hash__(self):$/;"	kind:member	line:19
+__hash__	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^    def __hash__(self):$/;"	kind:member	line:16
+__init__	../eigen_options/eigen_options.py	/^    def __init__(self, mdp):$/;"	kind:member	line:10
+__init__	../examples/new_mdp_example.py	/^    def __init__(self, col_sq_locs_dict, width=5, height=3, init_loc=(1, 1), goal_locs=[(5, 3)]):$/;"	kind:member	line:15
+__init__	../examples/new_mdp_example.py	/^    def __init__(self, x, y, color="white"):$/;"	kind:member	line:72
+__init__	../simple_rl/abstraction/AbstractionWrapperClass.py	/^    def __init__(self,$/;"	kind:member	line:11
+__init__	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def __init__(self, options, prim_actions=[], term_prob=0.0, prims_on_failure=False):$/;"	kind:member	line:11
+__init__	../simple_rl/abstraction/action_abs/InListPredicateClass.py	/^    def __init__(self, ls):$/;"	kind:member	line:2
+__init__	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def __init__(self, init_predicate, term_predicate, policy, name="o", term_prob=0.01):$/;"	kind:member	line:7
+__init__	../simple_rl/abstraction/action_abs/PolicyClass.py	/^    def __init__(self, policy_lambda):$/;"	kind:member	line:2
+__init__	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^    def __init__(self, policy_dict={}):$/;"	kind:member	line:10
+__init__	../simple_rl/abstraction/action_abs/PredicateClass.py	/^    def __init__(self, func):$/;"	kind:member	line:2
+__init__	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def __init__(self, phi=None):$/;"	kind:member	line:10
+__init__	../simple_rl/agents/AgentClass.py	/^    def __init__(self, name, actions, gamma=0.99):$/;"	kind:member	line:10
+__init__	../simple_rl/agents/FixedPolicyAgentClass.py	/^    def __init__(self, policy, name=NAME):$/;"	kind:member	line:12
+__init__	../simple_rl/agents/QLearnerAgentClass.py	/^    def __init__(self, actions, name="qlearner", alpha=0.05, gamma=0.99, epsilon=0.1, explore="uniform", anneal=False):$/;"	kind:member	line:16
+__init__	../simple_rl/agents/RMaxAgentClass.py	/^    def __init__(self, actions, gamma=0.95, horizon=10, s_a_threshold=1):$/;"	kind:member	line:21
+__init__	../simple_rl/agents/RandomAgentClass.py	/^    def __init__(self, actions, name=""):$/;"	kind:member	line:13
+__init__	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def __init__(self, actions, name="lin-ucb", rand_init=True, context_size=None, alpha=1.5):$/;"	kind:member	line:20
+__init__	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def __init__(self, actions, name="grad_boost", gamma=0.99, explore="softmax", markov_window=20, update_window=500):$/;"	kind:member	line:33
+__init__	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def __init__(self, actions, num_features, rand_init=True, name="ql-linear", alpha=0.2, gamma=0.99, epsilon=0.2,$/;"	kind:member	line:20
+__init__	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^    def __init__(self, actions, num_features, rand_init=False, name="sarsa-linear", alpha=0.05, gamma=0.99,$/;"	kind:member	line:20
+__init__	../simple_rl/experiments/ExperimentClass.py	/^    def __init__(self,$/;"	kind:member	line:25
+__init__	../simple_rl/experiments/ExperimentParametersClass.py	/^    def __init__(self, params=defaultdict(lambda: None)):$/;"	kind:member	line:17
+__init__	../simple_rl/mdp/MDPClass.py	/^    def __init__(self, actions, transition_func, reward_func, init_state, gamma=0.99, step_cost=0):$/;"	kind:member	line:10
+__init__	../simple_rl/mdp/MDPDistributionClass.py	/^    def __init__(self, mdp_prob_dict, horizon=0):$/;"	kind:member	line:12
+__init__	../simple_rl/mdp/StateClass.py	/^    def __init__(self, data=[], is_terminal=False):$/;"	kind:member	line:10
+__init__	../simple_rl/mdp/markov_game/MarkovGameMDPClass.py	/^    def __init__(self, actions, transition_func, reward_func, init_state, gamma=0.99, num_agents=2):$/;"	kind:member	line:10
+__init__	../simple_rl/mdp/oomdp/OOMDPClass.py	/^    def __init__(self, actions, transition_func, reward_func, init_state, gamma=0.99):$/;"	kind:member	line:18
+__init__	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def __init__(self, attributes, name="OOMDP-Object"):$/;"	kind:member	line:7
+__init__	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def __init__(self, objects):$/;"	kind:member	line:10
+__init__	../simple_rl/planning/MCTSClass.py	/^    def __init__(self, mdp, name="mcts", explore_param=m.sqrt(2), rollout_depth=20, num_rollouts_per_step=10):$/;"	kind:member	line:13
+__init__	../simple_rl/planning/PlannerClass.py	/^    def __init__(self, mdp, name="planner"):$/;"	kind:member	line:4
+__init__	../simple_rl/planning/ValueIterationClass.py	/^    def __init__(self, mdp, name="value_iter", delta=0.0001, max_iterations=200, sample_rate=3):$/;"	kind:member	line:11
+__init__	../simple_rl/tasks/chain/ChainMDPClass.py	/^    def __init__(self, num_states=5, reset_val=0.01, gamma=0.99):$/;"	kind:member	line:13
+__init__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __init__(self, num):$/;"	kind:member	line:10
+__init__	../simple_rl/tasks/color/ColorMDPClass.py	/^    def __init__(self, width=9, height=9, rand_init=False, is_four_room=False, num_colors=5, init_loc=(1, 1),$/;"	kind:member	line:17
+__init__	../simple_rl/tasks/color/ColorStateClass.py	/^    def __init__(self, x, y, color):$/;"	kind:member	line:11
+__init__	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^    def __init__(self, width=9, height=9, init_loc=(1, 1), goal_locs=[(9, 9)], gamma=0.99, slip_prob=0.00,$/;"	kind:member	line:16
+__init__	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def __init__(self, height=3, width=8, init_a_x=1, init_a_y=2, init_b_x=8, init_b_y=8):$/;"	kind:member	line:17
+__init__	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^    def __init__(self, a_x, a_y, b_x, b_y):$/;"	kind:member	line:10
+__init__	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def __init__(self,$/;"	kind:member	line:20
+__init__	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^    def __init__(self, x, y):$/;"	kind:member	line:10
+__init__	../simple_rl/tasks/gym/GymMDPClass.py	/^    def __init__(self, env_name='CartPole-v0', render=False):$/;"	kind:member	line:21
+__init__	../simple_rl/tasks/gym/GymStateClass.py	/^    def __init__(self, data=[], is_terminal=False):$/;"	kind:member	line:13
+__init__	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^    def __init__(self):$/;"	kind:member	line:17
+__init__	../simple_rl/tasks/random/RandomMDPClass.py	/^    def __init__(self, num_states=5, num_rand_trans=5, gamma=0.99):$/;"	kind:member	line:18
+__init__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __init__(self, num):$/;"	kind:member	line:10
+__init__	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^    def __init__(self):$/;"	kind:member	line:17
+__init__	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def __init__(self, width, height, agent, walls, passengers, slip_prob=0, gamma=0.99):$/;"	kind:member	line:31
+__init__	../simple_rl/tasks/taxi/TaxiStateClass.py	/^    def __init__(self, objects):$/;"	kind:member	line:10
+__init__	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def __init__(self, width, height, agent, blocks, lavas, gamma=0.99, slip_prob=0.0, name="trench"):$/;"	kind:member	line:21
+__init__	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^    def __init__(self, objects):$/;"	kind:member	line:7
+__init__.py	../eigen_options/__init__.py	1;"	kind:file	line:1
+__init__.py	../examples/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/abstraction/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/abstraction/action_abs/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/abstraction/state_abs/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/agents/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/agents/bandits/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/agents/func_approx/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/experiments/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/mdp/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/mdp/markov_game/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/mdp/oomdp/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/planning/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/chain/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/color/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/four_room/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/grid_game/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/grid_world/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/gym/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/prisoners/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/random/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/rock_paper_scissors/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/taxi/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/tasks/trench/__init__.py	1;"	kind:file	line:1
+__init__.py	../simple_rl/utils/__init__.py	1;"	kind:file	line:1
+__len__	../simple_rl/mdp/StateClass.py	/^    def __len__(self):$/;"	kind:member	line:53
+__lt__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __lt__(self, val):$/;"	kind:member	line:20
+__lt__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __lt__(self, val):$/;"	kind:member	line:20
+__setitem__	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def __setitem__(self, key, item):$/;"	kind:member	line:30
+__str__	../examples/new_mdp_example.py	/^    def __str__(self):$/;"	kind:member	line:76
+__str__	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def __str__(self):$/;"	kind:member	line:87
+__str__	../simple_rl/agents/AgentClass.py	/^    def __str__(self):$/;"	kind:member	line:56
+__str__	../simple_rl/agents/FixedPolicyAgentClass.py	/^    def __str__(self):$/;"	kind:member	line:34
+__str__	../simple_rl/experiments/ExperimentClass.py	/^    def __str__(self):$/;"	kind:member	line:216
+__str__	../simple_rl/experiments/ExperimentParametersClass.py	/^    def __str__(self):$/;"	kind:member	line:20
+__str__	../simple_rl/mdp/MDPDistributionClass.py	/^    def __str__(self):$/;"	kind:member	line:156
+__str__	../simple_rl/mdp/StateClass.py	/^    def __str__(self):$/;"	kind:member	line:44
+__str__	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def __str__(self):$/;"	kind:member	line:33
+__str__	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def __str__(self):$/;"	kind:member	line:46
+__str__	../simple_rl/planning/PlannerClass.py	/^        def __str__(self):$/;"	kind:function	line:23
+__str__	../simple_rl/tasks/chain/ChainMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:60
+__str__	../simple_rl/tasks/chain/ChainStateClass.py	/^    def __str__(self):$/;"	kind:member	line:23
+__str__	../simple_rl/tasks/color/ColorStateClass.py	/^    def __str__(self):$/;"	kind:member	line:26
+__str__	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:137
+__str__	../simple_rl/tasks/grid_game/GridGameStateClass.py	/^    def __str__(self):$/;"	kind:member	line:45
+__str__	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:169
+__str__	../simple_rl/tasks/grid_world/GridWorldStateClass.py	/^    def __str__(self):$/;"	kind:member	line:18
+__str__	../simple_rl/tasks/gym/GymMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:64
+__str__	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:59
+__str__	../simple_rl/tasks/random/RandomMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:70
+__str__	../simple_rl/tasks/random/RandomStateClass.py	/^    def __str__(self):$/;"	kind:member	line:23
+__str__	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:60
+__str__	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:142
+__str__	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def __str__(self):$/;"	kind:member	line:263
+_anneal	../simple_rl/agents/QLearnerAgentClass.py	/^    def _anneal(self):$/;"	kind:member	line:136
+_avg_r_func	../simple_rl/mdp/MDPDistributionClass.py	/^        def _avg_r_func(s, a):$/;"	kind:function	line:102
+_calculate_eigen_options	../eigen_options/eigen_options.py	/^    def _calculate_eigen_options(self):$/;"	kind:member	line:53
+_compute_adjacency_matrix	../eigen_options/eigen_options.py	/^    def _compute_adjacency_matrix(self):$/;"	kind:member	line:28
+_compute_exp_future_return	../simple_rl/agents/RMaxAgentClass.py	/^    def _compute_exp_future_return(self, state, action, horizon=None):$/;"	kind:member	line:162
+_compute_matrix_from_trans_func	../simple_rl/planning/ValueIterationClass.py	/^    def _compute_matrix_from_trans_func(self):$/;"	kind:member	line:30
+_compute_max_qval_action_pair	../simple_rl/agents/QLearnerAgentClass.py	/^    def _compute_max_qval_action_pair(self, state):$/;"	kind:member	line:141
+_compute_max_qval_action_pair	../simple_rl/agents/RMaxAgentClass.py	/^    def _compute_max_qval_action_pair(self, state, horizon=None):$/;"	kind:member	line:80
+_compute_max_qval_action_pair	../simple_rl/planning/ValueIterationClass.py	/^    def _compute_max_qval_action_pair(self, state):$/;"	kind:member	line:233
+_compute_reachable_state_space	../simple_rl/planning/ValueIterationClass.py	/^    def _compute_reachable_state_space(self):$/;"	kind:member	line:88
+_compute_score	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def _compute_score(self, context):$/;"	kind:member	line:51
+_compute_walls	../simple_rl/tasks/color/ColorMDPClass.py	/^    def _compute_walls(self, width, height):$/;"	kind:member	line:36
+_compute_walls	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^    def _compute_walls(self, width, height):$/;"	kind:member	line:29
+_convert_to_options	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def _convert_to_options(self, action_list):$/;"	kind:member	line:66
+_coord2id	../eigen_options/eigen_options.py	/^    def _coord2id(self, i, j):$/;"	kind:member	line:49
+_create_state	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def _create_state(self, agent_oo_obj, walls, passengers):$/;"	kind:member	line:44
+_create_state	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _create_state(self, agent_oo_obj, blocks, lavas):$/;"	kind:member	line:35
+_draw_agent	../simple_rl/tasks/grid_world/grid_visualizer.py	/^def _draw_agent(center_point, screen, base_size=30):$/;"	kind:function	line:135
+_draw_agent	../simple_rl/tasks/taxi/taxi_visualizer.py	/^def _draw_agent(center_point, screen, base_size=30):$/;"	kind:function	line:92
+_draw_agent_text	../simple_rl/utils/mdp_visualizer.py	/^def _draw_agent_text(agent, screen):$/;"	kind:function	line:59
+_draw_state	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from grid_visualizer import _draw_state$/;"	kind:namespace	line:177
+_draw_state	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from grid_visualizer import _draw_state$/;"	kind:namespace	line:193
+_draw_state	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from grid_visualizer import _draw_state$/;"	kind:namespace	line:199
+_draw_state	../simple_rl/tasks/grid_world/grid_visualizer.py	/^def _draw_state(screen,$/;"	kind:function	line:17
+_draw_state	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^        from taxi_visualizer import _draw_state$/;"	kind:namespace	line:147
+_draw_state	../simple_rl/tasks/taxi/taxi_visualizer.py	/^def _draw_state(screen,$/;"	kind:function	line:11
+_draw_state_text	../simple_rl/utils/mdp_visualizer.py	/^def _draw_state_text(state, screen):$/;"	kind:function	line:75
+_draw_title_text	../simple_rl/utils/mdp_visualizer.py	/^def _draw_title_text(mdp, screen):$/;"	kind:function	line:38
+_error_check	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^def _error_check(state, action):$/;"	kind:function	line:204
+_error_check	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^def _error_check(state, action):$/;"	kind:function	line:233
+_forward_state_in_bounds	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _forward_state_in_bounds(self, state):$/;"	kind:member	line:184
+_four_rooms	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _four_rooms(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:6
+_get_agent_colors	../simple_rl/utils/chart_utils.py	/^def _get_agent_colors(data_dir, agents):$/;"	kind:function	line:328
+_get_agent_names	../simple_rl/utils/chart_utils.py	/^def _get_agent_names(data_dir):$/;"	kind:function	line:298
+_get_exp_file_string	../simple_rl/experiments/ExperimentClass.py	/^    def _get_exp_file_string(self):$/;"	kind:member	line:202
+_get_max_q_action	../simple_rl/planning/ValueIterationClass.py	/^    def _get_max_q_action(self, state):$/;"	kind:member	line:191
+_get_reward	../simple_rl/agents/RMaxAgentClass.py	/^    def _get_reward(self, state, action):$/;"	kind:member	line:190
+_increment_bar	../simple_rl/run_experiments.py	/^def _increment_bar():$/;"	kind:function	line:397
+_init_action_model	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def _init_action_model(self, rand_init=True):$/;"	kind:member	line:36
+_is_episodic	../simple_rl/utils/chart_utils.py	/^def _is_episodic(data_dir):$/;"	kind:function	line:356
+_is_forward_loc_block	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_forward_loc_block(self, state):$/;"	kind:member	line:173
+_is_goal_state	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_goal_state(self, state):$/;"	kind:member	line:101
+_is_goal_state_action	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def _is_goal_state_action(self, state, action):$/;"	kind:member	line:92
+_is_goal_state_action	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_goal_state_action(self, state, action):$/;"	kind:member	line:78
+_is_lava_state	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_lava_state(self, state):$/;"	kind:member	line:111
+_is_lava_state_action	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_lava_state_action(self, state, action):$/;"	kind:member	line:90
+_is_terminal_state	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def _is_terminal_state(self, next_state):$/;"	kind:member	line:133
+_is_terminal_state	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _is_terminal_state(self, state):$/;"	kind:member	line:170
+_is_wall_in_the_way	../simple_rl/tasks/taxi/taxi_helpers.py	/^def _is_wall_in_the_way(state, dx=0, dy=0):$/;"	kind:function	line:7
+_make_mini_mdp_option_policy	../simple_rl/abstraction/action_abs/aa_helpers.py	/^def _make_mini_mdp_option_policy(mini_mdp):$/;"	kind:function	line:43
+_make_oomdp_objs_from_list_of_dict	../simple_rl/mdp/oomdp/OOMDPClass.py	/^    def _make_oomdp_objs_from_list_of_dict(self, list_of_attr_dicts, name):$/;"	kind:member	line:21
+_make_step_progress_bar	../simple_rl/run_experiments.py	/^def _make_step_progress_bar():$/;"	kind:function	line:382
+_manhattan_distance	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^def _manhattan_distance(a_x, a_y, b_x, b_y):$/;"	kind:function	line:141
+_move_agents	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def _move_agents(self, action_a, a_x, a_y, action_b, b_x, b_y):$/;"	kind:member	line:79
+_move_pass_in_taxi	../simple_rl/tasks/taxi/taxi_helpers.py	/^def _move_pass_in_taxi(state, dx=0, dy=0):$/;"	kind:function	line:24
+_next_action	../simple_rl/planning/MCTSClass.py	/^    def _next_action(self, state):$/;"	kind:member	line:59
+_normalize	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def _normalize(self, vec):$/;"	kind:member	line:76
+_normalize	../simple_rl/mdp/MDPDistributionClass.py	/^    def _normalize(self):$/;"	kind:member	line:67
+_pad_features_with_zeros	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def _pad_features_with_zeros(self, state, action):$/;"	kind:member	line:95
+_phi	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def _phi(self, state, action):$/;"	kind:member	line:51
+_pre_process_context	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def _pre_process_context(self, context):$/;"	kind:member	line:129
+_q_disc_approx_indicator	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _q_disc_approx_indicator(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:70
+_q_eps_approx_indicator	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _q_eps_approx_indicator(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:48
+_random	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _random(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:18
+_rbf	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^def _rbf(x):$/;"	kind:function	line:133
+_reset_reward	../simple_rl/agents/RMaxAgentClass.py	/^    def _reset_reward(self):$/;"	kind:member	line:209
+_reward_func	../simple_rl/tasks/chain/ChainMDPClass.py	/^    def _reward_func(self, state, action):$/;"	kind:member	line:23
+_reward_func	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def _reward_func(self, state, action_dict):$/;"	kind:member	line:28
+_reward_func	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def _reward_func(self, state, action):$/;"	kind:member	line:78
+_reward_func	../simple_rl/tasks/gym/GymMDPClass.py	/^    def _reward_func(self, state, action):$/;"	kind:member	line:32
+_reward_func	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^    def _reward_func(self, state, action_dict):$/;"	kind:member	line:21
+_reward_func	../simple_rl/tasks/random/RandomMDPClass.py	/^    def _reward_func(self, state, action):$/;"	kind:member	line:36
+_reward_func	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^    def _reward_func(self, state, action_dict):$/;"	kind:member	line:21
+_rollout	../simple_rl/planning/MCTSClass.py	/^    def _rollout(self, cur_state, action):$/;"	kind:member	line:98
+_setup_files	../simple_rl/experiments/ExperimentClass.py	/^    def _setup_files(self, clear_old_results=True):$/;"	kind:member	line:69
+_taxi_reward_func	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def _taxi_reward_func(self, state, action):$/;"	kind:member	line:71
+_taxi_transition_func	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def _taxi_transition_func(self, state, action):$/;"	kind:member	line:96
+_transition_func	../examples/new_mdp_example.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:37
+_transition_func	../simple_rl/tasks/chain/ChainMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:40
+_transition_func	../simple_rl/tasks/color/ColorMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:62
+_transition_func	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^    def _transition_func(self, state, action_dict):$/;"	kind:member	line:62
+_transition_func	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:118
+_transition_func	../simple_rl/tasks/gym/GymMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:50
+_transition_func	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:48
+_transition_func	../simple_rl/tasks/random/RandomMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:51
+_transition_func	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^    def _transition_func(self, state, action):$/;"	kind:member	line:49
+_trench_reward_func	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _trench_reward_func(self, state, action):$/;"	kind:member	line:60
+_trench_transition_func	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def _trench_transition_func(self, state, action):$/;"	kind:member	line:121
+_update_weights	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def _update_weights(self, reward, cur_state):$/;"	kind:member	line:83
+_update_weights	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^    def _update_weights(self, reward, curr_state, curr_action):$/;"	kind:member	line:74
+_v_approx_indicator	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _v_approx_indicator(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:33
+_v_disc_approx_indicator	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^def _v_disc_approx_indicator(state_x, state_y, vi, actions, epsilon=0.0):$/;"	kind:function	line:99
+_vis_init	../simple_rl/utils/mdp_visualizer.py	/^def _vis_init(screen, mdp, draw_state, cur_state, agent=None, value=False):$/;"	kind:function	line:188
+_write_extra_datum_to_file	../simple_rl/experiments/ExperimentClass.py	/^    def _write_extra_datum_to_file(self, mdp_name, agent, datum, datum_name):$/;"	kind:member	line:101
+aa_helpers	../examples/goal_based_options_example.py	/^from simple_rl.abstraction import AbstractionWrapper, aa_helpers, ActionAbstraction$/;"	kind:namespace	line:11
+aa_helpers	../simple_rl/abstraction/__init__.py	/^from action_abs import aa_helpers$/;"	kind:namespace	line:5
+aa_helpers	../simple_rl/abstraction/action_abs/__init__.py	/^import aa_helpers$/;"	kind:namespace	line:1
+aa_helpers.py	../simple_rl/abstraction/action_abs/aa_helpers.py	1;"	kind:file	line:1
+abs_to_ground	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def abs_to_ground(self, ground_state, abstr_action):$/;"	kind:member	line:106
+abstraction_example.py	../examples/abstraction_example.py	1;"	kind:file	line:1
+act	../simple_rl/abstraction/AbstractionWrapperClass.py	/^    def act(self, ground_state, reward):$/;"	kind:member	line:34
+act	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def act(self, agent, abstr_state, ground_state, reward):$/;"	kind:member	line:20
+act	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def act(self, ground_state):$/;"	kind:member	line:32
+act	../simple_rl/agents/AgentClass.py	/^    def act(self, state, reward):$/;"	kind:member	line:18
+act	../simple_rl/agents/FixedPolicyAgentClass.py	/^    def act(self, state, reward):$/;"	kind:member	line:20
+act	../simple_rl/agents/QLearnerAgentClass.py	/^    def act(self, state, reward, learning=True):$/;"	kind:member	line:50
+act	../simple_rl/agents/RMaxAgentClass.py	/^    def act(self, state, reward):$/;"	kind:member	line:46
+act	../simple_rl/agents/RandomAgentClass.py	/^    def act(self, state, reward):$/;"	kind:member	line:17
+act	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def act(self, context, reward):$/;"	kind:member	line:94
+act	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^    def act(self, state, reward):$/;"	kind:member	line:27
+act_until_terminal	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def act_until_terminal(self, cur_state, transition_func):$/;"	kind:member	line:41
+add_experience	../simple_rl/experiments/ExperimentClass.py	/^    def add_experience(self, agent, state, action, reward, next_state, time_taken=0):$/;"	kind:member	line:119
+add_new_weak_learner	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def add_new_weak_learner(self):$/;"	kind:member	line:113
+add_option	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def add_option(self, option):$/;"	kind:member	line:109
+agent	../eigen_options/eigen_options.py	/^    def agent(self, num_options):$/;"	kind:member	line:23
+agent_dropoff	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def agent_dropoff(self, state):$/;"	kind:member	line:206
+agent_pickup	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def agent_pickup(self, state):$/;"	kind:member	line:183
+agent_pickup	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def agent_pickup(self, state):$/;"	kind:member	line:223
+agent_place	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def agent_place(self, state):$/;"	kind:member	line:239
+agents	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+argparse	../examples/viz_example.py	/^import argparse$/;"	kind:namespace	line:4
+argparse	../simple_rl/run_experiments.py	/^import argparse$/;"	kind:namespace	line:18
+argparse	../simple_rl/utils/chart_utils.py	/^import argparse$/;"	kind:namespace	line:28
+author	../setup.py	/^    author='David Abel',$/;"	kind:variable	line:20
+author_email	../setup.py	/^    author_email='david_abel@brown.edu',$/;"	kind:variable	line:21
+average_data	../simple_rl/utils/chart_utils.py	/^def average_data(data, cumulative=False):$/;"	kind:function	line:72
+basic_test.py	../tests/basic_test.py	1;"	kind:file	line:1
+cPickle	../simple_rl/abstraction/state_abs/sa_helpers.py	/^import cPickle$/;"	kind:namespace	line:3
+chart_utils	../simple_rl/experiments/ExperimentClass.py	/^from simple_rl.utils import chart_utils$/;"	kind:namespace	line:15
+chart_utils.py	../simple_rl/utils/chart_utils.py	1;"	kind:file	line:1
+choose_mdp	../simple_rl/run_experiments.py	/^def choose_mdp(mdp_name, env_name="Asteroids-v0"):$/;"	kind:function	line:402
+classifiers	../setup.py	/^    classifiers=[],$/;"	kind:variable	line:25
+color_ls	../simple_rl/tasks/taxi/taxi_visualizer.py	/^from simple_rl.utils.chart_utils import color_ls$/;"	kind:namespace	line:8
+color_ls	../simple_rl/utils/chart_utils.py	/^            [153, 63, 0], [142, 142, 56], [56, 142, 142]]$/;"	kind:variable	line:33
+color_ls	../simple_rl/utils/mdp_visualizer.py	/^from simple_rl.utils.chart_utils import color_ls$/;"	kind:namespace	line:15
+compute_conf_intervals	../simple_rl/utils/chart_utils.py	/^def compute_conf_intervals(data, cumulative=False):$/;"	kind:function	line:115
+compute_single_conf_interval	../simple_rl/utils/chart_utils.py	/^def compute_single_conf_interval(datum):$/;"	kind:function	line:151
+copy	../simple_rl/mdp/MDPClass.py	/^import copy$/;"	kind:namespace	line:4
+copy	../simple_rl/run_experiments.py	/^import copy$/;"	kind:namespace	line:22
+copy	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^import copy$/;"	kind:namespace	line:14
+copy	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^import copy$/;"	kind:namespace	line:1
+csgraph	../eigen_options/eigen_options.py	/^from scipy.sparse import csgraph$/;"	kind:namespace	line:6
+defaultdict	../examples/new_mdp_example.py	/^from collections import defaultdict$/;"	kind:namespace	line:4
+defaultdict	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:2
+defaultdict	../simple_rl/abstraction/action_abs/OptionClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:1
+defaultdict	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:6
+defaultdict	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:2
+defaultdict	../simple_rl/abstraction/state_abs/sa_helpers.py	/^from collections import defaultdict$/;"	kind:namespace	line:2
+defaultdict	../simple_rl/agents/AgentClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:4
+defaultdict	../simple_rl/agents/QLearnerAgentClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:7
+defaultdict	../simple_rl/agents/RMaxAgentClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:10
+defaultdict	../simple_rl/experiments/ExperimentClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:12
+defaultdict	../simple_rl/experiments/ExperimentParametersClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:8
+defaultdict	../simple_rl/mdp/MDPDistributionClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:6
+defaultdict	../simple_rl/planning/MCTSClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:6
+defaultdict	../simple_rl/planning/ValueIterationClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:2
+defaultdict	../simple_rl/run_experiments.py	/^from collections import defaultdict$/;"	kind:namespace	line:24
+defaultdict	../simple_rl/tasks/grid_world/grid_visualizer.py	/^from collections import defaultdict$/;"	kind:namespace	line:2
+defaultdict	../simple_rl/tasks/random/RandomMDPClass.py	/^from collections import defaultdict$/;"	kind:namespace	line:6
+defaultdict	../simple_rl/utils/make_mdp.py	/^from collections import defaultdict$/;"	kind:namespace	line:10
+description	../setup.py	/^    description='A simple framework for experimenting with Reinforcement Learning in Python 2.7',$/;"	kind:variable	line:19
+download_url	../setup.py	/^    download_url='https:\/\/github.com\/david-abel\/simple_rl\/tarball\/v0.76',$/;"	kind:variable	line:23
+eigen_options.py	../eigen_options/eigen_options.py	1;"	kind:file	line:1
+end_of_episode	../simple_rl/abstraction/AbstractionWrapperClass.py	/^    def end_of_episode(self):$/;"	kind:member	line:53
+end_of_episode	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def end_of_episode(self):$/;"	kind:member	line:116
+end_of_episode	../simple_rl/agents/AgentClass.py	/^    def end_of_episode(self):$/;"	kind:member	line:41
+end_of_episode	../simple_rl/agents/QLearnerAgentClass.py	/^    def end_of_episode(self):$/;"	kind:member	line:221
+end_of_episode	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def end_of_episode(self):$/;"	kind:member	line:146
+end_of_episode	../simple_rl/experiments/ExperimentClass.py	/^    def end_of_episode(self, agent, num_times_to_write=1):$/;"	kind:member	line:148
+end_of_instance	../simple_rl/experiments/ExperimentClass.py	/^    def end_of_instance(self, agent):$/;"	kind:member	line:166
+eo	../eigen_options/run.py	/^    eo = EigenOptions(mdp)$/;"	kind:variable	line:40
+epsilon_greedy_q_policy	../simple_rl/agents/QLearnerAgentClass.py	/^    def epsilon_greedy_q_policy(self, state):$/;"	kind:member	line:82
+execute_agent_action	../simple_rl/mdp/MDPClass.py	/^    def execute_agent_action(self, action):$/;"	kind:member	line:50
+execute_agent_action	../simple_rl/mdp/markov_game/MarkovGameMDPClass.py	/^    def execute_agent_action(self, action_dict):$/;"	kind:member	line:14
+experiments	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+features	../simple_rl/mdp/StateClass.py	/^    def features(self):$/;"	kind:member	line:14
+fig6	../eigen_options/run.py	/^def fig6(mdp, eo):$/;"	kind:function	line:9
+fig7	../eigen_options/run.py	/^def fig7(mdp):$/;"	kind:function	line:24
+font	../simple_rl/utils/chart_utils.py	/^font = {'family': 'sans serif', 'size': 14}$/;"	kind:variable	line:36
+get_abs_cluster_num	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_abs_cluster_num(self, abs_state):$/;"	kind:member	line:85
+get_abs_states	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_abs_states(self):$/;"	kind:member	line:79
+get_action	../simple_rl/abstraction/action_abs/PolicyClass.py	/^    def get_action(self, state):$/;"	kind:member	line:5
+get_action	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^    def get_action(self, state):$/;"	kind:member	line:13
+get_action_distr	../simple_rl/agents/QLearnerAgentClass.py	/^    def get_action_distr(self, state):$/;"	kind:member	line:195
+get_actions	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def get_actions(self):$/;"	kind:member	line:103
+get_actions	../simple_rl/mdp/MDPClass.py	/^    def get_actions(self):$/;"	kind:member	line:29
+get_actions	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_actions(self):$/;"	kind:member	line:85
+get_active_options	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def get_active_options(self, state):$/;"	kind:member	line:56
+get_agent_avg_cumulative_rew	../simple_rl/experiments/ExperimentClass.py	/^    def get_agent_avg_cumulative_rew(self, agent):$/;"	kind:member	line:106
+get_agent_x	../simple_rl/tasks/taxi/TaxiStateClass.py	/^    def get_agent_x(self):$/;"	kind:member	line:13
+get_agent_x	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^    def get_agent_x(self):$/;"	kind:member	line:10
+get_agent_y	../simple_rl/tasks/taxi/TaxiStateClass.py	/^    def get_agent_y(self):$/;"	kind:member	line:16
+get_agent_y	../simple_rl/tasks/trench/TrenchOOMDPState.py	/^    def get_agent_y(self):$/;"	kind:member	line:13
+get_all_mdps	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_all_mdps(self, prob_threshold=0):$/;"	kind:member	line:72
+get_attribute	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def get_attribute(self, attr):$/;"	kind:member	line:18
+get_attributes	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def get_attributes(self):$/;"	kind:member	line:24
+get_average_reward_func	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_average_reward_func(self):$/;"	kind:member	line:101
+get_curr_state	../simple_rl/mdp/MDPClass.py	/^    def get_curr_state(self):$/;"	kind:member	line:26
+get_first_obj_of_class	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def get_first_obj_of_class(self, obj_class):$/;"	kind:member	line:31
+get_gamma	../simple_rl/mdp/MDPClass.py	/^    def get_gamma(self):$/;"	kind:member	line:32
+get_gamma	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_gamma(self):$/;"	kind:member	line:88
+get_goal_locs	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def get_goal_locs(self):$/;"	kind:member	line:172
+get_ground_states	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_ground_states(self):$/;"	kind:member	line:89
+get_ground_states_in_abs_state	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_ground_states_in_abs_state(self, abs_state):$/;"	kind:member	line:56
+get_horizon	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_horizon(self):$/;"	kind:member	line:82
+get_init_state	../simple_rl/mdp/MDPClass.py	/^    def get_init_state(self):$/;"	kind:member	line:23
+get_init_state	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_init_state(self):$/;"	kind:member	line:110
+get_lower_states	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_lower_states(self):$/;"	kind:member	line:92
+get_lower_states_in_abs_state	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_lower_states_in_abs_state(self, abs_state):$/;"	kind:member	line:66
+get_max_q_action	../simple_rl/agents/QLearnerAgentClass.py	/^    def get_max_q_action(self, state):$/;"	kind:member	line:164
+get_max_q_action	../simple_rl/agents/RMaxAgentClass.py	/^    def get_max_q_action(self, state, horizon=None):$/;"	kind:member	line:106
+get_max_q_actions	../simple_rl/planning/ValueIterationClass.py	/^    def get_max_q_actions(self, state):$/;"	kind:member	line:201
+get_max_q_value	../simple_rl/agents/QLearnerAgentClass.py	/^    def get_max_q_value(self, state):$/;"	kind:member	line:174
+get_max_q_value	../simple_rl/agents/RMaxAgentClass.py	/^    def get_max_q_value(self, state, horizon=None):$/;"	kind:member	line:121
+get_mdps	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_mdps(self):$/;"	kind:member	line:120
+get_name	../simple_rl/agents/AgentClass.py	/^    def get_name(self):$/;"	kind:member	line:53
+get_next_ground_action	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def get_next_ground_action(self, ground_state):$/;"	kind:member	line:100
+get_num_abstr_states	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_num_abstr_states(self):$/;"	kind:member	line:95
+get_num_backups_in_recent_run	../simple_rl/planning/ValueIterationClass.py	/^    def get_num_backups_in_recent_run(self):$/;"	kind:member	line:152
+get_num_feats	../simple_rl/mdp/StateClass.py	/^    def get_num_feats(self):$/;"	kind:member	line:26
+get_num_ground_states	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def get_num_ground_states(self):$/;"	kind:member	line:98
+get_num_known_sa	../simple_rl/agents/RMaxAgentClass.py	/^    def get_num_known_sa(self):$/;"	kind:member	line:40
+get_num_mdps	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_num_mdps(self):$/;"	kind:member	line:117
+get_num_state_feats	../simple_rl/mdp/MDPClass.py	/^    def get_num_state_feats(self):$/;"	kind:member	line:41
+get_num_states	../simple_rl/planning/ValueIterationClass.py	/^    def get_num_states(self):$/;"	kind:member	line:50
+get_obj_state	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def get_obj_state(self):$/;"	kind:member	line:21
+get_objects	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def get_objects(self):$/;"	kind:member	line:20
+get_objects_of_class	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def get_objects_of_class(self, obj_class):$/;"	kind:member	line:23
+get_prob_of_mdp	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_prob_of_mdp(self, mdp):$/;"	kind:member	line:123
+get_q_value	../simple_rl/agents/QLearnerAgentClass.py	/^    def get_q_value(self, state, action):$/;"	kind:member	line:184
+get_q_value	../simple_rl/agents/RMaxAgentClass.py	/^    def get_q_value(self, state, action, horizon=None):$/;"	kind:member	line:136
+get_q_value	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def get_q_value(self, state, action):$/;"	kind:member	line:71
+get_q_value	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def get_q_value(self, state, action):$/;"	kind:member	line:113
+get_q_value	../simple_rl/planning/ValueIterationClass.py	/^    def get_q_value(self, s, a):$/;"	kind:member	line:72
+get_reward_func	../simple_rl/mdp/MDPClass.py	/^    def get_reward_func(self):$/;"	kind:member	line:35
+get_reward_func	../simple_rl/mdp/MDPDistributionClass.py	/^    def get_reward_func(self, avg=True):$/;"	kind:member	line:95
+get_state_color	../examples/new_mdp_example.py	/^    def get_state_color(self, x, y):$/;"	kind:member	line:65
+get_states	../simple_rl/planning/ValueIterationClass.py	/^    def get_states(self):$/;"	kind:member	line:55
+get_transition_func	../simple_rl/mdp/MDPClass.py	/^    def get_transition_func(self):$/;"	kind:member	line:38
+get_value	../simple_rl/planning/ValueIterationClass.py	/^    def get_value(self, s):$/;"	kind:member	line:62
+goal_based_options_example.py	../examples/goal_based_options_example.py	1;"	kind:file	line:1
+grid_visualizer.py	../simple_rl/tasks/grid_world/grid_visualizer.py	1;"	kind:file	line:1
+gym	../simple_rl/tasks/gym/GymMDPClass.py	/^import gym$/;"	kind:namespace	line:13
+gym_example.py	../examples/gym_example.py	1;"	kind:file	line:1
+ind_funcs	../simple_rl/abstraction/state_abs/sa_helpers.py	/^import indicator_funcs as ind_funcs$/;"	kind:namespace	line:12
+indicator_funcs.py	../simple_rl/abstraction/state_abs/indicator_funcs.py	1;"	kind:file	line:1
+install_requires	../setup.py	/^    install_requires=[$/;"	kind:variable	line:14
+is_init_true	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def is_init_true(self, ground_state):$/;"	kind:member	line:26
+is_known	../simple_rl/agents/RMaxAgentClass.py	/^    def is_known(self, s, a):$/;"	kind:member	line:43
+is_next_step_continuing_option	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def is_next_step_continuing_option(self, ground_state):$/;"	kind:member	line:85
+is_taxi_terminal_state	../simple_rl/tasks/taxi/taxi_helpers.py	/^def is_taxi_terminal_state(state):$/;"	kind:function	line:42
+is_term_true	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def is_term_true(self, ground_state):$/;"	kind:member	line:29
+is_terminal	../simple_rl/mdp/StateClass.py	/^    def is_terminal(self):$/;"	kind:member	line:29
+is_true	../simple_rl/abstraction/action_abs/InListPredicateClass.py	/^    def is_true(self, x):$/;"	kind:member	line:5
+is_true	../simple_rl/abstraction/action_abs/PredicateClass.py	/^    def is_true(self, x):$/;"	kind:member	line:5
+is_wall	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def is_wall(self, x, y):$/;"	kind:member	line:158
+itertools	../simple_rl/abstraction/state_abs/sa_helpers.py	/^import itertools$/;"	kind:namespace	line:6
+itertools	../simple_rl/utils/make_mdp.py	/^import itertools$/;"	kind:namespace	line:8
+keywords	../setup.py	/^    keywords=['Markov Decision Process', 'MDP', 'Reinforcement Learning'],$/;"	kind:variable	line:24
+load_data	../simple_rl/utils/chart_utils.py	/^def load_data(experiment_dir, experiment_agents):$/;"	kind:function	line:44
+logger	../examples/gym_example.py	/^    logger = logging.getLogger(__name__)$/;"	kind:variable	line:26
+logging	../examples/gym_example.py	/^import logging$/;"	kind:namespace	line:5
+m	../simple_rl/planning/MCTSClass.py	/^import math as m$/;"	kind:namespace	line:4
+main	../examples/abstraction_example.py	/^def main(open_plot=True):$/;"	kind:function	line:14
+main	../examples/goal_based_options_example.py	/^def main(open_plot=True):$/;"	kind:function	line:14
+main	../examples/gym_example.py	/^def main(open_plot=True):$/;"	kind:function	line:14
+main	../examples/markov_game_example.py	/^def main(open_plot=True):$/;"	kind:function	line:14
+main	../examples/multitask_example.py	/^def main(open_plot=True):$/;"	kind:function	line:15
+main	../examples/new_mdp_example.py	/^def main(open_plot=True):$/;"	kind:function	line:80
+main	../examples/oomdp_example.py	/^def main(open_plot=True):$/;"	kind:function	line:13
+main	../examples/planning_example.py	/^def main():$/;"	kind:function	line:12
+main	../examples/simple_example.py	/^def main(open_plot=True):$/;"	kind:function	line:13
+main	../examples/viz_example.py	/^def main():$/;"	kind:function	line:25
+main	../simple_rl/mdp/MDPDistributionClass.py	/^def main():$/;"	kind:function	line:164
+main	../simple_rl/run_experiments.py	/^def main():$/;"	kind:function	line:455
+main	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^def main():$/;"	kind:function	line:145
+main	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^def main():$/;"	kind:function	line:294
+main	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^def main():$/;"	kind:function	line:63
+main	../simple_rl/tasks/random/RandomMDPClass.py	/^def main():$/;"	kind:function	line:74
+main	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^def main():$/;"	kind:function	line:64
+main	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^def main():$/;"	kind:function	line:252
+main	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^def main():$/;"	kind:function	line:268
+main	../simple_rl/utils/chart_utils.py	/^def main():$/;"	kind:function	line:387
+main	../tests/basic_test.py	/^def main():$/;"	kind:function	line:25
+make_cluster	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def make_cluster(self, list_of_ground_states):$/;"	kind:member	line:45
+make_dict_from_lambda	../simple_rl/abstraction/action_abs/aa_helpers.py	/^def make_dict_from_lambda(policy_func, state_list):$/;"	kind:function	line:61
+make_goal_based_options	../simple_rl/abstraction/action_abs/aa_helpers.py	/^def make_goal_based_options(mdp_distr):$/;"	kind:function	line:13
+make_grid_world_from_file	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^def make_grid_world_from_file(file_name, randomize=False, num_goals=1, name=None, goal_num=None, slip_prob=0.0):$/;"	kind:function	line:224
+make_grid_world_from_file	../simple_rl/utils/make_mdp.py	/^from simple_rl.tasks.grid_world.GridWorldMDPClass import make_grid_world_from_file$/;"	kind:namespace	line:14
+make_lambda	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^def make_lambda(result):$/;"	kind:function	line:120
+make_markov_game	../simple_rl/utils/make_mdp.py	/^def make_markov_game(markov_game_class="grid_game"):$/;"	kind:function	line:18
+make_mdp	../examples/goal_based_options_example.py	/^from simple_rl.utils import make_mdp$/;"	kind:namespace	line:8
+make_mdp	../examples/multitask_example.py	/^from simple_rl.utils import make_mdp$/;"	kind:namespace	line:12
+make_mdp	../simple_rl/utils/make_mdp.py	/^def make_mdp(mdp_class="grid", state_size=7):$/;"	kind:function	line:24
+make_mdp.py	../simple_rl/utils/make_mdp.py	1;"	kind:file	line:1
+make_mdp_distr	../examples/viz_example.py	/^from simple_rl.utils.make_mdp import make_mdp_distr$/;"	kind:namespace	line:13
+make_mdp_distr	../simple_rl/utils/make_mdp.py	/^def make_mdp_distr(mdp_class="grid", grid_dim=9, horizon=0, step_cost=0, gamma=0.99):$/;"	kind:function	line:50
+make_multitask_sa	../simple_rl/abstraction/state_abs/sa_helpers.py	/^def make_multitask_sa(mdp_distr, state_class=State, indic_func=ind_funcs._q_eps_approx_indicator, epsilon=0.0,$/;"	kind:function	line:58
+make_plots	../simple_rl/experiments/ExperimentClass.py	/^    def make_plots(self, open_plot=True):$/;"	kind:member	line:84
+make_plots	../simple_rl/utils/chart_utils.py	/^def make_plots(experiment_dir, experiment_agents, cumulative=True, use_cost=False, episodic=True, open_plot=True,$/;"	kind:function	line:260
+make_sa	../simple_rl/abstraction/state_abs/sa_helpers.py	/^def make_sa(mdp, indic_func=ind_funcs._q_eps_approx_indicator, state_class=State, epsilon=0.0, save=False,$/;"	kind:function	line:32
+make_singletask_sa	../simple_rl/abstraction/state_abs/sa_helpers.py	/^def make_singletask_sa(mdp, indic_func, state_class, epsilon=0.0, aa_single_act=False, prob_of_mdp=1.0,$/;"	kind:function	line:82
+markov_game_example.py	../examples/markov_game_example.py	1;"	kind:file	line:1
+math	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^import math$/;"	kind:namespace	line:14
+math	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^import math$/;"	kind:namespace	line:9
+math	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^import math$/;"	kind:namespace	line:9
+math	../simple_rl/run_experiments.py	/^import math$/;"	kind:namespace	line:20
+math	../simple_rl/tasks/color/ColorMDPClass.py	/^import math$/;"	kind:namespace	line:5
+math	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^import math$/;"	kind:namespace	line:5
+math	../simple_rl/utils/chart_utils.py	/^import math$/;"	kind:namespace	line:21
+matplotlib	../simple_rl/utils/chart_utils.py	/^import matplotlib$/;"	kind:namespace	line:24
+matplotlib	../simple_rl/utils/chart_utils.py	/^import matplotlib.pyplot as pyplot$/;"	kind:namespace	line:25
+mdp	../eigen_options/run.py	/^    mdp = FourRoomMDP()$/;"	kind:variable	line:39
+mdp	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+mdp_visualizer.py	../simple_rl/utils/mdp_visualizer.py	1;"	kind:file	line:1
+mdpv	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from simple_rl.utils import mdp_visualizer as mdpv$/;"	kind:namespace	line:176
+mdpv	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from simple_rl.utils import mdp_visualizer as mdpv$/;"	kind:namespace	line:192
+mdpv	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^        from simple_rl.utils import mdp_visualizer as mdpv$/;"	kind:namespace	line:198
+mdpv	../simple_rl/tasks/grid_world/grid_visualizer.py	/^from simple_rl.utils import mdp_visualizer as mdpv$/;"	kind:namespace	line:14
+merge_state_abs	../simple_rl/abstraction/state_abs/sa_helpers.py	/^def merge_state_abs(list_of_sa, track_act_opt_pr=False):$/;"	kind:function	line:16
+move_agent	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def move_agent(self, state, slip_prob=0, dx=0, dy=0):$/;"	kind:member	line:156
+move_agent_forward	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def move_agent_forward(self, state):$/;"	kind:member	line:194
+multitask_example.py	../examples/multitask_example.py	1;"	kind:file	line:1
+name	../setup.py	/^    name='simple_rl',$/;"	kind:variable	line:4
+new_mdp_example.py	../examples/new_mdp_example.py	1;"	kind:file	line:1
+np	../eigen_options/eigen_options.py	/^import numpy as np$/;"	kind:namespace	line:5
+np	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^import numpy as np$/;"	kind:namespace	line:6
+np	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^import numpy as np$/;"	kind:namespace	line:15
+np	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^import numpy as np$/;"	kind:namespace	line:8
+np	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^import numpy as np$/;"	kind:namespace	line:8
+np	../simple_rl/mdp/MDPDistributionClass.py	/^import numpy as np$/;"	kind:namespace	line:4
+np	../simple_rl/mdp/StateClass.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../simple_rl/run_experiments.py	/^import numpy as np$/;"	kind:namespace	line:23
+np	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^import numpy as np$/;"	kind:namespace	line:7
+np	../simple_rl/tasks/random/RandomMDPClass.py	/^import numpy as np$/;"	kind:namespace	line:5
+np	../simple_rl/utils/chart_utils.py	/^import numpy as np$/;"	kind:namespace	line:26
+numpy	../simple_rl/agents/QLearnerAgentClass.py	/^import numpy$/;"	kind:namespace	line:5
+numpy	../simple_rl/tasks/gym/GymMDPClass.py	/^import numpy$/;"	kind:namespace	line:6
+numpy	../simple_rl/tasks/gym/GymStateClass.py	/^import numpy$/;"	kind:namespace	line:2
+oomdp_example.py	../examples/oomdp_example.py	1;"	kind:file	line:1
+os	../examples/srl_example_setup.py	/^import os$/;"	kind:namespace	line:2
+os	../simple_rl/abstraction/AbstractionWrapperClass.py	/^import os$/;"	kind:namespace	line:2
+os	../simple_rl/abstraction/state_abs/sa_helpers.py	/^import os$/;"	kind:namespace	line:4
+os	../simple_rl/experiments/ExperimentClass.py	/^import os$/;"	kind:namespace	line:11
+os	../simple_rl/run_experiments.py	/^import os$/;"	kind:namespace	line:19
+os	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^import os$/;"	kind:namespace	line:6
+os	../simple_rl/tasks/gym/GymMDPClass.py	/^import os$/;"	kind:namespace	line:9
+os	../simple_rl/utils/chart_utils.py	/^import os$/;"	kind:namespace	line:23
+os	../tests/basic_test.py	/^import os$/;"	kind:namespace	line:5
+packages	../setup.py	/^              'simple_rl.planning', 'simple_rl.agents', 'simple_rl.agents.bandits', 'simple_rl.agents.func_approx',$/;"	kind:variable	line:6
+parent_dir	../examples/srl_example_setup.py	/^parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))$/;"	kind:variable	line:5
+parse_args	../examples/viz_example.py	/^def parse_args():$/;"	kind:function	line:16
+parse_args	../simple_rl/run_experiments.py	/^def parse_args():$/;"	kind:function	line:441
+parse_args	../simple_rl/utils/chart_utils.py	/^def parse_args():$/;"	kind:function	line:376
+phi	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def phi(self, state):$/;"	kind:member	line:21
+plan	../simple_rl/planning/MCTSClass.py	/^    def plan(self, cur_state, horizon=20):$/;"	kind:member	line:22
+plan	../simple_rl/planning/PlannerClass.py	/^        def plan(self, state):$/;"	kind:function	line:17
+plan	../simple_rl/planning/ValueIterationClass.py	/^    def plan(self, state=None, horizon=100):$/;"	kind:member	line:163
+planning	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+planning_example.py	../examples/planning_example.py	1;"	kind:file	line:1
+play_markov_game	../examples/markov_game_example.py	/^from simple_rl.run_experiments import play_markov_game$/;"	kind:namespace	line:11
+play_markov_game	../simple_rl/run_experiments.py	/^def play_markov_game(agent_ls, markov_game_mdp, instances=10, episodes=100, steps=30, verbose=False, open_plot=True):$/;"	kind:function	line:33
+plot	../simple_rl/utils/chart_utils.py	/^def plot(results, experiment_dir, agents, conf_intervals=[], use_cost=False, cumulative=False, episodic=True,$/;"	kind:function	line:165
+policy	../simple_rl/agents/AgentClass.py	/^    def policy(self, state):$/;"	kind:member	line:29
+policy	../simple_rl/planning/MCTSClass.py	/^    def policy(self, state):$/;"	kind:member	line:46
+policy	../simple_rl/planning/PlannerClass.py	/^        def policy(self, state):$/;"	kind:function	line:20
+policy	../simple_rl/planning/ValueIterationClass.py	/^    def policy(self, state):$/;"	kind:member	line:220
+policy_from_dict	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def policy_from_dict(self, state):$/;"	kind:member	line:76
+print_value_func	../simple_rl/planning/ValueIterationClass.py	/^    def print_value_func(self):$/;"	kind:member	line:159
+pygame	../simple_rl/tasks/grid_world/grid_visualizer.py	/^    import pygame$/;"	kind:namespace	line:5
+pygame	../simple_rl/tasks/taxi/taxi_visualizer.py	/^    import pygame$/;"	kind:namespace	line:3
+pygame	../simple_rl/utils/mdp_visualizer.py	/^    import pygame$/;"	kind:namespace	line:5
+pyplot	../simple_rl/utils/chart_utils.py	/^import matplotlib.pyplot as pyplot$/;"	kind:namespace	line:25
+random	../examples/markov_game_example.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^import random$/;"	kind:namespace	line:3
+random	../simple_rl/abstraction/action_abs/OptionClass.py	/^import random$/;"	kind:namespace	line:2
+random	../simple_rl/abstraction/action_abs/PolicyFromDictClass.py	/^import random$/;"	kind:namespace	line:2
+random	../simple_rl/abstraction/state_abs/indicator_funcs.py	/^import random$/;"	kind:namespace	line:1
+random	../simple_rl/agents/QLearnerAgentClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/agents/RMaxAgentClass.py	/^import random$/;"	kind:namespace	line:9
+random	../simple_rl/agents/RandomAgentClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^import random$/;"	kind:namespace	line:13
+random	../simple_rl/planning/MCTSClass.py	/^import random$/;"	kind:namespace	line:5
+random	../simple_rl/planning/ValueIterationClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/color/ColorMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/four_room/FourRoomMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/grid_game/GridGameMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/grid_world/grid_visualizer.py	/^import random$/;"	kind:namespace	line:8
+random	../simple_rl/tasks/gym/GymMDPClass.py	/^import random$/;"	kind:namespace	line:10
+random	../simple_rl/tasks/gym/GymMDPClass.py	/^import random$/;"	kind:namespace	line:7
+random	../simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/random/RandomMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py	/^import random$/;"	kind:namespace	line:4
+random	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^import random$/;"	kind:namespace	line:13
+random	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^import random$/;"	kind:namespace	line:2
+random	../simple_rl/utils/make_mdp.py	/^import random$/;"	kind:namespace	line:9
+remove_mdp	../simple_rl/mdp/MDPDistributionClass.py	/^    def remove_mdp(self, mdp):$/;"	kind:member	line:51
+remove_mdps	../simple_rl/mdp/MDPDistributionClass.py	/^    def remove_mdps(self, mdp_list):$/;"	kind:member	line:33
+reset	../simple_rl/abstraction/AbstractionWrapperClass.py	/^    def reset(self):$/;"	kind:member	line:48
+reset	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def reset(self):$/;"	kind:member	line:112
+reset	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def reset(self):$/;"	kind:member	line:101
+reset	../simple_rl/agents/AgentClass.py	/^    def reset(self):$/;"	kind:member	line:32
+reset	../simple_rl/agents/QLearnerAgentClass.py	/^    def reset(self):$/;"	kind:member	line:215
+reset	../simple_rl/agents/RMaxAgentClass.py	/^    def reset(self):$/;"	kind:member	line:28
+reset	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def reset(self):$/;"	kind:member	line:128
+reset	../simple_rl/mdp/MDPClass.py	/^    def reset(self):$/;"	kind:member	line:68
+reset	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def reset(self):$/;"	kind:function	line:286
+reset	../simple_rl/tasks/gym/GymMDPClass.py	/^    def reset(self):$/;"	kind:member	line:61
+rnd	../simple_rl/mdp/MDPDistributionClass.py	/^import random as rnd$/;"	kind:namespace	line:5
+rollout	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def rollout(self, cur_state, reward_func, transition_func, step_cost=0):$/;"	kind:member	line:53
+rotate_agent_left	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def rotate_agent_left(self, state):$/;"	kind:member	line:203
+rotate_agent_right	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^    def rotate_agent_right(self, state):$/;"	kind:member	line:213
+run.py	../eigen_options/run.py	1;"	kind:file	line:1
+run_agents_multi_task	../examples/goal_based_options_example.py	/^from simple_rl.run_experiments import run_agents_multi_task$/;"	kind:namespace	line:10
+run_agents_multi_task	../examples/multitask_example.py	/^from simple_rl.run_experiments import run_agents_multi_task$/;"	kind:namespace	line:11
+run_agents_multi_task	../simple_rl/run_experiments.py	/^def run_agents_multi_task(agents,$/;"	kind:function	line:121
+run_agents_on_mdp	../eigen_options/run.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:5
+run_agents_on_mdp	../examples/abstraction_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:10
+run_agents_on_mdp	../examples/gym_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:11
+run_agents_on_mdp	../examples/new_mdp_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:11
+run_agents_on_mdp	../examples/oomdp_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp, run_single_agent_on_mdp$/;"	kind:namespace	line:10
+run_agents_on_mdp	../examples/simple_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:10
+run_agents_on_mdp	../simple_rl/run_experiments.py	/^def run_agents_on_mdp(agents,$/;"	kind:function	line:215
+run_agents_on_mdp	../simple_rl/tasks/trench/TrenchOOMDPClass.py	/^from simple_rl.run_experiments import run_agents_on_mdp$/;"	kind:namespace	line:9
+run_example	../tests/basic_test.py	/^def run_example(path_to_example_file):$/;"	kind:function	line:9
+run_experiments	../simple_rl/__init__.py	/^import run_experiments$/;"	kind:namespace	line:31
+run_experiments.py	../simple_rl/run_experiments.py	1;"	kind:file	line:1
+run_single_agent_on_mdp	../examples/oomdp_example.py	/^from simple_rl.run_experiments import run_agents_on_mdp, run_single_agent_on_mdp$/;"	kind:namespace	line:10
+run_single_agent_on_mdp	../examples/viz_example.py	/^from simple_rl.run_experiments import run_single_agent_on_mdp$/;"	kind:namespace	line:10
+run_single_agent_on_mdp	../simple_rl/run_experiments.py	/^def run_single_agent_on_mdp(agent, mdp, episodes, steps, experiment=None, verbose=False, is_rec_disc_reward=False,$/;"	kind:function	line:289
+run_vi	../simple_rl/planning/ValueIterationClass.py	/^    def run_vi(self):$/;"	kind:member	line:114
+sa_helpers	../simple_rl/abstraction/__init__.py	/^from state_abs import sa_helpers$/;"	kind:namespace	line:4
+sa_helpers	../simple_rl/abstraction/state_abs/__init__.py	/^import sa_helpers$/;"	kind:namespace	line:1
+sa_helpers.py	../simple_rl/abstraction/state_abs/sa_helpers.py	1;"	kind:file	line:1
+sample	../simple_rl/mdp/MDPDistributionClass.py	/^    def sample(self, k=1):$/;"	kind:member	line:133
+scripts	../setup.py	/^    scripts=['simple_rl\/run_experiments.py'],$/;"	kind:variable	line:13
+set_attribute	../simple_rl/mdp/oomdp/OOMDPObjectClass.py	/^    def set_attribute(self, attr, val):$/;"	kind:member	line:15
+set_gamma	../simple_rl/mdp/MDPClass.py	/^    def set_gamma(self, new_gamma):$/;"	kind:member	line:44
+set_gamma	../simple_rl/mdp/MDPDistributionClass.py	/^    def set_gamma(self, new_gamma):$/;"	kind:member	line:129
+set_name	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def set_name(self, new_name):$/;"	kind:member	line:38
+set_name	../simple_rl/agents/AgentClass.py	/^    def set_name(self, name):$/;"	kind:member	line:50
+set_option_executing	../simple_rl/abstraction/action_abs/ActionAbstractionClass.py	/^    def set_option_executing(self, option):$/;"	kind:member	line:92
+set_phi	../simple_rl/abstraction/state_abs/StateAbstractionClass.py	/^    def set_phi(self, new_phi):$/;"	kind:member	line:18
+set_policy	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def set_policy(self, policy):$/;"	kind:member	line:35
+set_policy	../simple_rl/agents/FixedPolicyAgentClass.py	/^    def set_policy(self, new_policy):$/;"	kind:member	line:31
+set_step_cost	../simple_rl/mdp/MDPClass.py	/^    def set_step_cost(self, new_step_cost):$/;"	kind:member	line:47
+set_terminal	../simple_rl/mdp/StateClass.py	/^    def set_terminal(self, is_term=True):$/;"	kind:member	line:32
+setup	../setup.py	/^from distutils.core import setup$/;"	kind:namespace	line:1
+setup.py	../setup.py	1;"	kind:file	line:1
+simple_example.py	../examples/simple_example.py	1;"	kind:file	line:1
+soft_max_policy	../simple_rl/agents/QLearnerAgentClass.py	/^    def soft_max_policy(self, state):$/;"	kind:member	line:100
+srl_example_setup	../examples/abstraction_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/goal_based_options_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/gym_example.py	/^import srl_example_setup$/;"	kind:namespace	line:8
+srl_example_setup	../examples/markov_game_example.py	/^import srl_example_setup$/;"	kind:namespace	line:8
+srl_example_setup	../examples/multitask_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/new_mdp_example.py	/^import srl_example_setup$/;"	kind:namespace	line:8
+srl_example_setup	../examples/oomdp_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/planning_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/simple_example.py	/^import srl_example_setup$/;"	kind:namespace	line:7
+srl_example_setup	../examples/viz_example.py	/^import srl_example_setup$/;"	kind:namespace	line:8
+srl_example_setup.py	../examples/srl_example_setup.py	1;"	kind:file	line:1
+subprocess	../simple_rl/utils/chart_utils.py	/^import subprocess$/;"	kind:namespace	line:27
+subprocess	../tests/basic_test.py	/^import subprocess$/;"	kind:namespace	line:4
+sys	../examples/abstraction_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/goal_based_options_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/gym_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/markov_game_example.py	/^import sys$/;"	kind:namespace	line:5
+sys	../examples/multitask_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/new_mdp_example.py	/^import sys$/;"	kind:namespace	line:5
+sys	../examples/oomdp_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/simple_example.py	/^import sys$/;"	kind:namespace	line:4
+sys	../examples/srl_example_setup.py	/^import sys$/;"	kind:namespace	line:3
+sys	../examples/viz_example.py	/^import sys$/;"	kind:namespace	line:5
+sys	../simple_rl/abstraction/state_abs/sa_helpers.py	/^import sys$/;"	kind:namespace	line:5
+sys	../simple_rl/run_experiments.py	/^import sys$/;"	kind:namespace	line:21
+sys	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^import sys$/;"	kind:namespace	line:5
+sys	../simple_rl/tasks/grid_world/grid_visualizer.py	/^import sys$/;"	kind:namespace	line:9
+sys	../simple_rl/tasks/gym/GymMDPClass.py	/^import sys$/;"	kind:namespace	line:8
+sys	../simple_rl/utils/chart_utils.py	/^import sys$/;"	kind:namespace	line:22
+sys	../simple_rl/utils/mdp_visualizer.py	/^import sys$/;"	kind:namespace	line:2
+sys	../tests/basic_test.py	/^import sys$/;"	kind:namespace	line:6
+tasks	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+taxi_helpers	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^import taxi_helpers$/;"	kind:namespace	line:20
+taxi_helpers.py	../simple_rl/tasks/taxi/taxi_helpers.py	1;"	kind:file	line:1
+taxi_visualizer.py	../simple_rl/tasks/taxi/taxi_visualizer.py	1;"	kind:file	line:1
+term_func_from_list	../simple_rl/abstraction/action_abs/OptionClass.py	/^    def term_func_from_list(self, state):$/;"	kind:member	line:84
+time	../simple_rl/agents/QLearnerAgentClass.py	/^import time$/;"	kind:namespace	line:6
+time	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^import time$/;"	kind:namespace	line:16
+time	../simple_rl/run_experiments.py	/^import time$/;"	kind:namespace	line:17
+title_font	../simple_rl/utils/mdp_visualizer.py	/^    title_font = pygame.font.SysFont("CMU Serif", 32)$/;"	kind:variable	line:9
+update	../simple_rl/agents/QLearnerAgentClass.py	/^    def update(self, state, action, reward, next_state):$/;"	kind:member	line:114
+update	../simple_rl/agents/RMaxAgentClass.py	/^    def update(self, state, action, reward, next_state):$/;"	kind:member	line:59
+update	../simple_rl/agents/bandits/LinUCBAgentClass.py	/^    def update(self, reward):$/;"	kind:member	line:79
+update	../simple_rl/agents/func_approx/GradientBoostingAgentClass.py	/^    def update(self, state, action, reward, next_state):$/;"	kind:member	line:44
+update	../simple_rl/agents/func_approx/LinearQLearnerAgentClass.py	/^    def update(self, state, action, reward, next_state):$/;"	kind:member	line:34
+update	../simple_rl/agents/func_approx/LinearSarsaAgentClass.py	/^    def update(self, state, action, reward, next_state, next_action):$/;"	kind:member	line:56
+update	../simple_rl/mdp/oomdp/OOMDPStateClass.py	/^    def update(self):$/;"	kind:member	line:34
+url	../setup.py	/^    url='https:\/\/github.com\/david-abel\/simple_rl',$/;"	kind:variable	line:22
+utils	../simple_rl/__init__.py	/^import agents, experiments, mdp, planning, tasks, utils$/;"	kind:namespace	line:30
+val_to_color	../simple_rl/utils/mdp_visualizer.py	/^def val_to_color(val, good_col=(169, 193, 249), bad_col=(255, 255, 255)):$/;"	kind:function	line:18
+version	../setup.py	/^    version='0.76',$/;"	kind:variable	line:18
+visualize_agent	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def visualize_agent(self, agent):$/;"	kind:member	line:191
+visualize_agent	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^        from ...utils.mdp_visualizer import visualize_agent$/;"	kind:namespace	line:146
+visualize_agent	../simple_rl/tasks/taxi/TaxiOOMDPClass.py	/^    def visualize_agent(self, agent):$/;"	kind:member	line:145
+visualize_agent	../simple_rl/utils/mdp_visualizer.py	/^def visualize_agent(mdp, agent, draw_state, cur_state=None, scr_width=720, scr_height=720):$/;"	kind:function	line:139
+visualize_mdp	../eigen_options/eigen_options.py	/^    def visualize_mdp(self):$/;"	kind:member	line:62
+visualize_policy	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def visualize_policy(self, policy):$/;"	kind:member	line:175
+visualize_policy	../simple_rl/utils/mdp_visualizer.py	/^def visualize_policy(mdp, policy, draw_state, action_char_dict, cur_state=None, scr_width=720, scr_height=720):$/;"	kind:function	line:96
+visualize_value	../simple_rl/tasks/grid_world/GridWorldMDPClass.py	/^    def visualize_value(self):$/;"	kind:member	line:197
+visualize_value	../simple_rl/utils/mdp_visualizer.py	/^def visualize_value(mdp, draw_state, cur_state=None, scr_width=720, scr_height=720):$/;"	kind:function	line:120
+viz_example.py	../examples/viz_example.py	1;"	kind:file	line:1
+write_datum_to_file	../simple_rl/experiments/ExperimentClass.py	/^    def write_datum_to_file(self, agent, datum, extra_dir=""):$/;"	kind:member	line:181
+write_exp_info_to_file	../simple_rl/experiments/ExperimentClass.py	/^    def write_exp_info_to_file(self):$/;"	kind:member	line:192
