@@ -2,8 +2,10 @@
 
 from simple_rl.agents import QLearnerAgent
 from simple_rl.abstraction import AbstractionWrapper, ActionAbstraction
+from simple_rl.run_experiments import run_single_agent_on_mdp
 import numpy as np
 from scipy.sparse import csgraph
+from option_wrapper_ import OptionWrapperMDP
 
 
 class EigenOptions:
@@ -50,17 +52,20 @@ class EigenOptions:
         """ Turns coordinate into ID """
         return (i - 1) * self.width + (j - 1)
 
+    def state2id(state):
+        return return state.y * self.width + state.x
+
     def _calculate_eigen_options(self):
         # Normalized Graph Laplacian
         L = csgraph.laplacian(self.G)
         w, v = np.linalg.eig(L)
         eigens = sorted(zip(w, v))  # the smallest eigen values first
 
-        # TODO: calculate eigen_options using eigen values and eigen vectors
-        self.eigen_purpose = lambda (s, s_, e) : np.dot(e, s_) - np.dot(e, s)
-        for e in w:
-            M_e = MDP(self, actions, )
-
+        for (vector, value) in eigens:
+            eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, state2id)
+            vi = ValueIteration(eigen_option_mdp)
+            vi.run_vi()
+            eigen_option_policy = vi.policy 
 
     def visualize_mdp(self):
         for i in range(1, self.width + 1):
