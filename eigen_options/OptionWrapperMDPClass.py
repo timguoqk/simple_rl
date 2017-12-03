@@ -38,9 +38,16 @@ class OptionMDP(object):
     def _transition_func(self, state, action):
         if action in self.options:
             # TODO: Not sure about this handling
-            state_ = action.run_policy(state)
+            state_ = run_policy(state, action, self.base_mdp)
         else:
             state_ = self.base_mdp._transition_func(state, action)
         
         return state_
-        
+
+def run_policy(state, policy, mdp):
+    while state != TERMINATE:
+        action = policy.get_value(state)
+        next_state = mdp._transition_func(state, action)
+        state = next_state
+    
+    return state
