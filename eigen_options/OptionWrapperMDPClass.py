@@ -29,5 +29,18 @@ class OptionWrapperMDP(MDP):
         else:
             return self.base_mdp._transition_func(state, action)
             
+class OptionMDP(object):
+    def __init__(self, base_mdp, options, actions):
+        self.base_mdp = base_mdp
+        self.actions = actions + options
+        self.options = set(options)
     
-
+    def _transition_func(self, state, action):
+        if action in self.options:
+            # TODO: Not sure about this handling
+            state_ = action.run_policy(state)
+        else:
+            state_ = self.base_mdp._transition_func(state, action)
+        
+        return state_
+        

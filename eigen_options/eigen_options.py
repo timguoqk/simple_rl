@@ -61,11 +61,15 @@ class EigenOptions:
         w, v = np.linalg.eig(L)
         eigens = sorted(zip(w, v))  # the smallest eigen values first
 
+        options = []
         for (vector, value) in eigens:
             eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, state2id)
             vi = ValueIteration(eigen_option_mdp)
             vi.run_vi()
-            eigen_option_policy = vi.policy 
+            eigen_option_policy = vi.policy
+            options.append(eigen_option_policy)
+        
+        self.eigen_options = options
 
     def visualize_mdp(self):
         for i in range(1, self.width + 1):
