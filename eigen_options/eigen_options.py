@@ -105,7 +105,7 @@ class EigenOptions:
             print vi.run_vi()
 
             #self.mdp.visualize_policy(lambda x: str(int(100*round(vi._compute_max_qval_action_pair(x)[0], 2))))
-            self.mdp.visualize_policy(vi.policy)
+            #self.mdp.visualize_policy(vi.policy)
             term_predicate = Predicate(lambda x: vi.policy(x) == TERMINATE)
             option = Option(true_predicate, term_predicate, vi.policy)
             options.append(option)
