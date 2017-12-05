@@ -9,7 +9,10 @@ import numpy as np
 from scipy.sparse import csgraph
 from OptionWrapperMDPClass import OptionWrapperMDP
 from simple_rl.planning.ValueIterationClass import ValueIteration
+from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP
 
+
+TERMINATE = "AHHHHHHHH"
 
 class EigenOptions:
     def __init__(self, mdp):
@@ -59,19 +62,52 @@ class EigenOptions:
         val = state.y * self.width + state.x
         return int((state.y - 1) * self.width + (state.x - 1))
 
+    def up_policy(self, state):
+        return "up"
+
+    def down_policy(self, state):
+        return "down"
+
+    def left_policy(self, state):
+        return "left"
+
+    def right_policy(self, state):
+        return "right"
+
     def _calculate_eigen_options(self):
         # Normalized Graph Laplacian
         L = csgraph.laplacian(self.G, normed=True)
         w, v = np.linalg.eig(L)
-        eigens = zip(w, v)[::-1]  # the smallest eigen values first
+        print w
+        eigens = []
 
+        for vector in v:
+            eigens.append(vector)   # the smallest eigen values first
+            inv = [x*-1 for x in vector]
+            eigens.append(inv)
+
+        eigens = eigens[::-1]
+        #eigens = [eigens[0]]
+
+        true_predicate = Predicate(lambda x: True)
+        
+
+        up_primitive = Option(true_predicate, true_predicate, self.up_policy)
+        down_primitive = Option(true_predicate, true_predicate, self.down_policy)
+        left_primitive = Option(true_predicate, true_predicate, self.left_policy)
+        right_primitive = Option(true_predicate, true_predicate, self.right_policy)
+        options = [up_primitive, down_primitive, left_primitive, right_primitive]
         options = []
-        for value, vector in eigens:
+
+        for vector in eigens:
             eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, self.state2id)
-            vi = ValueIteration(eigen_option_mdp)
+            vi = ValueIteration(eigen_option_mdp, delta=0.000000001, max_iterations=1000, sample_rate=10)
             print vi.run_vi()
-            true_predicate = Predicate(lambda x: True)
-            option = Option(true_predicate, true_predicate, vi.policy)
+
+            #self.mdp.visualize_policy(lambda x: str(int(100*round(vi._compute_max_qval_action_pair(x)[0], 2))))
+            self.mdp.visualize_policy(vi.policy)
+            term_predicate = Predicate(lambda x: vi.policy(x) == TERMINATE)
+            option = Option(true_predicate, term_predicate, vi.policy)
             options.append(option)
         
         self.eigen_options = options
