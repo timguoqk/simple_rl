@@ -12,7 +12,7 @@ from simple_rl.planning.ValueIterationClass import ValueIteration
 from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP
 
 
-TERMINATE = "AHHHHHHHH"
+TERMINATE = "AH"
 
 class EigenOptions:
     def __init__(self, mdp):
@@ -74,20 +74,66 @@ class EigenOptions:
     def right_policy(self, state):
         return "right"
 
+    def exponentiate(self, M, exp):
+        numRows = len(M)
+        numCols = len(M[0])
+        expM = np.zeros((numRows, numCols))
+
+        for i in xrange(numRows):
+            for j in xrange(numCols):
+                if M[i][j] != 0:
+                    expM[i][j] = M[i][j]**exp
+
+        return expM
+
     def _calculate_eigen_options(self):
         # Normalized Graph Laplacian
-        L = csgraph.laplacian(self.G, normed=True)
-        w, v = np.linalg.eig(L)
-        print w
+
+        W = self.G
+
+        numStates = self.width*self.height
+        D = np.zeros((numStates, numStates))
+
+        # Obtaining the Valency Matrix
+        for i in xrange(numStates):
+            for j in xrange(numStates):
+                D[i][i] = np.sum(W[i])
+        # Making sure our final matrix will be full rank
+        for i in xrange(numStates):
+           if D[i][i] == 0.0:
+               D[i][i] = 1.0
+
+        # Normalized Laplacian
+        L = D - W
+        expD = self.exponentiate(D, -0.5)
+        normalizedL = expD.dot(L).dot(expD)
+
+        
+
+        ourL = csgraph.laplacian(self.G, normed=True)
+
+        print sum(np.abs(normalizedL-ourL))
+
+
+
+        #w, v = np.linalg.eig(normalizedL)
+        eigenvalues, eigenvectors = np.linalg.eig(normalizedL)
+        idx = eigenvalues.argsort()#[::-1]
+        w = eigenvalues[idx]
+        v = eigenvectors[:,idx]
+        #sort_wv = sorted(zip(w,v), key=lambda x: x[0])
+        #print sort_wv[0][0]
+        #print w
         eigens = []
 
-        for vector in v:
+        for i in range(len(v)):
+            vector = v[:, i]
             eigens.append(vector)   # the smallest eigen values first
             inv = [x*-1 for x in vector]
             eigens.append(inv)
 
-        eigens = eigens[::-1]
-        #eigens = [eigens[0]]
+        #eigens = eigens[::-1]
+        #eigens = [eigens[7]]
 
         true_predicate = Predicate(lambda x: True)
         
@@ -96,13 +142,14 @@ class EigenOptions:
         down_primitive = Option(true_predicate, true_predicate, self.down_policy)
         left_primitive = Option(true_predicate, true_predicate, self.left_policy)
         right_primitive = Option(true_predicate, true_predicate, self.right_policy)
-        options = [up_primitive, down_primitive, left_primitive, right_primitive]
+        #options = [up_primitive, down_primitive, left_primitive, right_primitive]
         options = []
 
         for vector in eigens:
             eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, self.state2id)
             vi = ValueIteration(eigen_option_mdp, delta=0.000000001, max_iterations=1000, sample_rate=10)
-            print vi.run_vi()
+            iters, start_val = vi.run_vi()
+            print iters, start_val
 
             #self.mdp.visualize_policy(lambda x: str(int(100*round(vi._compute_max_qval_action_pair(x)[0], 2))))
             #self.mdp.visualize_policy(vi.policy)

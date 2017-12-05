@@ -4,7 +4,8 @@ from simple_rl.tasks import FourRoomMDP
 from simple_rl.agents import QLearnerAgent
 from simple_rl.run_experiments import run_agents_on_mdp
 from eigen_options import EigenOptions
-
+from simple_rl.tasks.grid_world.GridWorldMDPClass import make_grid_world_from_file
+import os
 
 def fig6(mdp, eo):
     # Avg number of steps and the number of options used
@@ -36,7 +37,8 @@ def fig7(mdp, eo):
     # TODO: plot using csv
 
 if __name__ == "__main__":
-    mdp = FourRoomMDP(gamma=0.9)
+    mdp = make_grid_world_from_file("/Users/noah/Desktop/csci2651F/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid.txt", num_goals=1, randomize=True)
+    mdp.gamma = 0.9
     eo = EigenOptions(mdp)
 
     # fig6(mdp, eo)

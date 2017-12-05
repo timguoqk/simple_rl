@@ -2,7 +2,7 @@ from simple_rl.mdp.MDPClass import MDP
 
 from copy import deepcopy
 
-TERMINATE = "AHHHHHHHH"
+TERMINATE = "AH"
 
 class OptionWrapperMDP(MDP):
     def __init__(self, MDPClass, eigenvector, state2id):
