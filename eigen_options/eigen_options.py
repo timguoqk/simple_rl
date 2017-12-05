@@ -52,20 +52,20 @@ class EigenOptions:
         """ Turns coordinate into ID """
         return (i - 1) * self.width + (j - 1)
 
-    def state2id(state):
-        return return state.y * self.width + state.x
+    def state2id(self, state):
+        return state.y * self.width + state.x
 
     def _calculate_eigen_options(self):
         # Normalized Graph Laplacian
-        L = csgraph.laplacian(self.G)
+        L = csgraph.laplacian(self.G, normed=True)
         w, v = np.linalg.eig(L)
-        eigens = sorted(zip(w, v))  # the smallest eigen values first
+        eigens = zip(w, v)[::-1]  # the smallest eigen values first
 
         for (vector, value) in eigens:
-            eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, state2id)
+            eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, self.state2id)
             vi = ValueIteration(eigen_option_mdp)
             vi.run_vi()
-            eigen_option_policy = vi.policy 
+            eigen_option = vi.policy 
 
     def visualize_mdp(self):
         for i in range(1, self.width + 1):
