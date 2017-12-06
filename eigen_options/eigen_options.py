@@ -23,6 +23,8 @@ class EigenOptions:
         self.width, self.height = self.mdp.width, self.mdp.height
         self.num_states = self.width * self.height
 
+        self.epsilon = 0.0001
+
         # Compute Adjacency Matrix (num_states x num_states)
         self._compute_adjacency_matrix()
 
@@ -74,6 +76,14 @@ class EigenOptions:
     def right_policy(self, state):
         return "right"
 
+    def get_epsilon_policy(self, epsilon, policy, value_func):
+        def epsilon_policy(state):
+            if value_func(state) < epsilon:
+                return TERMINATE
+            return policy(state)
+        return epsilon_policy
+
+
     def exponentiate(self, M, exp):
         numRows = len(M)
         numCols = len(M[0])
@@ -118,12 +128,12 @@ class EigenOptions:
 
         #w, v = np.linalg.eig(normalizedL)
         eigenvalues, eigenvectors = np.linalg.eig(normalizedL)
-        idx = eigenvalues.argsort()#[::-1]
+        idx = eigenvalues.argsort()
         w = eigenvalues[idx]
         v = eigenvectors[:,idx]
         #sort_wv = sorted(zip(w,v), key=lambda x: x[0])
         #print sort_wv[0][0]
-        #print w
+        print w
         eigens = []
 
         for i in range(len(v)):
@@ -142,8 +152,8 @@ class EigenOptions:
         down_primitive = Option(true_predicate, true_predicate, self.down_policy)
         left_primitive = Option(true_predicate, true_predicate, self.left_policy)
         right_primitive = Option(true_predicate, true_predicate, self.right_policy)
-        #options = [up_primitive, down_primitive, left_primitive, right_primitive]
-        options = []
+        options = [up_primitive, down_primitive, left_primitive, right_primitive]
+        #options = []
 
         for vector in eigens:
             eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, self.state2id)
@@ -153,8 +163,10 @@ class EigenOptions:
 
             #self.mdp.visualize_policy(lambda x: str(int(100*round(vi._compute_max_qval_action_pair(x)[0], 2))))
             #self.mdp.visualize_policy(vi.policy)
-            term_predicate = Predicate(lambda x: vi.policy(x) == TERMINATE)
-            option = Option(true_predicate, term_predicate, vi.policy)
+            epsilon_policy = self.get_epsilon_policy(self.epsilon, vi.policy, lambda state: vi._compute_max_qval_action_pair(state)[0])
+            #self.mdp.visualize_policy(epsilon_policy)
+            term_predicate = Predicate(lambda x: epsilon_policy(x) == TERMINATE)
+            option = Option(true_predicate, term_predicate, epsilon_policy)
             options.append(option)
         
         self.eigen_options = options
