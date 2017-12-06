@@ -2,7 +2,7 @@ from simple_rl.mdp.MDPClass import MDP
 
 from copy import deepcopy
 
-TERMINATE = "AHHHHHHHH"
+TERMINATE = "AH"
 
 class OptionWrapperMDP(MDP):
     def __init__(self, MDPClass, eigenvector, state2id):
@@ -17,11 +17,9 @@ class OptionWrapperMDP(MDP):
     def get_eigen_purpose(self, eigenvector):
         def reward_function(state, action):
             if action == TERMINATE:
-                return 0
+                return 0.00000001
             else:
                 next_state = self.transition_func(state, action)
-                if self.state2id(next_state) > len(eigenvector) or self.state2id(state) > len(eigenvector):
-                    print 'jhey'
                 return eigenvector[self.state2id(next_state)] - eigenvector[self.state2id(state)]
             
         return reward_function

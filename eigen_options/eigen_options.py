@@ -9,7 +9,10 @@ import numpy as np
 from scipy.sparse import csgraph
 from OptionWrapperMDPClass import OptionWrapperMDP
 from simple_rl.planning.ValueIterationClass import ValueIteration
+from simple_rl.tasks.grid_world.GridWorldMDPClass import GridWorldMDP
 
+
+TERMINATE = "AH"
 
 class EigenOptions:
     def __init__(self, mdp):
@@ -19,6 +22,8 @@ class EigenOptions:
         # Get Height, Width => 1-Indexed [1 -> width, 1 -> height] (inclusive)
         self.width, self.height = self.mdp.width, self.mdp.height
         self.num_states = self.width * self.height
+
+        self.epsilon = 0.0001
 
         # Compute Adjacency Matrix (num_states x num_states)
         self._compute_adjacency_matrix()
@@ -59,19 +64,109 @@ class EigenOptions:
         val = state.y * self.width + state.x
         return int((state.y - 1) * self.width + (state.x - 1))
 
+    def up_policy(self, state):
+        return "up"
+
+    def down_policy(self, state):
+        return "down"
+
+    def left_policy(self, state):
+        return "left"
+
+    def right_policy(self, state):
+        return "right"
+
+    def get_epsilon_policy(self, epsilon, policy, value_func):
+        def epsilon_policy(state):
+            if value_func(state) < epsilon:
+                return TERMINATE
+            return policy(state)
+        return epsilon_policy
+
+
+    def exponentiate(self, M, exp):
+        numRows = len(M)
+        numCols = len(M[0])
+        expM = np.zeros((numRows, numCols))
+
+        for i in xrange(numRows):
+            for j in xrange(numCols):
+                if M[i][j] != 0:
+                    expM[i][j] = M[i][j]**exp
+
+        return expM
+
     def _calculate_eigen_options(self):
         # Normalized Graph Laplacian
-        L = csgraph.laplacian(self.G, normed=True)
-        w, v = np.linalg.eig(L)
-        eigens = zip(w, v)[::-1]  # the smallest eigen values first
 
-        options = []
-        for value, vector in eigens:
+        W = self.G
+
+        numStates = self.width*self.height
+        D = np.zeros((numStates, numStates))
+
+        # Obtaining the Valency Matrix
+        for i in xrange(numStates):
+            for j in xrange(numStates):
+                D[i][i] = np.sum(W[i])
+        # Making sure our final matrix will be full rank
+        for i in xrange(numStates):
+           if D[i][i] == 0.0:
+               D[i][i] = 1.0
+
+        # Normalized Laplacian
+        L = D - W
+        expD = self.exponentiate(D, -0.5)
+        normalizedL = expD.dot(L).dot(expD)
+
+        
+
+        ourL = csgraph.laplacian(self.G, normed=True)
+
+        print sum(np.abs(normalizedL-ourL))
+
+
+
+        #w, v = np.linalg.eig(normalizedL)
+        eigenvalues, eigenvectors = np.linalg.eig(normalizedL)
+        idx = eigenvalues.argsort()
+        w = eigenvalues[idx]
+        v = eigenvectors[:,idx]
+        #sort_wv = sorted(zip(w,v), key=lambda x: x[0])
+        #print sort_wv[0][0]
+        print w
+        eigens = []
+
+        for i in range(len(v)):
+            vector = v[:, i]
+            eigens.append(vector)   # the smallest eigen values first
+            inv = [x*-1 for x in vector]
+            eigens.append(inv)
+
+        #eigens = eigens[::-1]
+        #eigens = [eigens[7]]
+
+        true_predicate = Predicate(lambda x: True)
+        
+
+        up_primitive = Option(true_predicate, true_predicate, self.up_policy)
+        down_primitive = Option(true_predicate, true_predicate, self.down_policy)
+        left_primitive = Option(true_predicate, true_predicate, self.left_policy)
+        right_primitive = Option(true_predicate, true_predicate, self.right_policy)
+        options = [up_primitive, down_primitive, left_primitive, right_primitive]
+        #options = []
+
+        for vector in eigens:
             eigen_option_mdp = OptionWrapperMDP(self.mdp, vector, self.state2id)
-            vi = ValueIteration(eigen_option_mdp)
-            print vi.run_vi()
-            true_predicate = Predicate(lambda x: True)
-            option = Option(true_predicate, true_predicate, vi.policy)
+            vi = ValueIteration(eigen_option_mdp, delta=0.000000001, max_iterations=1000, sample_rate=10)
+            iters, start_val = vi.run_vi()
+            print iters, start_val
+
+            #self.mdp.visualize_policy(lambda x: str(int(100*round(vi._compute_max_qval_action_pair(x)[0], 2))))
+            #self.mdp.visualize_policy(vi.policy)
+            epsilon_policy = self.get_epsilon_policy(self.epsilon, vi.policy, lambda state: vi._compute_max_qval_action_pair(state)[0])
+            #self.mdp.visualize_policy(epsilon_policy)
+            term_predicate = Predicate(lambda x: epsilon_policy(x) == TERMINATE)
+            option = Option(true_predicate, term_predicate, epsilon_policy)
             options.append(option)
         
         self.eigen_options = options
