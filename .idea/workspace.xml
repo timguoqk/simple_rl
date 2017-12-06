@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="703f50f5-a3bb-49b4-be8f-7ede95be7d72" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/OptionWrapperMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/eigen_options.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/grid_world_options.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/plot_4.R" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/plot_6.R" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/run.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/examples_overview-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/abstraction_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/examples_overview.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/goal_based_options_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/gym_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/markov_game_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/multitask_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/new_mdp_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/oomdp_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/planning_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/simple_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srl_example_setup.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/viz_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/setup.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/setup.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/AbstractionWrapperClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/ActionAbstractionClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/InListPredicateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/OptionClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PolicyClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PolicyFromDictClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PredicateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/aa_helpers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/StateAbstractionClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/indicator_funcs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/sa_helpers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/AgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/FixedPolicyAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/QLearnerAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/RMaxAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/RandomAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/bandits/LinUCBAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/GradientBoostingAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/LinearQLearnerAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/LinearSarsaAgentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/ExperimentClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/ExperimentParametersClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/MDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/MDPDistributionClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/StateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/markov_game/MarkovGameMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPObjectClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/MCTSClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/PlannerClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/ValueIterationClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/run_experiments.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/ChainMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/ChainStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/ColorMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/ColorStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/four_room/FourRoomMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/GridGameMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/GridGameStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/grid_visualizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/hierarch_rooms.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/octogrid.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/pblocks_grid.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/GymMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/GymStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/prisoners/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/RandomMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/RandomStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/rock_paper_scissors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/TaxiOOMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/TaxiStateClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/taxi_helpers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/taxi_visualizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/TrenchOOMDPClass.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/TrenchOOMDPState.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/chart_utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/make_mdp.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/mdp_visualizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/basic_test.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/eigen_options/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/4_Rooms.mdp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/discovery/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/agents/bandits/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/discovery/eigen_options.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/environment/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/mdp/markov_game/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/environment/gridworld.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/policy_iteration.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/q_learning.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/four_room/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/run.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laplacian_options/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="69" column="6" lean-forward="false" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+              <folding>
+                <element signature="e#167#215#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="q_learning.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laplacian_options/learning/q_learning.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding>
+                <element signature="e#66#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eigen_options.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laplacian_options/discovery/eigen_options.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="e#98#151#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gridworld.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laplacian_options/environment/gridworld.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="649">
+              <caret line="123" column="40" lean-forward="true" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+              <folding>
+                <element signature="e#831#1783#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>is_wall</find>
+      <find>visualize</find>
+      <find>X</find>
+      <find>action_set</find>
+      <find>get_actions</find>
+      <find>max_num</find>
+      <find>current</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>W</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/eigen_options/OptionWrapperMDPClass.py" />
+        <option value="$PROJECT_DIR$/eigen_options/run.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/laplacian_options/4_Rooms.mdp" />
+        <option value="$PROJECT_DIR$/laplacian_options/discovery/laplacian_options.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/learning/learners.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/learning/policy_iteration.py" />
+        <option value="$PROJECT_DIR$/eigen_options/eigen_options.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/environment/gridworld.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/discovery/eigen_options.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/learning/q_learning.py" />
+        <option value="$PROJECT_DIR$/laplacian_options/run.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple_rl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple_rl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laplacian_options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple_rl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple_rl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laplacian_options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simple_rl" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simple_rl" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simple_rl" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simple_rl" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="703f50f5-a3bb-49b4-be8f-7ede95be7d72" name="Default" comment="" />
+      <created>1510881880395</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1510881880395</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30547947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/eigen_options/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/eigen_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/four_room/FourRoomMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/eigen_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/four_room/FourRoomMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/nlp/lib/python2.7/site-packages/scipy/sparse/csgraph/_laplacian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/abstraction/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/abstraction/AbstractionWrapperClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/MDPDistributionClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1972">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/StateClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-446">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/hierarch_rooms.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/octogrid.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/pblocks_grid.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_game/GridGameMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1826">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldStateClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/mdp/MDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/grid_visualizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/grid_world_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/four_room/FourRoomMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/fourroom_h-9_w-9/parameters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/planning/ValueIterationClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="113" column="8" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/primitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/OptionWrapperMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-4 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-2 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-64 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-256 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-128 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/results/Users/sidd/Projects/simple_rl/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid_h-13_w-13/qlearner-8 options.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/run_experiments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="229" column="21" lean-forward="false" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/plot_4.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/plot_6.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldMDPClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3240">
+          <caret line="223" column="4" lean-forward="false" selection-start-line="223" selection-start-column="4" selection-end-line="223" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/4_Rooms.mdp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/learning/policy_iteration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="26" lean-forward="false" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+          <folding>
+            <element signature="e#168#179#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eigen_options/eigen_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/discovery/eigen_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#98#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/environment/gridworld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="123" column="40" lean-forward="true" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+          <folding>
+            <element signature="e#831#1783#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/learning/q_learning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="e#66#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="69" column="6" lean-forward="false" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+          <folding>
+            <element signature="e#167#215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
