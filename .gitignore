@@ -5,3 +5,4 @@ dist/
 todo.txt
 update.py
 .idea/
+.DS_Store
