@@ -7,12 +7,19 @@ for Option Discovery in Reinforcement Learning."
 from discovery.eigen_options import EigenOptions
 from environment.gridworld import GridWorld
 from learning.q_learning import QLearner
+import numpy as np
 
 # Parameters for Figure 7
 PATH_TO_MDP = "4_Rooms.mdp"
 ALPHA, GAMMA, EPSILON = 0.1, 0.9, 1.0
-MAX_EPISODE_LEN, MAX_NUM_EPISODES = 100, 500
-NUM_SEEDS, NUM_OPTIONS_TO_EVAL = 5, [2, 4, 8, 64, 128, 256]
+MAX_EPISODE_LEN, MAX_NUM_EPISODES = 100, 549
+NUM_SEEDS, NUM_OPTIONS_TO_EVAL = 25, [2, 4, 8, 64, 128, 256]
+
+
+def moving_average(d, n=50):
+    ret = np.cumsum(d, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
 
 
 if __name__ == "__main__":
@@ -31,7 +38,7 @@ if __name__ == "__main__":
         action_set = gridworld.get_actions()
 
         # Add Options to action_set
-        for i in range(num_options/2):                # TODO: Paper divides num_options by 2... bug???
+        for i in range(num_options):
             action_set.append(eo.options[i])
 
         for s in range(NUM_SEEDS):
@@ -59,6 +66,36 @@ if __name__ == "__main__":
             learn_returns_primitive[s].append(q.learn_episode(timestep_limit=MAX_EPISODE_LEN))
             eval_returns_primitive[s].append(q.evaluate_episode(eps=0.01, timestep_limit=MAX_EPISODE_LEN))
 
+    # Assemble Means, Standard Deviation
+    means = {}
+    n_prims = eval_returns_primitive
+    mn_prims = np.mean(n_prims, axis=0)
+    stdn_prims = np.std(n_prims, axis=0)
+    means['primitive'] = (mn_prims, stdn_prims, moving_average(mn_prims), eval_returns_primitive)
+    for idx, num_options in enumerate(NUM_OPTIONS_TO_EVAL):
+        n_opts = eval_returns[idx]
+        mn_opts = np.mean(n_opts, axis=0)
+        stdn_opts = np.std(n_opts, axis=0)
+        means[str(num_options)] = (mn_opts, stdn_opts, moving_average(mn_opts), eval_returns[idx])
+
+    # Save
+    import pickle
+    with open('means.pik', 'w') as f:
+        pickle.dump(means, f)
+
+    # Plot
+    import matplotlib.pyplot as plt
+    x_vals = range(1, len(means['primitive'][2]) + 1)
+
+    plt.plot(x_vals, means['primitive'][2])
+    plt.plot(x_vals, means['2'][2])
+    plt.plot(x_vals, means['4'][2])
+    plt.plot(x_vals, means['8'][2])
+    plt.plot(x_vals, means['64'][2])
+    plt.plot(x_vals, means['128'][2])
+    plt.plot(x_vals, means['256'][2])
+    plt.legend(['Prim', '2', '4', '8', '64', '128', '256'])
+    plt.show()
+
     import IPython
     IPython.embed()
-

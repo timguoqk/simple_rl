@@ -2,121 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="703f50f5-a3bb-49b4-be8f-7ede95be7d72" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/OptionWrapperMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/eigen_options.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/grid_world_options.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/plot_4.R" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/plot_6.R" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen_options/run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/examples_overview-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/abstraction_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/examples_overview.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/goal_based_options_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/gym_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/markov_game_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/multitask_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/new_mdp_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/oomdp_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/planning_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/simple_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srl_example_setup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/viz_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/setup.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/setup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/AbstractionWrapperClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/ActionAbstractionClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/InListPredicateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/OptionClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PolicyClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PolicyFromDictClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/PredicateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/action_abs/aa_helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/StateAbstractionClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/indicator_funcs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/abstraction/state_abs/sa_helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/AgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/FixedPolicyAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/QLearnerAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/RMaxAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/RandomAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/bandits/LinUCBAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/GradientBoostingAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/LinearQLearnerAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/LinearSarsaAgentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/ExperimentClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/ExperimentParametersClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/experiments/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/MDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/MDPDistributionClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/StateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/markov_game/MarkovGameMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPObjectClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/OOMDPStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/MCTSClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/PlannerClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/ValueIterationClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/planning/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/run_experiments.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/ChainMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/ChainStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/ColorMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/ColorStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/four_room/FourRoomMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/GridGameMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/GridGameStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_game/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/GridWorldStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/grid_visualizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/four_rooms_grid.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/hierarch_rooms.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/octogrid.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/grid_world/txt_grids/pblocks_grid.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/GymMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/GymStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/gym/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/prisoners/PrisonersDilemmaMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/prisoners/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/RandomMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/RandomStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/random/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/rock_paper_scissors/RockPaperScissorsMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/rock_paper_scissors/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/TaxiOOMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/TaxiStateClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/taxi_helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/taxi/taxi_visualizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/TrenchOOMDPClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/TrenchOOMDPState.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/tasks/trench/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/chart_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/make_mdp.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple_rl/utils/mdp_visualizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/basic_test.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/eigen_options/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/4_Rooms.mdp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/discovery/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/agents/bandits/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/discovery/eigen_options.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/agents/func_approx/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/environment/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/mdp/markov_game/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/environment/gridworld.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/mdp/oomdp/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/chain/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/policy_iteration.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/color/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/learning/q_learning.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/simple_rl/tasks/four_room/__init__.py" afterPath="$PROJECT_DIR$/laplacian_options/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/sidd.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/sidd.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laplacian_options/means.pik" afterPath="$PROJECT_DIR$/laplacian_options/means.pik" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laplacian_options/run.py" afterPath="$PROJECT_DIR$/laplacian_options/run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -131,8 +19,8 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laplacian_options/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="69" column="6" lean-forward="false" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+            <state relative-caret-position="337">
+              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
                 <element signature="e#167#215#0" expanded="true" />
               </folding>
@@ -255,24 +143,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple_rl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple_rl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laplacian_options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -387,13 +257,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30547947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51232874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -417,14 +288,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eigen_options/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eigen_options/eigen_options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -804,10 +667,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laplacian_options/primitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laplacian_options/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="69" column="6" lean-forward="false" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        <state relative-caret-position="337">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
             <element signature="e#167#215#0" expanded="true" />
           </folding>

@@ -14,7 +14,10 @@
       <w>exponentiate</w>
       <w>gridworld</w>
       <w>laplacian</w>
+      <w>prims</w>
+      <w>stdn</w>
       <w>timestep</w>
+      <w>vals</w>
     </words>
   </dictionary>
 </component>
